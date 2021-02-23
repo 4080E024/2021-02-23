@@ -3,7 +3,7 @@
 PowerShell 語法為"動詞-名詞"
 利用"Get-Command"指令獲取資訊
 ```
-下達指令"Get-Command"呈現結果(第一部分 =>aliases(別名))
+下達指令 "Get-Command"呈現結果(第一部分 =>aliases(別名))
 ```
 Alias           Add-AppPackage                                     2.0.1.0    Appx
 Alias           Add-AppPackageVolume                               2.0.1.0    Appx
