@@ -3,7 +3,7 @@
 PowerShell 語法為"動詞-名詞"
 利用"Get-Command"指令獲取資訊
 ```
-下達指令"Get-Command"呈現結果如下(第一部分 =>aliases(別名))
+下達指令"Get-Command"呈現結果(第一部分 =>aliases(別名))
 ```
 Alias           Add-AppPackage                                     2.0.1.0    Appx
 Alias           Add-AppPackageVolume                               2.0.1.0    Appx
@@ -59,7 +59,7 @@ Alias           Set-ProvisionedAppPackageDataFile                  3.0        Di
 Alias           Set-ProvisionedAppXDataFile                        3.0        Dism
 Alias           Write-FileSystemCache                              2.0.0.0    Storage
 ```
-Function
+下達指令"Get-Command"呈現結果(第二部分=>functions)
 ```
 Function        A:
 Function        Add-BCDataCacheExtension                           1.0.0.0    BranchCache
@@ -1005,7 +1005,7 @@ Function        X:
 Function        Y:
 Function        Z:
 ```
-Cmdlet
+下達指令"Get-Command"查詢結果(第三部分=>cmdlets)
 ```
 Cmdlet          Add-AppvClientConnectionGroup                      1.0.0.0    AppvClient
 Cmdlet          Add-AppvClientPackage                              1.0.0.0    AppvClient
