@@ -1880,9 +1880,124 @@ Cmdlet          Write-Progress                                     3.1.0.0    Mi
 Cmdlet          Write-Verbose                                      3.1.0.0    Microsoft.PowerShell.Utility
 Cmdlet          Write-Warning                                      3.1.0.0    Microsoft.PowerShell.Utility
 ```
-Get-Command -Type Cmdlet
+指令 Get-Help
 ```
+PS C:\windows\system32> Get-Help
 
+您是否想要執行 Update-Help?
+Update-Help Cmdlet 會下載 Windows PowerShell
+模組的最新說明檔，並將它們安裝在您的電腦上。如需關於 Update-Help Cmdlet 的詳細資訊，請參閱
+https:/go.microsoft.com/fwlink/?LinkId=210614。
+[Y] 是(Y)  [N] 否(N)  [S] 暫停(S)  [?] 說明 (預設值為 "Y"): y
+
+
+主題
+    Windows PowerShell 說明系統
+
+簡短描述
+    顯示關於 Windows PowerShell Cmdlet 和概念的說明。
+
+完整描述
+    Windows PowerShell 說明將描述 Windows PowerShell Cmdlet、
+    功能、指令碼及模組，以及說明包括
+    Windows PowerShell 語言項目在內的概念。
+
+    Windows PowerShell 未包含說明檔案，但您可以線上讀取
+    說明主題，或是使用 Update-Help Cmdlet，將說明檔案
+    下載至您的電腦，然後使用 Get-Help Cmdlet，在命令列中
+    顯示說明主題。
+
+    您也可以使用 Update-Help Cmdlet，在發行更新的說明檔時
+    進行下載，如此，您的本機說明內容就能永遠維持最新狀態。
+
+    不需使用說明檔，Get-Help 會顯示針對 Cmdlet、功能及指令碼
+    自動產生的說明。
+
+
+  線上說明
+    您一開始可以在 TechNet Library (網址為
+     http://go.microsoft.com/fwlink/?LinkID=108518) 線上尋找適用於 Windows PowerShell 的說明 。
+
+    若要開啟任何 Cmdlet 或功能的線上說明，請輸入：
+
+        Get-Help <Cmdlet-name> -Online
+
+  UPDATE-HELP
+    若要在電腦下載並安裝說明檔案：
+
+       1. 利用 [以系統管理員身分執行] 選項來啟動 Windows PowerShell。
+       2. 輸入：
+
+          Update-Help
+
+    在安裝說明檔之後，您可以使用 Get-Help Cmdlet 來
+    顯示說明主題。 您也可以使用 Update-Help Cmdlet 來
+    下載更新的說明檔，如此，您本機的說明檔將永遠維持
+    最新狀態。
+
+    如需關於 Update-Help Cmdlet 的詳細資訊，請輸入：
+
+       Get-Help Update-Help -Online
+
+    或移至： http://go.microsoft.com/fwlink/?LinkID=210614
+
+
+  GET-HELP
+    Get-Help Cmdlet 會在您電腦的命令列上顯示來自說明檔中
+    內容的說明。 不需使用說明檔，Get-Help 會顯示
+    針對 Cmdlet 及功能有關的基本說明。 您也可以使用 Get-Help 來顯示
+    Cmdlet 與功能的線上說明。
+
+    若要取得 Cmdlet 的說明，請輸入：
+
+        Get-Help <Cmdlet-name>
+
+    若要取得線上說明，請輸入：
+
+        Get-Help <Cmdlet-name> -Online
+
+    概念性主題的標題會以 "About_" 為開頭。
+    若要取得概念或語言項目的說明，請輸入：
+
+        Get-Help About_<topic-name>
+
+    若要搜尋所有說明檔中的字詞或片語，請輸入：
+
+        Get-Help <search-term>
+
+    如需關於 Get-Help Cmdlet 的詳細資訊，請輸入：
+
+        Get-Help Get-Help -Online
+
+    或移至： http://go.microsoft.com/fwlink/?LinkID=113316
+
+
+  範例：
+      Save-Help              ：從網際網路下載說明檔，並將它們
+                               儲存於檔案共用上。
+      Update-Help              ：從網際網路或檔案共用下載並安裝
+                               說明檔。
+      Get-Help Get-Process   ：顯示關於 Get-Process Cmdlet 的說明。
+      Get-Help Get-Process -Online
+                             ： 開啟 Get-Process Cmdlet 的線上說明。                         
+      Help Get-Process       ：一次在一個頁面上顯示 Get-Process 的說明。
+      Get-Process -?         ：顯示關於 Get-Process Cmdlet 的說明。
+      Get-Help About_Modules ：顯示關於 Windows PowerShell 模組的說明。
+      Get-Help remoting      ： 利用字詞 "remoting" 來搜尋說明主題。
+
+  另請參閱：
+      about_Updatable_Help
+      Get-Help
+      Save-Help
+      Update-Help
+PS C:\windows\system32> Y
+```
+下達指令 Get-Command -Type Cmdlet
+```
+PS C:\windows\system32> Get-Command -Type Cmdlet
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
 Cmdlet          Add-AppvClientConnectionGroup                      1.0.0.0    AppvClient
 Cmdlet          Add-AppvClientPackage                              1.0.0.0    AppvClient
 Cmdlet          Add-AppvPublishingServer                           1.0.0.0    AppvClient
@@ -1891,16 +2006,16 @@ Cmdlet          Add-AppxProvisionedPackage                         3.0        Di
 Cmdlet          Add-AppxVolume                                     2.0.1.0    Appx
 Cmdlet          Add-BitsFile                                       2.0.0.0    BitsTransfer
 Cmdlet          Add-CertificateEnrollmentPolicyServer              1.0.0.0    PKI
-Cmdlet          Add-Computer                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Add-Content                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Add-History                                        3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Add-Computer                                       3.1.0.0    Microsoft.P...
+Cmdlet          Add-Content                                        3.1.0.0    Microsoft.P...
+Cmdlet          Add-History                                        3.0.0.0    Microsoft.P...
 Cmdlet          Add-JobTrigger                                     1.1.0.0    PSScheduledJob
 Cmdlet          Add-KdsRootKey                                     1.0.0.0    Kds
-Cmdlet          Add-LocalGroupMember                               1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Add-Member                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Add-PSSnapin                                       3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Add-LocalGroupMember                               1.0.0.0    Microsoft.P...
+Cmdlet          Add-Member                                         3.1.0.0    Microsoft.P...
+Cmdlet          Add-PSSnapin                                       3.0.0.0    Microsoft.P...
 Cmdlet          Add-SignerRule                                     1.0        ConfigCI
-Cmdlet          Add-Type                                           3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Add-Type                                           3.1.0.0    Microsoft.P...
 Cmdlet          Add-VMAssignableDevice                             2.0.0.0    Hyper-V
 Cmdlet          Add-VMDvdDrive                                     2.0.0.0    Hyper-V
 Cmdlet          Add-VMFibreChannelHba                              2.0.0.0    Hyper-V
@@ -1926,70 +2041,70 @@ Cmdlet          Add-WindowsCapability                              3.0        Di
 Cmdlet          Add-WindowsDriver                                  3.0        Dism
 Cmdlet          Add-WindowsImage                                   3.0        Dism
 Cmdlet          Add-WindowsPackage                                 3.0        Dism
-Cmdlet          Checkpoint-Computer                                3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Checkpoint-Computer                                3.1.0.0    Microsoft.P...
 Cmdlet          Checkpoint-VM                                      2.0.0.0    Hyper-V
-Cmdlet          Clear-Content                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Clear-EventLog                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Clear-History                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Clear-Item                                         3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Clear-ItemProperty                                 3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Clear-Content                                      3.1.0.0    Microsoft.P...
+Cmdlet          Clear-EventLog                                     3.1.0.0    Microsoft.P...
+Cmdlet          Clear-History                                      3.0.0.0    Microsoft.P...
+Cmdlet          Clear-Item                                         3.1.0.0    Microsoft.P...
+Cmdlet          Clear-ItemProperty                                 3.1.0.0    Microsoft.P...
 Cmdlet          Clear-KdsCache                                     1.0.0.0    Kds
-Cmdlet          Clear-RecycleBin                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Clear-Tpm                                          2.0.0.0    TrustedPlatformModule
+Cmdlet          Clear-RecycleBin                                   3.1.0.0    Microsoft.P...
+Cmdlet          Clear-Tpm                                          2.0.0.0    TrustedPlat...
 Cmdlet          Clear-UevAppxPackage                               2.1.639.0  UEV
 Cmdlet          Clear-UevConfiguration                             2.1.639.0  UEV
-Cmdlet          Clear-Variable                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Clear-Variable                                     3.1.0.0    Microsoft.P...
 Cmdlet          Clear-WindowsCorruptMountPoint                     3.0        Dism
-Cmdlet          Compare-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Compare-Object                                     3.1.0.0    Microsoft.P...
 Cmdlet          Compare-VM                                         2.0.0.0    Hyper-V
 Cmdlet          Complete-BitsTransfer                              2.0.0.0    BitsTransfer
 Cmdlet          Complete-DtcDiagnosticTransaction                  1.0.0.0    MsDtc
-Cmdlet          Complete-Transaction                               3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Complete-Transaction                               3.1.0.0    Microsoft.P...
 Cmdlet          Complete-VMFailover                                2.0.0.0    Hyper-V
 Cmdlet          Confirm-SecureBootUEFI                             2.0.0.0    SecureBoot
-Cmdlet          Connect-PSSession                                  3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Connect-PSSession                                  3.0.0.0    Microsoft.P...
 Cmdlet          Connect-VMNetworkAdapter                           2.0.0.0    Hyper-V
 Cmdlet          Connect-VMSan                                      2.0.0.0    Hyper-V
-Cmdlet          Connect-WSMan                                      3.0.0.0    Microsoft.WSMan.Management
+Cmdlet          Connect-WSMan                                      3.0.0.0    Microsoft.W...
 Cmdlet          ConvertFrom-CIPolicy                               1.0        ConfigCI
-Cmdlet          ConvertFrom-Csv                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertFrom-Json                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertFrom-SecureString                           3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          ConvertFrom-String                                 3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertFrom-StringData                             3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Convert-Path                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Convert-String                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertTo-Csv                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertTo-Html                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertTo-Json                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertTo-ProcessMitigationPolicy                  1.0.11     ProcessMitigations
-Cmdlet          ConvertTo-SecureString                             3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          ConvertTo-TpmOwnerAuth                             2.0.0.0    TrustedPlatformModule
-Cmdlet          ConvertTo-Xml                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          ConvertFrom-Csv                                    3.1.0.0    Microsoft.P...
+Cmdlet          ConvertFrom-Json                                   3.1.0.0    Microsoft.P...
+Cmdlet          ConvertFrom-SecureString                           3.0.0.0    Microsoft.P...
+Cmdlet          ConvertFrom-String                                 3.1.0.0    Microsoft.P...
+Cmdlet          ConvertFrom-StringData                             3.1.0.0    Microsoft.P...
+Cmdlet          Convert-Path                                       3.1.0.0    Microsoft.P...
+Cmdlet          Convert-String                                     3.1.0.0    Microsoft.P...
+Cmdlet          ConvertTo-Csv                                      3.1.0.0    Microsoft.P...
+Cmdlet          ConvertTo-Html                                     3.1.0.0    Microsoft.P...
+Cmdlet          ConvertTo-Json                                     3.1.0.0    Microsoft.P...
+Cmdlet          ConvertTo-ProcessMitigationPolicy                  1.0.11     ProcessMiti...
+Cmdlet          ConvertTo-SecureString                             3.0.0.0    Microsoft.P...
+Cmdlet          ConvertTo-TpmOwnerAuth                             2.0.0.0    TrustedPlat...
+Cmdlet          ConvertTo-Xml                                      3.1.0.0    Microsoft.P...
 Cmdlet          Convert-VHD                                        2.0.0.0    Hyper-V
-Cmdlet          Copy-Item                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Copy-ItemProperty                                  3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Copy-Item                                          3.1.0.0    Microsoft.P...
+Cmdlet          Copy-ItemProperty                                  3.1.0.0    Microsoft.P...
 Cmdlet          Copy-VMFile                                        2.0.0.0    Hyper-V
-Cmdlet          Debug-Job                                          3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Debug-Runspace                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Debug-Job                                          3.0.0.0    Microsoft.P...
+Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.P...
+Cmdlet          Debug-Runspace                                     3.1.0.0    Microsoft.P...
 Cmdlet          Debug-VM                                           2.0.0.0    Hyper-V
-Cmdlet          Delete-DeliveryOptimizationCache                   1.0.2.0    DeliveryOptimization
-Cmdlet          Disable-AppBackgroundTaskDiagnosticLog             1.0.0.0    AppBackgroundTask
+Cmdlet          Delete-DeliveryOptimizationCache                   1.0.2.0    DeliveryOpt...
+Cmdlet          Disable-AppBackgroundTaskDiagnosticLog             1.0.0.0    AppBackgrou...
 Cmdlet          Disable-Appv                                       1.0.0.0    AppvClient
 Cmdlet          Disable-AppvClientConnectionGroup                  1.0.0.0    AppvClient
-Cmdlet          Disable-ComputerRestore                            3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Disable-ComputerRestore                            3.1.0.0    Microsoft.P...
 Cmdlet          Disable-JobTrigger                                 1.1.0.0    PSScheduledJob
-Cmdlet          Disable-LocalUser                                  1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Disable-PSBreakpoint                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Disable-PSRemoting                                 3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Disable-PSSessionConfiguration                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Disable-RunspaceDebug                              3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Disable-LocalUser                                  1.0.0.0    Microsoft.P...
+Cmdlet          Disable-PSBreakpoint                               3.1.0.0    Microsoft.P...
+Cmdlet          Disable-PSRemoting                                 3.0.0.0    Microsoft.P...
+Cmdlet          Disable-PSSessionConfiguration                     3.0.0.0    Microsoft.P...
+Cmdlet          Disable-RunspaceDebug                              3.1.0.0    Microsoft.P...
 Cmdlet          Disable-ScheduledJob                               1.1.0.0    PSScheduledJob
 Cmdlet          Disable-TlsCipherSuite                             2.0.0.0    TLS
 Cmdlet          Disable-TlsEccCurve                                2.0.0.0    TLS
 Cmdlet          Disable-TlsSessionTicketKey                        2.0.0.0    TLS
-Cmdlet          Disable-TpmAutoProvisioning                        2.0.0.0    TrustedPlatformModule
+Cmdlet          Disable-TpmAutoProvisioning                        2.0.0.0    TrustedPlat...
 Cmdlet          Disable-Uev                                        2.1.639.0  UEV
 Cmdlet          Disable-UevAppxPackage                             2.1.639.0  UEV
 Cmdlet          Disable-UevTemplate                                2.1.639.0  UEV
@@ -2001,33 +2116,33 @@ Cmdlet          Disable-VMRemoteFXPhysicalVideoAdapter             2.0.0.0    Hy
 Cmdlet          Disable-VMResourceMetering                         2.0.0.0    Hyper-V
 Cmdlet          Disable-VMSwitchExtension                          2.0.0.0    Hyper-V
 Cmdlet          Disable-VMTPM                                      2.0.0.0    Hyper-V
-Cmdlet          Disable-WindowsErrorReporting                      1.0        WindowsErrorReporting
+Cmdlet          Disable-WindowsErrorReporting                      1.0        WindowsErro...
 Cmdlet          Disable-WindowsOptionalFeature                     3.0        Dism
-Cmdlet          Disable-WSManCredSSP                               3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Disconnect-PSSession                               3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Disable-WSManCredSSP                               3.0.0.0    Microsoft.W...
+Cmdlet          Disconnect-PSSession                               3.0.0.0    Microsoft.P...
 Cmdlet          Disconnect-VMNetworkAdapter                        2.0.0.0    Hyper-V
 Cmdlet          Disconnect-VMSan                                   2.0.0.0    Hyper-V
-Cmdlet          Disconnect-WSMan                                   3.0.0.0    Microsoft.WSMan.Management
+Cmdlet          Disconnect-WSMan                                   3.0.0.0    Microsoft.W...
 Cmdlet          Dismount-AppxVolume                                2.0.1.0    Appx
 Cmdlet          Dismount-VHD                                       2.0.0.0    Hyper-V
 Cmdlet          Dismount-VMHostAssignableDevice                    2.0.0.0    Hyper-V
 Cmdlet          Dismount-WindowsImage                              3.0        Dism
 Cmdlet          Edit-CIPolicyRule                                  1.0        ConfigCI
-Cmdlet          Enable-AppBackgroundTaskDiagnosticLog              1.0.0.0    AppBackgroundTask
+Cmdlet          Enable-AppBackgroundTaskDiagnosticLog              1.0.0.0    AppBackgrou...
 Cmdlet          Enable-Appv                                        1.0.0.0    AppvClient
 Cmdlet          Enable-AppvClientConnectionGroup                   1.0.0.0    AppvClient
-Cmdlet          Enable-ComputerRestore                             3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Enable-ComputerRestore                             3.1.0.0    Microsoft.P...
 Cmdlet          Enable-JobTrigger                                  1.1.0.0    PSScheduledJob
-Cmdlet          Enable-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Enable-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Enable-PSRemoting                                  3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Enable-PSSessionConfiguration                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Enable-RunspaceDebug                               3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Enable-LocalUser                                   1.0.0.0    Microsoft.P...
+Cmdlet          Enable-PSBreakpoint                                3.1.0.0    Microsoft.P...
+Cmdlet          Enable-PSRemoting                                  3.0.0.0    Microsoft.P...
+Cmdlet          Enable-PSSessionConfiguration                      3.0.0.0    Microsoft.P...
+Cmdlet          Enable-RunspaceDebug                               3.1.0.0    Microsoft.P...
 Cmdlet          Enable-ScheduledJob                                1.1.0.0    PSScheduledJob
 Cmdlet          Enable-TlsCipherSuite                              2.0.0.0    TLS
 Cmdlet          Enable-TlsEccCurve                                 2.0.0.0    TLS
 Cmdlet          Enable-TlsSessionTicketKey                         2.0.0.0    TLS
-Cmdlet          Enable-TpmAutoProvisioning                         2.0.0.0    TrustedPlatformModule
+Cmdlet          Enable-TpmAutoProvisioning                         2.0.0.0    TrustedPlat...
 Cmdlet          Enable-Uev                                         2.1.639.0  UEV
 Cmdlet          Enable-UevAppxPackage                              2.1.639.0  UEV
 Cmdlet          Enable-UevTemplate                                 2.1.639.0  UEV
@@ -2040,27 +2155,27 @@ Cmdlet          Enable-VMReplication                               2.0.0.0    Hy
 Cmdlet          Enable-VMResourceMetering                          2.0.0.0    Hyper-V
 Cmdlet          Enable-VMSwitchExtension                           2.0.0.0    Hyper-V
 Cmdlet          Enable-VMTPM                                       2.0.0.0    Hyper-V
-Cmdlet          Enable-WindowsErrorReporting                       1.0        WindowsErrorReporting
+Cmdlet          Enable-WindowsErrorReporting                       1.0        WindowsErro...
 Cmdlet          Enable-WindowsOptionalFeature                      3.0        Dism
-Cmdlet          Enable-WSManCredSSP                                3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Enter-PSHostProcess                                3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Enter-PSSession                                    3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Exit-PSHostProcess                                 3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Exit-PSSession                                     3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Enable-WSManCredSSP                                3.0.0.0    Microsoft.W...
+Cmdlet          Enter-PSHostProcess                                3.0.0.0    Microsoft.P...
+Cmdlet          Enter-PSSession                                    3.0.0.0    Microsoft.P...
+Cmdlet          Exit-PSHostProcess                                 3.0.0.0    Microsoft.P...
+Cmdlet          Exit-PSSession                                     3.0.0.0    Microsoft.P...
 Cmdlet          Expand-WindowsCustomDataImage                      3.0        Dism
 Cmdlet          Expand-WindowsImage                                3.0        Dism
-Cmdlet          Export-Alias                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Export-Alias                                       3.1.0.0    Microsoft.P...
 Cmdlet          Export-BinaryMiLog                                 1.0.0.0    CimCmdlets
 Cmdlet          Export-Certificate                                 1.0.0.0    PKI
-Cmdlet          Export-Clixml                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Export-Console                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Export-Counter                                     3.0.0.0    Microsoft.PowerShell.Diagnostics
-Cmdlet          Export-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Export-FormatData                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Export-ModuleMember                                3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Export-Clixml                                      3.1.0.0    Microsoft.P...
+Cmdlet          Export-Console                                     3.0.0.0    Microsoft.P...
+Cmdlet          Export-Counter                                     3.0.0.0    Microsoft.P...
+Cmdlet          Export-Csv                                         3.1.0.0    Microsoft.P...
+Cmdlet          Export-FormatData                                  3.1.0.0    Microsoft.P...
+Cmdlet          Export-ModuleMember                                3.0.0.0    Microsoft.P...
 Cmdlet          Export-PfxCertificate                              1.0.0.0    PKI
 Cmdlet          Export-ProvisioningPackage                         3.0        Provisioning
-Cmdlet          Export-PSSession                                   3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Export-PSSession                                   3.1.0.0    Microsoft.P...
 Cmdlet          Export-StartLayout                                 1.0.0.0    StartLayout
 Cmdlet          Export-StartLayoutEdgeAssets                       1.0.0.0    StartLayout
 Cmdlet          Export-TlsSessionTicketKey                         2.0.0.0    TLS
@@ -2072,16 +2187,16 @@ Cmdlet          Export-VMSnapshot                                  2.0.0.0    Hy
 Cmdlet          Export-WindowsCapabilitySource                     3.0        Dism
 Cmdlet          Export-WindowsDriver                               3.0        Dism
 Cmdlet          Export-WindowsImage                                3.0        Dism
-Cmdlet          Find-Package                                       1.0.0.1    PackageManagement
-Cmdlet          Find-PackageProvider                               1.0.0.1    PackageManagement
-Cmdlet          ForEach-Object                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Format-Custom                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Format-List                                        3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Find-Package                                       1.0.0.1    PackageMana...
+Cmdlet          Find-PackageProvider                               1.0.0.1    PackageMana...
+Cmdlet          ForEach-Object                                     3.0.0.0    Microsoft.P...
+Cmdlet          Format-Custom                                      3.1.0.0    Microsoft.P...
+Cmdlet          Format-List                                        3.1.0.0    Microsoft.P...
 Cmdlet          Format-SecureBootUEFI                              2.0.0.0    SecureBoot
-Cmdlet          Format-Table                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Format-Wide                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Acl                                            3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Get-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Format-Table                                       3.1.0.0    Microsoft.P...
+Cmdlet          Format-Wide                                        3.1.0.0    Microsoft.P...
+Cmdlet          Get-Acl                                            3.0.0.0    Microsoft.P...
+Cmdlet          Get-Alias                                          3.1.0.0    Microsoft.P...
 Cmdlet          Get-AppLockerFileInformation                       2.0.0.0    AppLocker
 Cmdlet          Get-AppLockerPolicy                                2.0.0.0    AppLocker
 Cmdlet          Get-AppvClientApplication                          1.0.0.0    AppvClient
@@ -2096,13 +2211,13 @@ Cmdlet          Get-AppxPackage                                    2.0.1.0    Ap
 Cmdlet          Get-AppxPackageManifest                            2.0.1.0    Appx
 Cmdlet          Get-AppxProvisionedPackage                         3.0        Dism
 Cmdlet          Get-AppxVolume                                     2.0.1.0    Appx
-Cmdlet          Get-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          Get-AuthenticodeSignature                          3.0.0.0    Microsoft.P...
 Cmdlet          Get-BitsTransfer                                   2.0.0.0    BitsTransfer
 Cmdlet          Get-Certificate                                    1.0.0.0    PKI
 Cmdlet          Get-CertificateAutoEnrollmentPolicy                1.0.0.0    PKI
 Cmdlet          Get-CertificateEnrollmentPolicyServer              1.0.0.0    PKI
 Cmdlet          Get-CertificateNotificationTask                    1.0.0.0    PKI
-Cmdlet          Get-ChildItem                                      3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Get-ChildItem                                      3.1.0.0    Microsoft.P...
 Cmdlet          Get-CimAssociatedInstance                          1.0.0.0    CimCmdlets
 Cmdlet          Get-CimClass                                       1.0.0.0    CimCmdlets
 Cmdlet          Get-CimInstance                                    1.0.0.0    CimCmdlets
@@ -2110,102 +2225,102 @@ Cmdlet          Get-CimSession                                     1.0.0.0    Ci
 Cmdlet          Get-CIPolicy                                       1.0        ConfigCI
 Cmdlet          Get-CIPolicyIdInfo                                 1.0        ConfigCI
 Cmdlet          Get-CIPolicyInfo                                   1.0        ConfigCI
-Cmdlet          Get-Clipboard                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-CmsMessage                                     3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Get-Command                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-ComputerInfo                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ComputerRestorePoint                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Content                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ControlPanelItem                               3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Counter                                        3.0.0.0    Microsoft.PowerShell.Diagnostics
-Cmdlet          Get-Credential                                     3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Get-Culture                                        3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Get-Clipboard                                      3.1.0.0    Microsoft.P...
+Cmdlet          Get-CmsMessage                                     3.0.0.0    Microsoft.P...
+Cmdlet          Get-Command                                        3.0.0.0    Microsoft.P...
+Cmdlet          Get-ComputerInfo                                   3.1.0.0    Microsoft.P...
+Cmdlet          Get-ComputerRestorePoint                           3.1.0.0    Microsoft.P...
+Cmdlet          Get-Content                                        3.1.0.0    Microsoft.P...
+Cmdlet          Get-ControlPanelItem                               3.1.0.0    Microsoft.P...
+Cmdlet          Get-Counter                                        3.0.0.0    Microsoft.P...
+Cmdlet          Get-Credential                                     3.0.0.0    Microsoft.P...
+Cmdlet          Get-Culture                                        3.1.0.0    Microsoft.P...
 Cmdlet          Get-DAPolicyChange                                 2.0.0.0    NetSecurity
-Cmdlet          Get-Date                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-DeliveryOptimizationLog                        1.0.2.0    DeliveryOptimization
-Cmdlet          Get-DeliveryOptimizationPerfSnap                   1.0.2.0    DeliveryOptimization
-Cmdlet          Get-DeliveryOptimizationPerfSnapThisMonth          1.0.2.0    DeliveryOptimization
-Cmdlet          Get-DeliveryOptimizationStatus                     1.0.2.0    DeliveryOptimization
-Cmdlet          Get-DOConfig                                       1.0.2.0    DeliveryOptimization
-Cmdlet          Get-DODownloadMode                                 1.0.2.0    DeliveryOptimization
-Cmdlet          Get-DOPercentageMaxBackgroundBandwidth             1.0.2.0    DeliveryOptimization
-Cmdlet          Get-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOptimization
-Cmdlet          Get-Event                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-EventLog                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-EventSubscriber                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-ExecutionPolicy                                3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Get-FormatData                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Help                                           3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Get-Date                                           3.1.0.0    Microsoft.P...
+Cmdlet          Get-DeliveryOptimizationLog                        1.0.2.0    DeliveryOpt...
+Cmdlet          Get-DeliveryOptimizationPerfSnap                   1.0.2.0    DeliveryOpt...
+Cmdlet          Get-DeliveryOptimizationPerfSnapThisMonth          1.0.2.0    DeliveryOpt...
+Cmdlet          Get-DeliveryOptimizationStatus                     1.0.2.0    DeliveryOpt...
+Cmdlet          Get-DOConfig                                       1.0.2.0    DeliveryOpt...
+Cmdlet          Get-DODownloadMode                                 1.0.2.0    DeliveryOpt...
+Cmdlet          Get-DOPercentageMaxBackgroundBandwidth             1.0.2.0    DeliveryOpt...
+Cmdlet          Get-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOpt...
+Cmdlet          Get-Event                                          3.1.0.0    Microsoft.P...
+Cmdlet          Get-EventLog                                       3.1.0.0    Microsoft.P...
+Cmdlet          Get-EventSubscriber                                3.1.0.0    Microsoft.P...
+Cmdlet          Get-ExecutionPolicy                                3.0.0.0    Microsoft.P...
+Cmdlet          Get-FormatData                                     3.1.0.0    Microsoft.P...
+Cmdlet          Get-Help                                           3.0.0.0    Microsoft.P...
 Cmdlet          Get-HgsAttestationBaselinePolicy                   1.0.0.0    HgsClient
 Cmdlet          Get-HgsTrace                                       1.0.0.0    HgsDiagnostics
 Cmdlet          Get-HgsTraceFileData                               1.0.0.0    HgsDiagnostics
-Cmdlet          Get-History                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-Host                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-HotFix                                         3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Item                                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ItemProperty                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ItemPropertyValue                              3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Job                                            3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Get-History                                        3.0.0.0    Microsoft.P...
+Cmdlet          Get-Host                                           3.1.0.0    Microsoft.P...
+Cmdlet          Get-HotFix                                         3.1.0.0    Microsoft.P...
+Cmdlet          Get-Item                                           3.1.0.0    Microsoft.P...
+Cmdlet          Get-ItemProperty                                   3.1.0.0    Microsoft.P...
+Cmdlet          Get-ItemPropertyValue                              3.1.0.0    Microsoft.P...
+Cmdlet          Get-Job                                            3.0.0.0    Microsoft.P...
 Cmdlet          Get-JobTrigger                                     1.1.0.0    PSScheduledJob
 Cmdlet          Get-KdsConfiguration                               1.0.0.0    Kds
 Cmdlet          Get-KdsRootKey                                     1.0.0.0    Kds
-Cmdlet          Get-LocalGroup                                     1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Get-LocalGroupMember                               1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Get-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Get-Location                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Member                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Module                                         3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Get-LocalGroup                                     1.0.0.0    Microsoft.P...
+Cmdlet          Get-LocalGroupMember                               1.0.0.0    Microsoft.P...
+Cmdlet          Get-LocalUser                                      1.0.0.0    Microsoft.P...
+Cmdlet          Get-Location                                       3.1.0.0    Microsoft.P...
+Cmdlet          Get-Member                                         3.1.0.0    Microsoft.P...
+Cmdlet          Get-Module                                         3.0.0.0    Microsoft.P...
 Cmdlet          Get-NonRemovableAppsPolicy                         3.0        Dism
-Cmdlet          Get-Package                                        1.0.0.1    PackageManagement
-Cmdlet          Get-PackageProvider                                1.0.0.1    PackageManagement
-Cmdlet          Get-PackageSource                                  1.0.0.1    PackageManagement
-Cmdlet          Get-PfxCertificate                                 3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          Get-Package                                        1.0.0.1    PackageMana...
+Cmdlet          Get-PackageProvider                                1.0.0.1    PackageMana...
+Cmdlet          Get-PackageSource                                  1.0.0.1    PackageMana...
+Cmdlet          Get-PfxCertificate                                 3.0.0.0    Microsoft.P...
 Cmdlet          Get-PfxData                                        1.0.0.0    PKI
-Cmdlet          Get-PmemDisk                                       1.0.0.0    PersistentMemory
-Cmdlet          Get-PmemPhysicalDevice                             1.0.0.0    PersistentMemory
-Cmdlet          Get-PmemUnusedRegion                               1.0.0.0    PersistentMemory
-Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ProcessMitigation                              1.0.11     ProcessMitigations
+Cmdlet          Get-PmemDisk                                       1.0.0.0    PersistentM...
+Cmdlet          Get-PmemPhysicalDevice                             1.0.0.0    PersistentM...
+Cmdlet          Get-PmemUnusedRegion                               1.0.0.0    PersistentM...
+Cmdlet          Get-Process                                        3.1.0.0    Microsoft.P...
+Cmdlet          Get-ProcessMitigation                              1.0.11     ProcessMiti...
 Cmdlet          Get-ProvisioningPackage                            3.0        Provisioning
-Cmdlet          Get-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-PSCallStack                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-PSDrive                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-PSHostProcessInfo                              3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSProvider                                     3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Get-PSBreakpoint                                   3.1.0.0    Microsoft.P...
+Cmdlet          Get-PSCallStack                                    3.1.0.0    Microsoft.P...
+Cmdlet          Get-PSDrive                                        3.1.0.0    Microsoft.P...
+Cmdlet          Get-PSHostProcessInfo                              3.0.0.0    Microsoft.P...
+Cmdlet          Get-PSProvider                                     3.1.0.0    Microsoft.P...
 Cmdlet          Get-PSReadLineKeyHandler                           2.0.0      PSReadline
 Cmdlet          Get-PSReadLineOption                               2.0.0      PSReadline
-Cmdlet          Get-PSSession                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSSessionCapability                            3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSSnapin                                       3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-Random                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Runspace                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-RunspaceDebug                                  3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Get-PSSession                                      3.0.0.0    Microsoft.P...
+Cmdlet          Get-PSSessionCapability                            3.0.0.0    Microsoft.P...
+Cmdlet          Get-PSSessionConfiguration                         3.0.0.0    Microsoft.P...
+Cmdlet          Get-PSSnapin                                       3.0.0.0    Microsoft.P...
+Cmdlet          Get-Random                                         3.1.0.0    Microsoft.P...
+Cmdlet          Get-Runspace                                       3.1.0.0    Microsoft.P...
+Cmdlet          Get-RunspaceDebug                                  3.1.0.0    Microsoft.P...
 Cmdlet          Get-ScheduledJob                                   1.1.0.0    PSScheduledJob
 Cmdlet          Get-ScheduledJobOption                             1.1.0.0    PSScheduledJob
 Cmdlet          Get-SecureBootPolicy                               2.0.0.0    SecureBoot
 Cmdlet          Get-SecureBootUEFI                                 2.0.0.0    SecureBoot
-Cmdlet          Get-Service                                        3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Get-Service                                        3.1.0.0    Microsoft.P...
 Cmdlet          Get-SystemDriver                                   1.0        ConfigCI
-Cmdlet          Get-TimeZone                                       3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Get-TimeZone                                       3.1.0.0    Microsoft.P...
 Cmdlet          Get-TlsCipherSuite                                 2.0.0.0    TLS
 Cmdlet          Get-TlsEccCurve                                    2.0.0.0    TLS
-Cmdlet          Get-Tpm                                            2.0.0.0    TrustedPlatformModule
-Cmdlet          Get-TpmEndorsementKeyInfo                          2.0.0.0    TrustedPlatformModule
-Cmdlet          Get-TpmSupportedFeature                            2.0.0.0    TrustedPlatformModule
-Cmdlet          Get-TraceSource                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Transaction                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-TroubleshootingPack                            1.0.0.0    TroubleshootingPack
+Cmdlet          Get-Tpm                                            2.0.0.0    TrustedPlat...
+Cmdlet          Get-TpmEndorsementKeyInfo                          2.0.0.0    TrustedPlat...
+Cmdlet          Get-TpmSupportedFeature                            2.0.0.0    TrustedPlat...
+Cmdlet          Get-TraceSource                                    3.1.0.0    Microsoft.P...
+Cmdlet          Get-Transaction                                    3.1.0.0    Microsoft.P...
+Cmdlet          Get-TroubleshootingPack                            1.0.0.0    Troubleshoo...
 Cmdlet          Get-TrustedProvisioningCertificate                 3.0        Provisioning
-Cmdlet          Get-TypeData                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Get-TypeData                                       3.1.0.0    Microsoft.P...
 Cmdlet          Get-UevAppxPackage                                 2.1.639.0  UEV
 Cmdlet          Get-UevConfiguration                               2.1.639.0  UEV
 Cmdlet          Get-UevStatus                                      2.1.639.0  UEV
 Cmdlet          Get-UevTemplate                                    2.1.639.0  UEV
 Cmdlet          Get-UevTemplateProgram                             2.1.639.0  UEV
-Cmdlet          Get-UICulture                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Unique                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Variable                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Get-UICulture                                      3.1.0.0    Microsoft.P...
+Cmdlet          Get-Unique                                         3.1.0.0    Microsoft.P...
+Cmdlet          Get-Variable                                       3.1.0.0    Microsoft.P...
 Cmdlet          Get-VHD                                            2.0.0.0    Hyper-V
 Cmdlet          Get-VHDSet                                         2.0.0.0    Hyper-V
 Cmdlet          Get-VHDSnapshot                                    2.0.0.0    Hyper-V
@@ -2274,65 +2389,65 @@ Cmdlet          Get-WinAcceptLanguageFromLanguageListOptOut        2.0.0.0    In
 Cmdlet          Get-WinCultureFromLanguageListOptOut               2.0.0.0    International
 Cmdlet          Get-WinDefaultInputMethodOverride                  2.0.0.0    International
 Cmdlet          Get-WindowsCapability                              3.0        Dism
-Cmdlet          Get-WindowsDeveloperLicense                        1.0.0.0    WindowsDeveloperLicense
+Cmdlet          Get-WindowsDeveloperLicense                        1.0.0.0    WindowsDeve...
 Cmdlet          Get-WindowsDriver                                  3.0        Dism
 Cmdlet          Get-WindowsEdition                                 3.0        Dism
-Cmdlet          Get-WindowsErrorReporting                          1.0        WindowsErrorReporting
+Cmdlet          Get-WindowsErrorReporting                          1.0        WindowsErro...
 Cmdlet          Get-WindowsImage                                   3.0        Dism
 Cmdlet          Get-WindowsImageContent                            3.0        Dism
 Cmdlet          Get-WindowsOptionalFeature                         3.0        Dism
 Cmdlet          Get-WindowsPackage                                 3.0        Dism
 Cmdlet          Get-WindowsSearchSetting                           1.0.0.0    WindowsSearch
-Cmdlet          Get-WinEvent                                       3.0.0.0    Microsoft.PowerShell.Diagnostics
+Cmdlet          Get-WinEvent                                       3.0.0.0    Microsoft.P...
 Cmdlet          Get-WinHomeLocation                                2.0.0.0    International
 Cmdlet          Get-WinLanguageBarOption                           2.0.0.0    International
 Cmdlet          Get-WinSystemLocale                                2.0.0.0    International
 Cmdlet          Get-WinUILanguageOverride                          2.0.0.0    International
 Cmdlet          Get-WinUserLanguageList                            2.0.0.0    International
-Cmdlet          Get-WmiObject                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-WSManCredSSP                                   3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Get-WSManInstance                                  3.0.0.0    Microsoft.WSMan.Management
+Cmdlet          Get-WmiObject                                      3.1.0.0    Microsoft.P...
+Cmdlet          Get-WSManCredSSP                                   3.0.0.0    Microsoft.W...
+Cmdlet          Get-WSManInstance                                  3.0.0.0    Microsoft.W...
 Cmdlet          Grant-VMConnectAccess                              2.0.0.0    Hyper-V
-Cmdlet          Group-Object                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Import-Alias                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Group-Object                                       3.1.0.0    Microsoft.P...
+Cmdlet          Import-Alias                                       3.1.0.0    Microsoft.P...
 Cmdlet          Import-BinaryMiLog                                 1.0.0.0    CimCmdlets
 Cmdlet          Import-Certificate                                 1.0.0.0    PKI
-Cmdlet          Import-Clixml                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Import-Counter                                     3.0.0.0    Microsoft.PowerShell.Diagnostics
-Cmdlet          Import-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Import-LocalizedData                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Import-Module                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Import-PackageProvider                             1.0.0.1    PackageManagement
+Cmdlet          Import-Clixml                                      3.1.0.0    Microsoft.P...
+Cmdlet          Import-Counter                                     3.0.0.0    Microsoft.P...
+Cmdlet          Import-Csv                                         3.1.0.0    Microsoft.P...
+Cmdlet          Import-LocalizedData                               3.1.0.0    Microsoft.P...
+Cmdlet          Import-Module                                      3.0.0.0    Microsoft.P...
+Cmdlet          Import-PackageProvider                             1.0.0.1    PackageMana...
 Cmdlet          Import-PfxCertificate                              1.0.0.0    PKI
-Cmdlet          Import-PSSession                                   3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Import-PSSession                                   3.1.0.0    Microsoft.P...
 Cmdlet          Import-StartLayout                                 1.0.0.0    StartLayout
-Cmdlet          Import-TpmOwnerAuth                                2.0.0.0    TrustedPlatformModule
+Cmdlet          Import-TpmOwnerAuth                                2.0.0.0    TrustedPlat...
 Cmdlet          Import-UevConfiguration                            2.1.639.0  UEV
 Cmdlet          Import-VM                                          2.0.0.0    Hyper-V
 Cmdlet          Import-VMInitialReplication                        2.0.0.0    Hyper-V
-Cmdlet          Initialize-PmemPhysicalDevice                      1.0.0.0    PersistentMemory
-Cmdlet          Initialize-Tpm                                     2.0.0.0    TrustedPlatformModule
-Cmdlet          Install-Package                                    1.0.0.1    PackageManagement
-Cmdlet          Install-PackageProvider                            1.0.0.1    PackageManagement
+Cmdlet          Initialize-PmemPhysicalDevice                      1.0.0.0    PersistentM...
+Cmdlet          Initialize-Tpm                                     2.0.0.0    TrustedPlat...
+Cmdlet          Install-Package                                    1.0.0.1    PackageMana...
+Cmdlet          Install-PackageProvider                            1.0.0.1    PackageMana...
 Cmdlet          Install-ProvisioningPackage                        3.0        Provisioning
 Cmdlet          Install-TrustedProvisioningCertificate             3.0        Provisioning
 Cmdlet          Invoke-CimMethod                                   1.0.0.0    CimCmdlets
-Cmdlet          Invoke-Command                                     3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Invoke-Command                                     3.0.0.0    Microsoft.P...
 Cmdlet          Invoke-CommandInDesktopPackage                     2.0.1.0    Appx
-Cmdlet          Invoke-DscResource                                 1.1        PSDesiredStateConfiguration
-Cmdlet          Invoke-Expression                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Invoke-History                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Invoke-Item                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Invoke-RestMethod                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Invoke-TroubleshootingPack                         1.0.0.0    TroubleshootingPack
-Cmdlet          Invoke-WebRequest                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Invoke-WmiMethod                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Invoke-WSManAction                                 3.0.0.0    Microsoft.WSMan.Management
+Cmdlet          Invoke-DscResource                                 1.1        PSDesiredSt...
+Cmdlet          Invoke-Expression                                  3.1.0.0    Microsoft.P...
+Cmdlet          Invoke-History                                     3.0.0.0    Microsoft.P...
+Cmdlet          Invoke-Item                                        3.1.0.0    Microsoft.P...
+Cmdlet          Invoke-RestMethod                                  3.1.0.0    Microsoft.P...
+Cmdlet          Invoke-TroubleshootingPack                         1.0.0.0    Troubleshoo...
+Cmdlet          Invoke-WebRequest                                  3.1.0.0    Microsoft.P...
+Cmdlet          Invoke-WmiMethod                                   3.1.0.0    Microsoft.P...
+Cmdlet          Invoke-WSManAction                                 3.0.0.0    Microsoft.W...
 Cmdlet          Join-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
-Cmdlet          Join-Path                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Limit-EventLog                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Measure-Command                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Measure-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Join-Path                                          3.1.0.0    Microsoft.P...
+Cmdlet          Limit-EventLog                                     3.1.0.0    Microsoft.P...
+Cmdlet          Measure-Command                                    3.1.0.0    Microsoft.P...
+Cmdlet          Measure-Object                                     3.1.0.0    Microsoft.P...
 Cmdlet          Measure-VM                                         2.0.0.0    Hyper-V
 Cmdlet          Measure-VMReplication                              2.0.0.0    Hyper-V
 Cmdlet          Measure-VMResourcePool                             2.0.0.0    Hyper-V
@@ -2345,11 +2460,11 @@ Cmdlet          Mount-VHD                                          2.0.0.0    Hy
 Cmdlet          Mount-VMHostAssignableDevice                       2.0.0.0    Hyper-V
 Cmdlet          Mount-WindowsImage                                 3.0        Dism
 Cmdlet          Move-AppxPackage                                   2.0.1.0    Appx
-Cmdlet          Move-Item                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Move-ItemProperty                                  3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Move-Item                                          3.1.0.0    Microsoft.P...
+Cmdlet          Move-ItemProperty                                  3.1.0.0    Microsoft.P...
 Cmdlet          Move-VM                                            2.0.0.0    Hyper-V
 Cmdlet          Move-VMStorage                                     2.0.0.0    Hyper-V
-Cmdlet          New-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-Alias                                          3.1.0.0    Microsoft.P...
 Cmdlet          New-AppLockerPolicy                                2.0.0.0    AppLocker
 Cmdlet          New-CertificateNotificationTask                    1.0.0.0    PKI
 Cmdlet          New-CimInstance                                    1.0.0.0    CimCmdlets
@@ -2358,36 +2473,36 @@ Cmdlet          New-CimSessionOption                               1.0.0.0    Ci
 Cmdlet          New-CIPolicy                                       1.0        ConfigCI
 Cmdlet          New-CIPolicyRule                                   1.0        ConfigCI
 Cmdlet          New-DtcDiagnosticTransaction                       1.0.0.0    MsDtc
-Cmdlet          New-Event                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-EventLog                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-FileCatalog                                    3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          New-Event                                          3.1.0.0    Microsoft.P...
+Cmdlet          New-EventLog                                       3.1.0.0    Microsoft.P...
+Cmdlet          New-FileCatalog                                    3.0.0.0    Microsoft.P...
 Cmdlet          New-HgsTraceTarget                                 1.0.0.0    HgsDiagnostics
-Cmdlet          New-Item                                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-ItemProperty                                   3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          New-Item                                           3.1.0.0    Microsoft.P...
+Cmdlet          New-ItemProperty                                   3.1.0.0    Microsoft.P...
 Cmdlet          New-JobTrigger                                     1.1.0.0    PSScheduledJob
-Cmdlet          New-LocalGroup                                     1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          New-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          New-Module                                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-ModuleManifest                                 3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-LocalGroup                                     1.0.0.0    Microsoft.P...
+Cmdlet          New-LocalUser                                      1.0.0.0    Microsoft.P...
+Cmdlet          New-Module                                         3.0.0.0    Microsoft.P...
+Cmdlet          New-ModuleManifest                                 3.0.0.0    Microsoft.P...
 Cmdlet          New-NetIPsecAuthProposal                           2.0.0.0    NetSecurity
 Cmdlet          New-NetIPsecMainModeCryptoProposal                 2.0.0.0    NetSecurity
 Cmdlet          New-NetIPsecQuickModeCryptoProposal                2.0.0.0    NetSecurity
-Cmdlet          New-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-PmemDisk                                       1.0.0.0    PersistentMemory
+Cmdlet          New-Object                                         3.1.0.0    Microsoft.P...
+Cmdlet          New-PmemDisk                                       1.0.0.0    PersistentM...
 Cmdlet          New-ProvisioningRepro                              3.0        Provisioning
-Cmdlet          New-PSDrive                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-PSRoleCapabilityFile                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSSession                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSSessionConfigurationFile                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSSessionOption                                3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSTransportOption                              3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-PSDrive                                        3.1.0.0    Microsoft.P...
+Cmdlet          New-PSRoleCapabilityFile                           3.0.0.0    Microsoft.P...
+Cmdlet          New-PSSession                                      3.0.0.0    Microsoft.P...
+Cmdlet          New-PSSessionConfigurationFile                     3.0.0.0    Microsoft.P...
+Cmdlet          New-PSSessionOption                                3.0.0.0    Microsoft.P...
+Cmdlet          New-PSTransportOption                              3.0.0.0    Microsoft.P...
 Cmdlet          New-PSWorkflowExecutionOption                      2.0.0.0    PSWorkflow
 Cmdlet          New-ScheduledJobOption                             1.1.0.0    PSScheduledJob
 Cmdlet          New-SelfSignedCertificate                          1.0.0.0    PKI
-Cmdlet          New-Service                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-TimeSpan                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-Service                                        3.1.0.0    Microsoft.P...
+Cmdlet          New-TimeSpan                                       3.1.0.0    Microsoft.P...
 Cmdlet          New-TlsSessionTicketKey                            2.0.0.0    TLS
-Cmdlet          New-Variable                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-Variable                                       3.1.0.0    Microsoft.P...
 Cmdlet          New-VFD                                            2.0.0.0    Hyper-V
 Cmdlet          New-VHD                                            2.0.0.0    Hyper-V
 Cmdlet          New-VM                                             2.0.0.0    Hyper-V
@@ -2396,42 +2511,42 @@ Cmdlet          New-VMReplicationAuthorizationEntry                2.0.0.0    Hy
 Cmdlet          New-VMResourcePool                                 2.0.0.0    Hyper-V
 Cmdlet          New-VMSan                                          2.0.0.0    Hyper-V
 Cmdlet          New-VMSwitch                                       2.0.0.0    Hyper-V
-Cmdlet          New-WebServiceProxy                                3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          New-WebServiceProxy                                3.1.0.0    Microsoft.P...
 Cmdlet          New-WindowsCustomImage                             3.0        Dism
 Cmdlet          New-WindowsImage                                   3.0        Dism
-Cmdlet          New-WinEvent                                       3.0.0.0    Microsoft.PowerShell.Diagnostics
+Cmdlet          New-WinEvent                                       3.0.0.0    Microsoft.P...
 Cmdlet          New-WinUserLanguageList                            2.0.0.0    International
-Cmdlet          New-WSManInstance                                  3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          New-WSManSessionOption                             3.0.0.0    Microsoft.WSMan.Management
+Cmdlet          New-WSManInstance                                  3.0.0.0    Microsoft.W...
+Cmdlet          New-WSManSessionOption                             3.0.0.0    Microsoft.W...
 Cmdlet          Optimize-AppxProvisionedPackages                   3.0        Dism
 Cmdlet          Optimize-VHD                                       2.0.0.0    Hyper-V
 Cmdlet          Optimize-VHDSet                                    2.0.0.0    Hyper-V
 Cmdlet          Optimize-WindowsImage                              3.0        Dism
-Cmdlet          Out-Default                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Out-File                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-GridView                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-Host                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Out-Null                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Out-Printer                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-String                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Pop-Location                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Protect-CmsMessage                                 3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          Out-Default                                        3.0.0.0    Microsoft.P...
+Cmdlet          Out-File                                           3.1.0.0    Microsoft.P...
+Cmdlet          Out-GridView                                       3.1.0.0    Microsoft.P...
+Cmdlet          Out-Host                                           3.0.0.0    Microsoft.P...
+Cmdlet          Out-Null                                           3.0.0.0    Microsoft.P...
+Cmdlet          Out-Printer                                        3.1.0.0    Microsoft.P...
+Cmdlet          Out-String                                         3.1.0.0    Microsoft.P...
+Cmdlet          Pop-Location                                       3.1.0.0    Microsoft.P...
+Cmdlet          Protect-CmsMessage                                 3.0.0.0    Microsoft.P...
 Cmdlet          Publish-AppvClientPackage                          1.0.0.0    AppvClient
-Cmdlet          Publish-DscConfiguration                           1.1        PSDesiredStateConfiguration
-Cmdlet          Push-Location                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Read-Host                                          3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Publish-DscConfiguration                           1.1        PSDesiredSt...
+Cmdlet          Push-Location                                      3.1.0.0    Microsoft.P...
+Cmdlet          Read-Host                                          3.1.0.0    Microsoft.P...
 Cmdlet          Receive-DtcDiagnosticTransaction                   1.0.0.0    MsDtc
-Cmdlet          Receive-Job                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Receive-PSSession                                  3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Register-ArgumentCompleter                         3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Receive-Job                                        3.0.0.0    Microsoft.P...
+Cmdlet          Receive-PSSession                                  3.0.0.0    Microsoft.P...
+Cmdlet          Register-ArgumentCompleter                         3.0.0.0    Microsoft.P...
 Cmdlet          Register-CimIndicationEvent                        1.0.0.0    CimCmdlets
-Cmdlet          Register-EngineEvent                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Register-ObjectEvent                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Register-PackageSource                             1.0.0.1    PackageManagement
-Cmdlet          Register-PSSessionConfiguration                    3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Register-EngineEvent                               3.1.0.0    Microsoft.P...
+Cmdlet          Register-ObjectEvent                               3.1.0.0    Microsoft.P...
+Cmdlet          Register-PackageSource                             1.0.0.1    PackageMana...
+Cmdlet          Register-PSSessionConfiguration                    3.0.0.0    Microsoft.P...
 Cmdlet          Register-ScheduledJob                              1.1.0.0    PSScheduledJob
 Cmdlet          Register-UevTemplate                               2.1.639.0  UEV
-Cmdlet          Register-WmiEvent                                  3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Register-WmiEvent                                  3.1.0.0    Microsoft.P...
 Cmdlet          Remove-AppvClientConnectionGroup                   1.0.0.0    AppvClient
 Cmdlet          Remove-AppvClientPackage                           1.0.0.0    AppvClient
 Cmdlet          Remove-AppvPublishingServer                        1.0.0.0    AppvClient
@@ -2444,25 +2559,25 @@ Cmdlet          Remove-CertificateNotificationTask                 1.0.0.0    PK
 Cmdlet          Remove-CimInstance                                 1.0.0.0    CimCmdlets
 Cmdlet          Remove-CimSession                                  1.0.0.0    CimCmdlets
 Cmdlet          Remove-CIPolicyRule                                1.0        ConfigCI
-Cmdlet          Remove-Computer                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-Event                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-EventLog                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-Item                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-ItemProperty                                3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-Job                                         3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Remove-Computer                                    3.1.0.0    Microsoft.P...
+Cmdlet          Remove-Event                                       3.1.0.0    Microsoft.P...
+Cmdlet          Remove-EventLog                                    3.1.0.0    Microsoft.P...
+Cmdlet          Remove-Item                                        3.1.0.0    Microsoft.P...
+Cmdlet          Remove-ItemProperty                                3.1.0.0    Microsoft.P...
+Cmdlet          Remove-Job                                         3.0.0.0    Microsoft.P...
 Cmdlet          Remove-JobTrigger                                  1.1.0.0    PSScheduledJob
-Cmdlet          Remove-LocalGroup                                  1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Remove-LocalGroupMember                            1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Remove-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Remove-Module                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Remove-PmemDisk                                    1.0.0.0    PersistentMemory
-Cmdlet          Remove-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-PSDrive                                     3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Remove-LocalGroup                                  1.0.0.0    Microsoft.P...
+Cmdlet          Remove-LocalGroupMember                            1.0.0.0    Microsoft.P...
+Cmdlet          Remove-LocalUser                                   1.0.0.0    Microsoft.P...
+Cmdlet          Remove-Module                                      3.0.0.0    Microsoft.P...
+Cmdlet          Remove-PmemDisk                                    1.0.0.0    PersistentM...
+Cmdlet          Remove-PSBreakpoint                                3.1.0.0    Microsoft.P...
+Cmdlet          Remove-PSDrive                                     3.1.0.0    Microsoft.P...
 Cmdlet          Remove-PSReadLineKeyHandler                        2.0.0      PSReadline
-Cmdlet          Remove-PSSession                                   3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Remove-PSSnapin                                    3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Remove-TypeData                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-Variable                                    3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Remove-PSSession                                   3.0.0.0    Microsoft.P...
+Cmdlet          Remove-PSSnapin                                    3.0.0.0    Microsoft.P...
+Cmdlet          Remove-TypeData                                    3.1.0.0    Microsoft.P...
+Cmdlet          Remove-Variable                                    3.1.0.0    Microsoft.P...
 Cmdlet          Remove-VHDSnapshot                                 2.0.0.0    Hyper-V
 Cmdlet          Remove-VM                                          2.0.0.0    Hyper-V
 Cmdlet          Remove-VMAssignableDevice                          2.0.0.0    Hyper-V
@@ -2498,13 +2613,13 @@ Cmdlet          Remove-WindowsCapability                           3.0        Di
 Cmdlet          Remove-WindowsDriver                               3.0        Dism
 Cmdlet          Remove-WindowsImage                                3.0        Dism
 Cmdlet          Remove-WindowsPackage                              3.0        Dism
-Cmdlet          Remove-WmiObject                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-WSManInstance                               3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Rename-Computer                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Rename-Item                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Rename-ItemProperty                                3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Rename-LocalGroup                                  1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Rename-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Remove-WmiObject                                   3.1.0.0    Microsoft.P...
+Cmdlet          Remove-WSManInstance                               3.0.0.0    Microsoft.W...
+Cmdlet          Rename-Computer                                    3.1.0.0    Microsoft.P...
+Cmdlet          Rename-Item                                        3.1.0.0    Microsoft.P...
+Cmdlet          Rename-ItemProperty                                3.1.0.0    Microsoft.P...
+Cmdlet          Rename-LocalGroup                                  1.0.0.0    Microsoft.P...
+Cmdlet          Rename-LocalUser                                   1.0.0.0    Microsoft.P...
 Cmdlet          Rename-VM                                          2.0.0.0    Hyper-V
 Cmdlet          Rename-VMGroup                                     2.0.0.0    Hyper-V
 Cmdlet          Rename-VMNetworkAdapter                            2.0.0.0    Hyper-V
@@ -2517,39 +2632,39 @@ Cmdlet          Repair-AppvClientPackage                           1.0.0.0    Ap
 Cmdlet          Repair-UevTemplateIndex                            2.1.639.0  UEV
 Cmdlet          Repair-VM                                          2.0.0.0    Hyper-V
 Cmdlet          Repair-WindowsImage                                3.0        Dism
-Cmdlet          Reset-ComputerMachinePassword                      3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Reset-ComputerMachinePassword                      3.1.0.0    Microsoft.P...
 Cmdlet          Reset-VMReplicationStatistics                      2.0.0.0    Hyper-V
 Cmdlet          Reset-VMResourceMetering                           2.0.0.0    Hyper-V
 Cmdlet          Resize-VHD                                         2.0.0.0    Hyper-V
 Cmdlet          Resolve-DnsName                                    1.0.0.0    DnsClient
-Cmdlet          Resolve-Path                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Restart-Computer                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Restart-Service                                    3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Resolve-Path                                       3.1.0.0    Microsoft.P...
+Cmdlet          Restart-Computer                                   3.1.0.0    Microsoft.P...
+Cmdlet          Restart-Service                                    3.1.0.0    Microsoft.P...
 Cmdlet          Restart-VM                                         2.0.0.0    Hyper-V
-Cmdlet          Restore-Computer                                   3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Restore-Computer                                   3.1.0.0    Microsoft.P...
 Cmdlet          Restore-UevBackup                                  2.1.639.0  UEV
 Cmdlet          Restore-UevUserSetting                             2.1.639.0  UEV
 Cmdlet          Restore-VMSnapshot                                 2.0.0.0    Hyper-V
 Cmdlet          Resume-BitsTransfer                                2.0.0.0    BitsTransfer
-Cmdlet          Resume-Job                                         3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Resume-Job                                         3.0.0.0    Microsoft.P...
 Cmdlet          Resume-ProvisioningSession                         3.0        Provisioning
-Cmdlet          Resume-Service                                     3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Resume-Service                                     3.1.0.0    Microsoft.P...
 Cmdlet          Resume-VM                                          2.0.0.0    Hyper-V
 Cmdlet          Resume-VMReplication                               2.0.0.0    Hyper-V
 Cmdlet          Revoke-VMConnectAccess                             2.0.0.0    Hyper-V
-Cmdlet          Save-Help                                          3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Save-Package                                       1.0.0.1    PackageManagement
+Cmdlet          Save-Help                                          3.0.0.0    Microsoft.P...
+Cmdlet          Save-Package                                       1.0.0.1    PackageMana...
 Cmdlet          Save-VM                                            2.0.0.0    Hyper-V
 Cmdlet          Save-WindowsImage                                  3.0        Dism
-Cmdlet          Select-Object                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Select-String                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Select-Xml                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Select-Object                                      3.1.0.0    Microsoft.P...
+Cmdlet          Select-String                                      3.1.0.0    Microsoft.P...
+Cmdlet          Select-Xml                                         3.1.0.0    Microsoft.P...
 Cmdlet          Send-AppvClientReport                              1.0.0.0    AppvClient
 Cmdlet          Send-DtcDiagnosticTransaction                      1.0.0.0    MsDtc
-Cmdlet          Send-MailMessage                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-Acl                                            3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Set-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-AppBackgroundTaskResourcePolicy                1.0.0.0    AppBackgroundTask
+Cmdlet          Send-MailMessage                                   3.1.0.0    Microsoft.P...
+Cmdlet          Set-Acl                                            3.0.0.0    Microsoft.P...
+Cmdlet          Set-Alias                                          3.1.0.0    Microsoft.P...
+Cmdlet          Set-AppBackgroundTaskResourcePolicy                1.0.0.0    AppBackgrou...
 Cmdlet          Set-AppLockerPolicy                                2.0.0.0    AppLocker
 Cmdlet          Set-AppvClientConfiguration                        1.0.0.0    AppvClient
 Cmdlet          Set-AppvClientMode                                 1.0.0.0    AppvClient
@@ -2557,51 +2672,51 @@ Cmdlet          Set-AppvClientPackage                              1.0.0.0    Ap
 Cmdlet          Set-AppvPublishingServer                           1.0.0.0    AppvClient
 Cmdlet          Set-AppxDefaultVolume                              2.0.1.0    Appx
 Cmdlet          Set-AppXProvisionedDataFile                        3.0        Dism
-Cmdlet          Set-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          Set-AuthenticodeSignature                          3.0.0.0    Microsoft.P...
 Cmdlet          Set-BitsTransfer                                   2.0.0.0    BitsTransfer
 Cmdlet          Set-CertificateAutoEnrollmentPolicy                1.0.0.0    PKI
 Cmdlet          Set-CimInstance                                    1.0.0.0    CimCmdlets
 Cmdlet          Set-CIPolicyIdInfo                                 1.0        ConfigCI
 Cmdlet          Set-CIPolicySetting                                1.0        ConfigCI
 Cmdlet          Set-CIPolicyVersion                                1.0        ConfigCI
-Cmdlet          Set-Clipboard                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-Content                                        3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Set-Clipboard                                      3.1.0.0    Microsoft.P...
+Cmdlet          Set-Content                                        3.1.0.0    Microsoft.P...
 Cmdlet          Set-Culture                                        2.0.0.0    International
-Cmdlet          Set-Date                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-DeliveryOptimizationStatus                     1.0.2.0    DeliveryOptimization
-Cmdlet          Set-DODownloadMode                                 1.0.2.0    DeliveryOptimization
-Cmdlet          Set-DOPercentageMaxBackgroundBandwidth             1.0.2.0    DeliveryOptimization
-Cmdlet          Set-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOptimization
-Cmdlet          Set-DscLocalConfigurationManager                   1.1        PSDesiredStateConfiguration
-Cmdlet          Set-ExecutionPolicy                                3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          Set-Date                                           3.1.0.0    Microsoft.P...
+Cmdlet          Set-DeliveryOptimizationStatus                     1.0.2.0    DeliveryOpt...
+Cmdlet          Set-DODownloadMode                                 1.0.2.0    DeliveryOpt...
+Cmdlet          Set-DOPercentageMaxBackgroundBandwidth             1.0.2.0    DeliveryOpt...
+Cmdlet          Set-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOpt...
+Cmdlet          Set-DscLocalConfigurationManager                   1.1        PSDesiredSt...
+Cmdlet          Set-ExecutionPolicy                                3.0.0.0    Microsoft.P...
 Cmdlet          Set-HVCIOptions                                    1.0        ConfigCI
-Cmdlet          Set-Item                                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-ItemProperty                                   3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Set-Item                                           3.1.0.0    Microsoft.P...
+Cmdlet          Set-ItemProperty                                   3.1.0.0    Microsoft.P...
 Cmdlet          Set-JobTrigger                                     1.1.0.0    PSScheduledJob
 Cmdlet          Set-KdsConfiguration                               1.0.0.0    Kds
-Cmdlet          Set-LocalGroup                                     1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Set-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAccounts
-Cmdlet          Set-Location                                       3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Set-LocalGroup                                     1.0.0.0    Microsoft.P...
+Cmdlet          Set-LocalUser                                      1.0.0.0    Microsoft.P...
+Cmdlet          Set-Location                                       3.1.0.0    Microsoft.P...
 Cmdlet          Set-NonRemovableAppsPolicy                         3.0        Dism
-Cmdlet          Set-PackageSource                                  1.0.0.1    PackageManagement
-Cmdlet          Set-ProcessMitigation                              1.0.11     ProcessMitigations
-Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-PSDebug                                        3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Set-PackageSource                                  1.0.0.1    PackageMana...
+Cmdlet          Set-ProcessMitigation                              1.0.11     ProcessMiti...
+Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.P...
+Cmdlet          Set-PSDebug                                        3.0.0.0    Microsoft.P...
 Cmdlet          Set-PSReadLineKeyHandler                           2.0.0      PSReadline
 Cmdlet          Set-PSReadLineOption                               2.0.0      PSReadline
-Cmdlet          Set-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Set-PSSessionConfiguration                         3.0.0.0    Microsoft.P...
 Cmdlet          Set-RuleOption                                     1.0        ConfigCI
 Cmdlet          Set-ScheduledJob                                   1.1.0.0    PSScheduledJob
 Cmdlet          Set-ScheduledJobOption                             1.1.0.0    PSScheduledJob
 Cmdlet          Set-SecureBootUEFI                                 2.0.0.0    SecureBoot
-Cmdlet          Set-Service                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-StrictMode                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Set-TimeZone                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-TpmOwnerAuth                                   2.0.0.0    TrustedPlatformModule
-Cmdlet          Set-TraceSource                                    3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Set-Service                                        3.1.0.0    Microsoft.P...
+Cmdlet          Set-StrictMode                                     3.0.0.0    Microsoft.P...
+Cmdlet          Set-TimeZone                                       3.1.0.0    Microsoft.P...
+Cmdlet          Set-TpmOwnerAuth                                   2.0.0.0    TrustedPlat...
+Cmdlet          Set-TraceSource                                    3.1.0.0    Microsoft.P...
 Cmdlet          Set-UevConfiguration                               2.1.639.0  UEV
 Cmdlet          Set-UevTemplateProfile                             2.1.639.0  UEV
-Cmdlet          Set-Variable                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Set-Variable                                       3.1.0.0    Microsoft.P...
 Cmdlet          Set-VHD                                            2.0.0.0    Hyper-V
 Cmdlet          Set-VM                                             2.0.0.0    Hyper-V
 Cmdlet          Set-VMBios                                         2.0.0.0    Hyper-V
@@ -2653,117 +2768,996 @@ Cmdlet          Set-WinLanguageBarOption                           2.0.0.0    In
 Cmdlet          Set-WinSystemLocale                                2.0.0.0    International
 Cmdlet          Set-WinUILanguageOverride                          2.0.0.0    International
 Cmdlet          Set-WinUserLanguageList                            2.0.0.0    International
-Cmdlet          Set-WmiInstance                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-WSManInstance                                  3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Set-WSManQuickConfig                               3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Show-Command                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Show-ControlPanelItem                              3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Show-EventLog                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Show-WindowsDeveloperLicenseRegistration           1.0.0.0    WindowsDeveloperLicense
-Cmdlet          Sort-Object                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Split-Path                                         3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Set-WmiInstance                                    3.1.0.0    Microsoft.P...
+Cmdlet          Set-WSManInstance                                  3.0.0.0    Microsoft.W...
+Cmdlet          Set-WSManQuickConfig                               3.0.0.0    Microsoft.W...
+Cmdlet          Show-Command                                       3.1.0.0    Microsoft.P...
+Cmdlet          Show-ControlPanelItem                              3.1.0.0    Microsoft.P...
+Cmdlet          Show-EventLog                                      3.1.0.0    Microsoft.P...
+Cmdlet          Show-WindowsDeveloperLicenseRegistration           1.0.0.0    WindowsDeve...
+Cmdlet          Sort-Object                                        3.1.0.0    Microsoft.P...
+Cmdlet          Split-Path                                         3.1.0.0    Microsoft.P...
 Cmdlet          Split-WindowsImage                                 3.0        Dism
 Cmdlet          Start-BitsTransfer                                 2.0.0.0    BitsTransfer
-Cmdlet          Start-DscConfiguration                             1.1        PSDesiredStateConfiguration
+Cmdlet          Start-DscConfiguration                             1.1        PSDesiredSt...
 Cmdlet          Start-DtcDiagnosticResourceManager                 1.0.0.0    MsDtc
-Cmdlet          Start-Job                                          3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Start-Job                                          3.0.0.0    Microsoft.P...
 Cmdlet          Start-OSUninstall                                  3.0        Dism
-Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Service                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Sleep                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Start-Transaction                                  3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Transcript                                   3.0.0.0    Microsoft.PowerShell.Host
+Cmdlet          Start-Process                                      3.1.0.0    Microsoft.P...
+Cmdlet          Start-Service                                      3.1.0.0    Microsoft.P...
+Cmdlet          Start-Sleep                                        3.1.0.0    Microsoft.P...
+Cmdlet          Start-Transaction                                  3.1.0.0    Microsoft.P...
+Cmdlet          Start-Transcript                                   3.0.0.0    Microsoft.P...
 Cmdlet          Start-VM                                           2.0.0.0    Hyper-V
 Cmdlet          Start-VMFailover                                   2.0.0.0    Hyper-V
 Cmdlet          Start-VMInitialReplication                         2.0.0.0    Hyper-V
 Cmdlet          Start-VMTrace                                      2.0.0.0    Hyper-V
 Cmdlet          Stop-AppvClientConnectionGroup                     1.0.0.0    AppvClient
 Cmdlet          Stop-AppvClientPackage                             1.0.0.0    AppvClient
-Cmdlet          Stop-Computer                                      3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Stop-Computer                                      3.1.0.0    Microsoft.P...
 Cmdlet          Stop-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
-Cmdlet          Stop-Job                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Stop-Service                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Stop-Transcript                                    3.0.0.0    Microsoft.PowerShell.Host
+Cmdlet          Stop-Job                                           3.0.0.0    Microsoft.P...
+Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.P...
+Cmdlet          Stop-Service                                       3.1.0.0    Microsoft.P...
+Cmdlet          Stop-Transcript                                    3.0.0.0    Microsoft.P...
 Cmdlet          Stop-VM                                            2.0.0.0    Hyper-V
 Cmdlet          Stop-VMFailover                                    2.0.0.0    Hyper-V
 Cmdlet          Stop-VMInitialReplication                          2.0.0.0    Hyper-V
 Cmdlet          Stop-VMReplication                                 2.0.0.0    Hyper-V
 Cmdlet          Stop-VMTrace                                       2.0.0.0    Hyper-V
 Cmdlet          Suspend-BitsTransfer                               2.0.0.0    BitsTransfer
-Cmdlet          Suspend-Job                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Suspend-Service                                    3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Suspend-Job                                        3.0.0.0    Microsoft.P...
+Cmdlet          Suspend-Service                                    3.1.0.0    Microsoft.P...
 Cmdlet          Suspend-VM                                         2.0.0.0    Hyper-V
 Cmdlet          Suspend-VMReplication                              2.0.0.0    Hyper-V
 Cmdlet          Switch-Certificate                                 1.0.0.0    PKI
 Cmdlet          Sync-AppvPublishingServer                          1.0.0.0    AppvClient
-Cmdlet          Tee-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Tee-Object                                         3.1.0.0    Microsoft.P...
 Cmdlet          Test-AppLockerPolicy                               2.0.0.0    AppLocker
 Cmdlet          Test-Certificate                                   1.0.0.0    PKI
-Cmdlet          Test-ComputerSecureChannel                         3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Test-Connection                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Test-DscConfiguration                              1.1        PSDesiredStateConfiguration
-Cmdlet          Test-FileCatalog                                   3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          Test-ComputerSecureChannel                         3.1.0.0    Microsoft.P...
+Cmdlet          Test-Connection                                    3.1.0.0    Microsoft.P...
+Cmdlet          Test-DscConfiguration                              1.1        PSDesiredSt...
+Cmdlet          Test-FileCatalog                                   3.0.0.0    Microsoft.P...
 Cmdlet          Test-HgsTraceTarget                                1.0.0.0    HgsDiagnostics
 Cmdlet          Test-KdsRootKey                                    1.0.0.0    Kds
-Cmdlet          Test-ModuleManifest                                3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Test-Path                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Test-PSSessionConfigurationFile                    3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Test-ModuleManifest                                3.0.0.0    Microsoft.P...
+Cmdlet          Test-Path                                          3.1.0.0    Microsoft.P...
+Cmdlet          Test-PSSessionConfigurationFile                    3.0.0.0    Microsoft.P...
 Cmdlet          Test-UevTemplate                                   2.1.639.0  UEV
 Cmdlet          Test-VHD                                           2.0.0.0    Hyper-V
 Cmdlet          Test-VMNetworkAdapter                              2.0.0.0    Hyper-V
 Cmdlet          Test-VMReplicationConnection                       2.0.0.0    Hyper-V
-Cmdlet          Test-WSMan                                         3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Trace-Command                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Unblock-File                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Unblock-Tpm                                        2.0.0.0    TrustedPlatformModule
+Cmdlet          Test-WSMan                                         3.0.0.0    Microsoft.W...
+Cmdlet          Trace-Command                                      3.1.0.0    Microsoft.P...
+Cmdlet          Unblock-File                                       3.1.0.0    Microsoft.P...
+Cmdlet          Unblock-Tpm                                        2.0.0.0    TrustedPlat...
 Cmdlet          Undo-DtcDiagnosticTransaction                      1.0.0.0    MsDtc
-Cmdlet          Undo-Transaction                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Uninstall-Package                                  1.0.0.1    PackageManagement
+Cmdlet          Undo-Transaction                                   3.1.0.0    Microsoft.P...
+Cmdlet          Uninstall-Package                                  1.0.0.1    PackageMana...
 Cmdlet          Uninstall-ProvisioningPackage                      3.0        Provisioning
 Cmdlet          Uninstall-TrustedProvisioningCertificate           3.0        Provisioning
-Cmdlet          Unprotect-CmsMessage                               3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          Unprotect-CmsMessage                               3.0.0.0    Microsoft.P...
 Cmdlet          Unpublish-AppvClientPackage                        1.0.0.0    AppvClient
-Cmdlet          Unregister-Event                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Unregister-PackageSource                           1.0.0.1    PackageManagement
-Cmdlet          Unregister-PSSessionConfiguration                  3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Unregister-Event                                   3.1.0.0    Microsoft.P...
+Cmdlet          Unregister-PackageSource                           1.0.0.1    PackageMana...
+Cmdlet          Unregister-PSSessionConfiguration                  3.0.0.0    Microsoft.P...
 Cmdlet          Unregister-ScheduledJob                            1.1.0.0    PSScheduledJob
 Cmdlet          Unregister-UevTemplate                             2.1.639.0  UEV
-Cmdlet          Unregister-WindowsDeveloperLicense                 1.0.0.0    WindowsDeveloperLicense
-Cmdlet          Update-FormatData                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Update-Help                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Update-List                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Update-TypeData                                    3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Unregister-WindowsDeveloperLicense                 1.0.0.0    WindowsDeve...
+Cmdlet          Update-FormatData                                  3.1.0.0    Microsoft.P...
+Cmdlet          Update-Help                                        3.0.0.0    Microsoft.P...
+Cmdlet          Update-List                                        3.1.0.0    Microsoft.P...
+Cmdlet          Update-TypeData                                    3.1.0.0    Microsoft.P...
 Cmdlet          Update-UevTemplate                                 2.1.639.0  UEV
 Cmdlet          Update-VMVersion                                   2.0.0.0    Hyper-V
 Cmdlet          Update-WIMBootEntry                                3.0        Dism
-Cmdlet          Use-Transaction                                    3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Use-Transaction                                    3.1.0.0    Microsoft.P...
 Cmdlet          Use-WindowsUnattend                                3.0        Dism
-Cmdlet          Wait-Debugger                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Wait-Event                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Wait-Job                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Wait-Debugger                                      3.1.0.0    Microsoft.P...
+Cmdlet          Wait-Event                                         3.1.0.0    Microsoft.P...
+Cmdlet          Wait-Job                                           3.0.0.0    Microsoft.P...
+Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.P...
 Cmdlet          Wait-VM                                            2.0.0.0    Hyper-V
-Cmdlet          Where-Object                                       3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Write-Debug                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Error                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-EventLog                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Write-Host                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Information                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Output                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Progress                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Verbose                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Warning                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Where-Object                                       3.0.0.0    Microsoft.P...
+Cmdlet          Write-Debug                                        3.1.0.0    Microsoft.P...
+Cmdlet          Write-Error                                        3.1.0.0    Microsoft.P...
+Cmdlet          Write-EventLog                                     3.1.0.0    Microsoft.P...
+Cmdlet          Write-Host                                         3.1.0.0    Microsoft.P...
+Cmdlet          Write-Information                                  3.1.0.0    Microsoft.P...
+Cmdlet          Write-Output                                       3.1.0.0    Microsoft.P...
+Cmdlet          Write-Progress                                     3.1.0.0    Microsoft.P...
+Cmdlet          Write-Verbose                                      3.1.0.0    Microsoft.P...
+Cmdlet          Write-Warning                                      3.1.0.0    Microsoft.P...
 ```
-Get-Command -Type Cmdlet | Sort-Object -Property Noun
+下達指令Get-Command -Type Cmdlet
 ```
-Cmdlet          Get-Acl                                            3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Set-Acl                                            3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Import-Alias                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Export-Alias                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Add-AppvClientConnectionGroup                      1.0.0.0    AppvClient
+Cmdlet          Add-AppvClientPackage                              1.0.0.0    AppvClient
+Cmdlet          Add-AppvPublishingServer                           1.0.0.0    AppvClient
+Cmdlet          Add-AppxPackage                                    2.0.1.0    Appx
+Cmdlet          Add-AppxProvisionedPackage                         3.0        Dism
+Cmdlet          Add-AppxVolume                                     2.0.1.0    Appx
+Cmdlet          Add-BitsFile                                       2.0.0.0    BitsTransfer
+Cmdlet          Add-CertificateEnrollmentPolicyServer              1.0.0.0    PKI
+Cmdlet          Add-Computer                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Add-Content                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Add-History                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Add-JobTrigger                                     1.1.0.0    PSScheduledJob
+Cmdlet          Add-KdsRootKey                                     1.0.0.0    Kds
+Cmdlet          Add-LocalGroupMember                               1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Add-Member                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Add-PSSnapin                                       3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Add-SignerRule                                     1.0        ConfigCI
+Cmdlet          Add-Type                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Add-VMAssignableDevice                             2.0.0.0    Hyper-V
+Cmdlet          Add-VMDvdDrive                                     2.0.0.0    Hyper-V
+Cmdlet          Add-VMFibreChannelHba                              2.0.0.0    Hyper-V
+Cmdlet          Add-VMGpuPartitionAdapter                          2.0.0.0    Hyper-V
+Cmdlet          Add-VMGroupMember                                  2.0.0.0    Hyper-V
+Cmdlet          Add-VMHardDiskDrive                                2.0.0.0    Hyper-V
+Cmdlet          Add-VMHostAssignableDevice                         2.0.0.0    Hyper-V
+Cmdlet          Add-VMKeyStorageDrive                              2.0.0.0    Hyper-V
+Cmdlet          Add-VMMigrationNetwork                             2.0.0.0    Hyper-V
+Cmdlet          Add-VMNetworkAdapter                               2.0.0.0    Hyper-V
+Cmdlet          Add-VMNetworkAdapterAcl                            2.0.0.0    Hyper-V
+Cmdlet          Add-VMNetworkAdapterExtendedAcl                    2.0.0.0    Hyper-V
+Cmdlet          Add-VMNetworkAdapterRoutingDomainMapping           2.0.0.0    Hyper-V
+Cmdlet          Add-VMPmemController                               2.0.0.0    Hyper-V
+Cmdlet          Add-VMRemoteFx3dVideoAdapter                       2.0.0.0    Hyper-V
+Cmdlet          Add-VMScsiController                               2.0.0.0    Hyper-V
+Cmdlet          Add-VMStoragePath                                  2.0.0.0    Hyper-V
+Cmdlet          Add-VMSwitch                                       2.0.0.0    Hyper-V
+Cmdlet          Add-VMSwitchExtensionPortFeature                   2.0.0.0    Hyper-V
+Cmdlet          Add-VMSwitchExtensionSwitchFeature                 2.0.0.0    Hyper-V
+Cmdlet          Add-VMSwitchTeamMember                             2.0.0.0    Hyper-V
+Cmdlet          Add-WindowsCapability                              3.0        Dism
+Cmdlet          Add-WindowsDriver                                  3.0        Dism
+Cmdlet          Add-WindowsImage                                   3.0        Dism
+Cmdlet          Add-WindowsPackage                                 3.0        Dism
+Cmdlet          Checkpoint-Computer                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Checkpoint-VM                                      2.0.0.0    Hyper-V
+Cmdlet          Clear-Content                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-EventLog                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-History                                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-Item                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-ItemProperty                                 3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-KdsCache                                     1.0.0.0    Kds
+Cmdlet          Clear-RecycleBin                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-Tpm                                          2.0.0.0    TrustedPlatformMo...
+Cmdlet          Clear-UevAppxPackage                               2.1.639.0  UEV
+Cmdlet          Clear-UevConfiguration                             2.1.639.0  UEV
+Cmdlet          Clear-Variable                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-WindowsCorruptMountPoint                     3.0        Dism
+Cmdlet          Compare-Object                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Compare-VM                                         2.0.0.0    Hyper-V
+Cmdlet          Complete-BitsTransfer                              2.0.0.0    BitsTransfer
+Cmdlet          Complete-DtcDiagnosticTransaction                  1.0.0.0    MsDtc
+Cmdlet          Complete-Transaction                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Complete-VMFailover                                2.0.0.0    Hyper-V
+Cmdlet          Confirm-SecureBootUEFI                             2.0.0.0    SecureBoot
+Cmdlet          Connect-PSSession                                  3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Connect-VMNetworkAdapter                           2.0.0.0    Hyper-V
+Cmdlet          Connect-VMSan                                      2.0.0.0    Hyper-V
+Cmdlet          Connect-WSMan                                      3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          ConvertFrom-CIPolicy                               1.0        ConfigCI
+Cmdlet          ConvertFrom-Csv                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertFrom-Json                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertFrom-SecureString                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertFrom-String                                 3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertFrom-StringData                             3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Convert-Path                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Convert-String                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertTo-Csv                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertTo-Html                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertTo-Json                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertTo-ProcessMitigationPolicy                  1.0.11     ProcessMitigations
+Cmdlet          ConvertTo-SecureString                             3.0.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertTo-TpmOwnerAuth                             2.0.0.0    TrustedPlatformMo...
+Cmdlet          ConvertTo-Xml                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Convert-VHD                                        2.0.0.0    Hyper-V
+Cmdlet          Copy-Item                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Copy-ItemProperty                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Copy-VMFile                                        2.0.0.0    Hyper-V
+Cmdlet          Debug-Job                                          3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Debug-Runspace                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Debug-VM                                           2.0.0.0    Hyper-V
+Cmdlet          Delete-DeliveryOptimizationCache                   1.0.2.0    DeliveryOptimization
+Cmdlet          Disable-AppBackgroundTaskDiagnosticLog             1.0.0.0    AppBackgroundTask
+Cmdlet          Disable-Appv                                       1.0.0.0    AppvClient
+Cmdlet          Disable-AppvClientConnectionGroup                  1.0.0.0    AppvClient
+Cmdlet          Disable-ComputerRestore                            3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-JobTrigger                                 1.1.0.0    PSScheduledJob
+Cmdlet          Disable-LocalUser                                  1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-PSBreakpoint                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-PSRemoting                                 3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-PSSessionConfiguration                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-RunspaceDebug                              3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-ScheduledJob                               1.1.0.0    PSScheduledJob
+Cmdlet          Disable-TlsCipherSuite                             2.0.0.0    TLS
+Cmdlet          Disable-TlsEccCurve                                2.0.0.0    TLS
+Cmdlet          Disable-TlsSessionTicketKey                        2.0.0.0    TLS
+Cmdlet          Disable-TpmAutoProvisioning                        2.0.0.0    TrustedPlatformMo...
+Cmdlet          Disable-Uev                                        2.1.639.0  UEV
+Cmdlet          Disable-UevAppxPackage                             2.1.639.0  UEV
+Cmdlet          Disable-UevTemplate                                2.1.639.0  UEV
+Cmdlet          Disable-VMConsoleSupport                           2.0.0.0    Hyper-V
+Cmdlet          Disable-VMEventing                                 2.0.0.0    Hyper-V
+Cmdlet          Disable-VMIntegrationService                       2.0.0.0    Hyper-V
+Cmdlet          Disable-VMMigration                                2.0.0.0    Hyper-V
+Cmdlet          Disable-VMRemoteFXPhysicalVideoAdapter             2.0.0.0    Hyper-V
+Cmdlet          Disable-VMResourceMetering                         2.0.0.0    Hyper-V
+Cmdlet          Disable-VMSwitchExtension                          2.0.0.0    Hyper-V
+Cmdlet          Disable-VMTPM                                      2.0.0.0    Hyper-V
+Cmdlet          Disable-WindowsErrorReporting                      1.0        WindowsErrorRepor...
+Cmdlet          Disable-WindowsOptionalFeature                     3.0        Dism
+Cmdlet          Disable-WSManCredSSP                               3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Disconnect-PSSession                               3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Disconnect-VMNetworkAdapter                        2.0.0.0    Hyper-V
+Cmdlet          Disconnect-VMSan                                   2.0.0.0    Hyper-V
+Cmdlet          Disconnect-WSMan                                   3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Dismount-AppxVolume                                2.0.1.0    Appx
+Cmdlet          Dismount-VHD                                       2.0.0.0    Hyper-V
+Cmdlet          Dismount-VMHostAssignableDevice                    2.0.0.0    Hyper-V
+Cmdlet          Dismount-WindowsImage                              3.0        Dism
+Cmdlet          Edit-CIPolicyRule                                  1.0        ConfigCI
+Cmdlet          Enable-AppBackgroundTaskDiagnosticLog              1.0.0.0    AppBackgroundTask
+Cmdlet          Enable-Appv                                        1.0.0.0    AppvClient
+Cmdlet          Enable-AppvClientConnectionGroup                   1.0.0.0    AppvClient
+Cmdlet          Enable-ComputerRestore                             3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-JobTrigger                                  1.1.0.0    PSScheduledJob
+Cmdlet          Enable-LocalUser                                   1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-PSBreakpoint                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-PSRemoting                                  3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-PSSessionConfiguration                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-RunspaceDebug                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-ScheduledJob                                1.1.0.0    PSScheduledJob
+Cmdlet          Enable-TlsCipherSuite                              2.0.0.0    TLS
+Cmdlet          Enable-TlsEccCurve                                 2.0.0.0    TLS
+Cmdlet          Enable-TlsSessionTicketKey                         2.0.0.0    TLS
+Cmdlet          Enable-TpmAutoProvisioning                         2.0.0.0    TrustedPlatformMo...
+Cmdlet          Enable-Uev                                         2.1.639.0  UEV
+Cmdlet          Enable-UevAppxPackage                              2.1.639.0  UEV
+Cmdlet          Enable-UevTemplate                                 2.1.639.0  UEV
+Cmdlet          Enable-VMConsoleSupport                            2.0.0.0    Hyper-V
+Cmdlet          Enable-VMEventing                                  2.0.0.0    Hyper-V
+Cmdlet          Enable-VMIntegrationService                        2.0.0.0    Hyper-V
+Cmdlet          Enable-VMMigration                                 2.0.0.0    Hyper-V
+Cmdlet          Enable-VMRemoteFXPhysicalVideoAdapter              2.0.0.0    Hyper-V
+Cmdlet          Enable-VMReplication                               2.0.0.0    Hyper-V
+Cmdlet          Enable-VMResourceMetering                          2.0.0.0    Hyper-V
+Cmdlet          Enable-VMSwitchExtension                           2.0.0.0    Hyper-V
+Cmdlet          Enable-VMTPM                                       2.0.0.0    Hyper-V
+Cmdlet          Enable-WindowsErrorReporting                       1.0        WindowsErrorRepor...
+Cmdlet          Enable-WindowsOptionalFeature                      3.0        Dism
+Cmdlet          Enable-WSManCredSSP                                3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Enter-PSHostProcess                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Enter-PSSession                                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Exit-PSHostProcess                                 3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Exit-PSSession                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Expand-WindowsCustomDataImage                      3.0        Dism
+Cmdlet          Expand-WindowsImage                                3.0        Dism
+Cmdlet          Export-Alias                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-BinaryMiLog                                 1.0.0.0    CimCmdlets
+Cmdlet          Export-Certificate                                 1.0.0.0    PKI
+Cmdlet          Export-Clixml                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-Console                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Export-Counter                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Export-Csv                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-FormatData                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-ModuleMember                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Export-PfxCertificate                              1.0.0.0    PKI
+Cmdlet          Export-ProvisioningPackage                         3.0        Provisioning
+Cmdlet          Export-PSSession                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-StartLayout                                 1.0.0.0    StartLayout
+Cmdlet          Export-StartLayoutEdgeAssets                       1.0.0.0    StartLayout
+Cmdlet          Export-TlsSessionTicketKey                         2.0.0.0    TLS
+Cmdlet          Export-Trace                                       3.0        Provisioning
+Cmdlet          Export-UevConfiguration                            2.1.639.0  UEV
+Cmdlet          Export-UevPackage                                  2.1.639.0  UEV
+Cmdlet          Export-VM                                          2.0.0.0    Hyper-V
+Cmdlet          Export-VMSnapshot                                  2.0.0.0    Hyper-V
+Cmdlet          Export-WindowsCapabilitySource                     3.0        Dism
+Cmdlet          Export-WindowsDriver                               3.0        Dism
+Cmdlet          Export-WindowsImage                                3.0        Dism
+Cmdlet          Find-Package                                       1.0.0.1    PackageManagement
+Cmdlet          Find-PackageProvider                               1.0.0.1    PackageManagement
+Cmdlet          ForEach-Object                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Format-Custom                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Format-List                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Format-SecureBootUEFI                              2.0.0.0    SecureBoot
+Cmdlet          Format-Table                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Format-Wide                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Acl                                            3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Alias                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-AppLockerFileInformation                       2.0.0.0    AppLocker
+Cmdlet          Get-AppLockerPolicy                                2.0.0.0    AppLocker
+Cmdlet          Get-AppvClientApplication                          1.0.0.0    AppvClient
+Cmdlet          Get-AppvClientConfiguration                        1.0.0.0    AppvClient
+Cmdlet          Get-AppvClientConnectionGroup                      1.0.0.0    AppvClient
+Cmdlet          Get-AppvClientMode                                 1.0.0.0    AppvClient
+Cmdlet          Get-AppvClientPackage                              1.0.0.0    AppvClient
+Cmdlet          Get-AppvPublishingServer                           1.0.0.0    AppvClient
+Cmdlet          Get-AppvStatus                                     1.0.0.0    AppvClient
+Cmdlet          Get-AppxDefaultVolume                              2.0.1.0    Appx
+Cmdlet          Get-AppxPackage                                    2.0.1.0    Appx
+Cmdlet          Get-AppxPackageManifest                            2.0.1.0    Appx
+Cmdlet          Get-AppxProvisionedPackage                         3.0        Dism
+Cmdlet          Get-AppxVolume                                     2.0.1.0    Appx
+Cmdlet          Get-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-BitsTransfer                                   2.0.0.0    BitsTransfer
+Cmdlet          Get-Certificate                                    1.0.0.0    PKI
+Cmdlet          Get-CertificateAutoEnrollmentPolicy                1.0.0.0    PKI
+Cmdlet          Get-CertificateEnrollmentPolicyServer              1.0.0.0    PKI
+Cmdlet          Get-CertificateNotificationTask                    1.0.0.0    PKI
+Cmdlet          Get-ChildItem                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-CimAssociatedInstance                          1.0.0.0    CimCmdlets
+Cmdlet          Get-CimClass                                       1.0.0.0    CimCmdlets
+Cmdlet          Get-CimInstance                                    1.0.0.0    CimCmdlets
+Cmdlet          Get-CimSession                                     1.0.0.0    CimCmdlets
+Cmdlet          Get-CIPolicy                                       1.0        ConfigCI
+Cmdlet          Get-CIPolicyIdInfo                                 1.0        ConfigCI
+Cmdlet          Get-CIPolicyInfo                                   1.0        ConfigCI
+Cmdlet          Get-Clipboard                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-CmsMessage                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Command                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ComputerInfo                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ComputerRestorePoint                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Content                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ControlPanelItem                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Counter                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Credential                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Culture                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-DAPolicyChange                                 2.0.0.0    NetSecurity
+Cmdlet          Get-Date                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-DeliveryOptimizationLog                        1.0.2.0    DeliveryOptimization
+Cmdlet          Get-DeliveryOptimizationPerfSnap                   1.0.2.0    DeliveryOptimization
+Cmdlet          Get-DeliveryOptimizationPerfSnapThisMonth          1.0.2.0    DeliveryOptimization
+Cmdlet          Get-DeliveryOptimizationStatus                     1.0.2.0    DeliveryOptimization
+Cmdlet          Get-DOConfig                                       1.0.2.0    DeliveryOptimization
+Cmdlet          Get-DODownloadMode                                 1.0.2.0    DeliveryOptimization
+Cmdlet          Get-DOPercentageMaxBackgroundBandwidth             1.0.2.0    DeliveryOptimization
+Cmdlet          Get-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOptimization
+Cmdlet          Get-Event                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-EventLog                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-EventSubscriber                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ExecutionPolicy                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-FormatData                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Help                                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-HgsAttestationBaselinePolicy                   1.0.0.0    HgsClient
+Cmdlet          Get-HgsTrace                                       1.0.0.0    HgsDiagnostics
+Cmdlet          Get-HgsTraceFileData                               1.0.0.0    HgsDiagnostics
+Cmdlet          Get-History                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Host                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-HotFix                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Item                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ItemProperty                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ItemPropertyValue                              3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Job                                            3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-JobTrigger                                     1.1.0.0    PSScheduledJob
+Cmdlet          Get-KdsConfiguration                               1.0.0.0    Kds
+Cmdlet          Get-KdsRootKey                                     1.0.0.0    Kds
+Cmdlet          Get-LocalGroup                                     1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-LocalGroupMember                               1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-LocalUser                                      1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Location                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Member                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Module                                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-NonRemovableAppsPolicy                         3.0        Dism
+Cmdlet          Get-Package                                        1.0.0.1    PackageManagement
+Cmdlet          Get-PackageProvider                                1.0.0.1    PackageManagement
+Cmdlet          Get-PackageSource                                  1.0.0.1    PackageManagement
+Cmdlet          Get-PfxCertificate                                 3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PfxData                                        1.0.0.0    PKI
+Cmdlet          Get-PmemDisk                                       1.0.0.0    PersistentMemory
+Cmdlet          Get-PmemPhysicalDevice                             1.0.0.0    PersistentMemory
+Cmdlet          Get-PmemUnusedRegion                               1.0.0.0    PersistentMemory
+Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ProcessMitigation                              1.0.11     ProcessMitigations
+Cmdlet          Get-ProvisioningPackage                            3.0        Provisioning
+Cmdlet          Get-PSBreakpoint                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSCallStack                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSDrive                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSHostProcessInfo                              3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSProvider                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSReadLineKeyHandler                           2.0.0      PSReadline
+Cmdlet          Get-PSReadLineOption                               2.0.0      PSReadline
+Cmdlet          Get-PSSession                                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSSessionCapability                            3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSSnapin                                       3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Random                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Runspace                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-RunspaceDebug                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ScheduledJob                                   1.1.0.0    PSScheduledJob
+Cmdlet          Get-ScheduledJobOption                             1.1.0.0    PSScheduledJob
+Cmdlet          Get-SecureBootPolicy                               2.0.0.0    SecureBoot
+Cmdlet          Get-SecureBootUEFI                                 2.0.0.0    SecureBoot
+Cmdlet          Get-Service                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-SystemDriver                                   1.0        ConfigCI
+Cmdlet          Get-TimeZone                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-TlsCipherSuite                                 2.0.0.0    TLS
+Cmdlet          Get-TlsEccCurve                                    2.0.0.0    TLS
+Cmdlet          Get-Tpm                                            2.0.0.0    TrustedPlatformMo...
+Cmdlet          Get-TpmEndorsementKeyInfo                          2.0.0.0    TrustedPlatformMo...
+Cmdlet          Get-TpmSupportedFeature                            2.0.0.0    TrustedPlatformMo...
+Cmdlet          Get-TraceSource                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Transaction                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-TroubleshootingPack                            1.0.0.0    TroubleshootingPack
+Cmdlet          Get-TrustedProvisioningCertificate                 3.0        Provisioning
+Cmdlet          Get-TypeData                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-UevAppxPackage                                 2.1.639.0  UEV
+Cmdlet          Get-UevConfiguration                               2.1.639.0  UEV
+Cmdlet          Get-UevStatus                                      2.1.639.0  UEV
+Cmdlet          Get-UevTemplate                                    2.1.639.0  UEV
+Cmdlet          Get-UevTemplateProgram                             2.1.639.0  UEV
+Cmdlet          Get-UICulture                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Unique                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Variable                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-VHD                                            2.0.0.0    Hyper-V
+Cmdlet          Get-VHDSet                                         2.0.0.0    Hyper-V
+Cmdlet          Get-VHDSnapshot                                    2.0.0.0    Hyper-V
+Cmdlet          Get-VM                                             2.0.0.0    Hyper-V
+Cmdlet          Get-VMAssignableDevice                             2.0.0.0    Hyper-V
+Cmdlet          Get-VMBios                                         2.0.0.0    Hyper-V
+Cmdlet          Get-VMComPort                                      2.0.0.0    Hyper-V
+Cmdlet          Get-VMConnectAccess                                2.0.0.0    Hyper-V
+Cmdlet          Get-VMDvdDrive                                     2.0.0.0    Hyper-V
+Cmdlet          Get-VMFibreChannelHba                              2.0.0.0    Hyper-V
+Cmdlet          Get-VMFirmware                                     2.0.0.0    Hyper-V
+Cmdlet          Get-VMFloppyDiskDrive                              2.0.0.0    Hyper-V
+Cmdlet          Get-VMGpuPartitionAdapter                          2.0.0.0    Hyper-V
+Cmdlet          Get-VMGroup                                        2.0.0.0    Hyper-V
+Cmdlet          Get-VMHardDiskDrive                                2.0.0.0    Hyper-V
+Cmdlet          Get-VMHost                                         2.0.0.0    Hyper-V
+Cmdlet          Get-VMHostAssignableDevice                         2.0.0.0    Hyper-V
+Cmdlet          Get-VMHostCluster                                  2.0.0.0    Hyper-V
+Cmdlet          Get-VMHostNumaNode                                 2.0.0.0    Hyper-V
+Cmdlet          Get-VMHostNumaNodeStatus                           2.0.0.0    Hyper-V
+Cmdlet          Get-VMHostSupportedVersion                         2.0.0.0    Hyper-V
+Cmdlet          Get-VMIdeController                                2.0.0.0    Hyper-V
+Cmdlet          Get-VMIntegrationService                           2.0.0.0    Hyper-V
+Cmdlet          Get-VMKeyProtector                                 2.0.0.0    Hyper-V
+Cmdlet          Get-VMKeyStorageDrive                              2.0.0.0    Hyper-V
+Cmdlet          Get-VMMemory                                       2.0.0.0    Hyper-V
+Cmdlet          Get-VMMigrationNetwork                             2.0.0.0    Hyper-V
+Cmdlet          Get-VMNetworkAdapter                               2.0.0.0    Hyper-V
+Cmdlet          Get-VMNetworkAdapterAcl                            2.0.0.0    Hyper-V
+Cmdlet          Get-VMNetworkAdapterExtendedAcl                    2.0.0.0    Hyper-V
+Cmdlet          Get-VMNetworkAdapterFailoverConfiguration          2.0.0.0    Hyper-V
+Cmdlet          Get-VMNetworkAdapterIsolation                      2.0.0.0    Hyper-V
+Cmdlet          Get-VMNetworkAdapterRdma                           2.0.0.0    Hyper-V
+Cmdlet          Get-VMNetworkAdapterRoutingDomainMapping           2.0.0.0    Hyper-V
+Cmdlet          Get-VMNetworkAdapterTeamMapping                    2.0.0.0    Hyper-V
+Cmdlet          Get-VMNetworkAdapterVlan                           2.0.0.0    Hyper-V
+Cmdlet          Get-VMPartitionableGpu                             2.0.0.0    Hyper-V
+Cmdlet          Get-VMPmemController                               2.0.0.0    Hyper-V
+Cmdlet          Get-VMProcessor                                    2.0.0.0    Hyper-V
+Cmdlet          Get-VMRemoteFx3dVideoAdapter                       2.0.0.0    Hyper-V
+Cmdlet          Get-VMRemoteFXPhysicalVideoAdapter                 2.0.0.0    Hyper-V
+Cmdlet          Get-VMReplication                                  2.0.0.0    Hyper-V
+Cmdlet          Get-VMReplicationAuthorizationEntry                2.0.0.0    Hyper-V
+Cmdlet          Get-VMReplicationServer                            2.0.0.0    Hyper-V
+Cmdlet          Get-VMResourcePool                                 2.0.0.0    Hyper-V
+Cmdlet          Get-VMSan                                          2.0.0.0    Hyper-V
+Cmdlet          Get-VMScsiController                               2.0.0.0    Hyper-V
+Cmdlet          Get-VMSecurity                                     2.0.0.0    Hyper-V
+Cmdlet          Get-VMSnapshot                                     2.0.0.0    Hyper-V
+Cmdlet          Get-VMStoragePath                                  2.0.0.0    Hyper-V
+Cmdlet          Get-VMStorageSettings                              2.0.0.0    Hyper-V
+Cmdlet          Get-VMSwitch                                       2.0.0.0    Hyper-V
+Cmdlet          Get-VMSwitchExtension                              2.0.0.0    Hyper-V
+Cmdlet          Get-VMSwitchExtensionPortData                      2.0.0.0    Hyper-V
+Cmdlet          Get-VMSwitchExtensionPortFeature                   2.0.0.0    Hyper-V
+Cmdlet          Get-VMSwitchExtensionSwitchData                    2.0.0.0    Hyper-V
+Cmdlet          Get-VMSwitchExtensionSwitchFeature                 2.0.0.0    Hyper-V
+Cmdlet          Get-VMSwitchTeam                                   2.0.0.0    Hyper-V
+Cmdlet          Get-VMSystemSwitchExtension                        2.0.0.0    Hyper-V
+Cmdlet          Get-VMSystemSwitchExtensionPortFeature             2.0.0.0    Hyper-V
+Cmdlet          Get-VMSystemSwitchExtensionSwitchFeature           2.0.0.0    Hyper-V
+Cmdlet          Get-VMVideo                                        2.0.0.0    Hyper-V
+Cmdlet          Get-WheaMemoryPolicy                               2.0.0.0    Whea
+Cmdlet          Get-WIMBootEntry                                   3.0        Dism
+Cmdlet          Get-WinAcceptLanguageFromLanguageListOptOut        2.0.0.0    International
+Cmdlet          Get-WinCultureFromLanguageListOptOut               2.0.0.0    International
+Cmdlet          Get-WinDefaultInputMethodOverride                  2.0.0.0    International
+Cmdlet          Get-WindowsCapability                              3.0        Dism
+Cmdlet          Get-WindowsDeveloperLicense                        1.0.0.0    WindowsDeveloperL...
+Cmdlet          Get-WindowsDriver                                  3.0        Dism
+Cmdlet          Get-WindowsEdition                                 3.0        Dism
+Cmdlet          Get-WindowsErrorReporting                          1.0        WindowsErrorRepor...
+Cmdlet          Get-WindowsImage                                   3.0        Dism
+Cmdlet          Get-WindowsImageContent                            3.0        Dism
+Cmdlet          Get-WindowsOptionalFeature                         3.0        Dism
+Cmdlet          Get-WindowsPackage                                 3.0        Dism
+Cmdlet          Get-WindowsSearchSetting                           1.0.0.0    WindowsSearch
+Cmdlet          Get-WinEvent                                       3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-WinHomeLocation                                2.0.0.0    International
+Cmdlet          Get-WinLanguageBarOption                           2.0.0.0    International
+Cmdlet          Get-WinSystemLocale                                2.0.0.0    International
+Cmdlet          Get-WinUILanguageOverride                          2.0.0.0    International
+Cmdlet          Get-WinUserLanguageList                            2.0.0.0    International
+Cmdlet          Get-WmiObject                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-WSManCredSSP                                   3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Get-WSManInstance                                  3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Grant-VMConnectAccess                              2.0.0.0    Hyper-V
+Cmdlet          Group-Object                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Import-Alias                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Import-BinaryMiLog                                 1.0.0.0    CimCmdlets
+Cmdlet          Import-Certificate                                 1.0.0.0    PKI
+Cmdlet          Import-Clixml                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Import-Counter                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Import-Csv                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Import-LocalizedData                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Import-Module                                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Import-PackageProvider                             1.0.0.1    PackageManagement
+Cmdlet          Import-PfxCertificate                              1.0.0.0    PKI
+Cmdlet          Import-PSSession                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Import-StartLayout                                 1.0.0.0    StartLayout
+Cmdlet          Import-TpmOwnerAuth                                2.0.0.0    TrustedPlatformMo...
+Cmdlet          Import-UevConfiguration                            2.1.639.0  UEV
+Cmdlet          Import-VM                                          2.0.0.0    Hyper-V
+Cmdlet          Import-VMInitialReplication                        2.0.0.0    Hyper-V
+Cmdlet          Initialize-PmemPhysicalDevice                      1.0.0.0    PersistentMemory
+Cmdlet          Initialize-Tpm                                     2.0.0.0    TrustedPlatformMo...
+Cmdlet          Install-Package                                    1.0.0.1    PackageManagement
+Cmdlet          Install-PackageProvider                            1.0.0.1    PackageManagement
+Cmdlet          Install-ProvisioningPackage                        3.0        Provisioning
+Cmdlet          Install-TrustedProvisioningCertificate             3.0        Provisioning
+Cmdlet          Invoke-CimMethod                                   1.0.0.0    CimCmdlets
+Cmdlet          Invoke-Command                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-CommandInDesktopPackage                     2.0.1.0    Appx
+Cmdlet          Invoke-DscResource                                 1.1        PSDesiredStateCon...
+Cmdlet          Invoke-Expression                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-History                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-Item                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-RestMethod                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-TroubleshootingPack                         1.0.0.0    TroubleshootingPack
+Cmdlet          Invoke-WebRequest                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-WmiMethod                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-WSManAction                                 3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Join-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
+Cmdlet          Join-Path                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Limit-EventLog                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Measure-Command                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Measure-Object                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Measure-VM                                         2.0.0.0    Hyper-V
+Cmdlet          Measure-VMReplication                              2.0.0.0    Hyper-V
+Cmdlet          Measure-VMResourcePool                             2.0.0.0    Hyper-V
+Cmdlet          Merge-CIPolicy                                     1.0        ConfigCI
+Cmdlet          Merge-VHD                                          2.0.0.0    Hyper-V
+Cmdlet          Mount-AppvClientConnectionGroup                    1.0.0.0    AppvClient
+Cmdlet          Mount-AppvClientPackage                            1.0.0.0    AppvClient
+Cmdlet          Mount-AppxVolume                                   2.0.1.0    Appx
+Cmdlet          Mount-VHD                                          2.0.0.0    Hyper-V
+Cmdlet          Mount-VMHostAssignableDevice                       2.0.0.0    Hyper-V
+Cmdlet          Mount-WindowsImage                                 3.0        Dism
+Cmdlet          Move-AppxPackage                                   2.0.1.0    Appx
+Cmdlet          Move-Item                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Move-ItemProperty                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Move-VM                                            2.0.0.0    Hyper-V
+Cmdlet          Move-VMStorage                                     2.0.0.0    Hyper-V
+Cmdlet          New-Alias                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-AppLockerPolicy                                2.0.0.0    AppLocker
+Cmdlet          New-CertificateNotificationTask                    1.0.0.0    PKI
+Cmdlet          New-CimInstance                                    1.0.0.0    CimCmdlets
+Cmdlet          New-CimSession                                     1.0.0.0    CimCmdlets
+Cmdlet          New-CimSessionOption                               1.0.0.0    CimCmdlets
+Cmdlet          New-CIPolicy                                       1.0        ConfigCI
+Cmdlet          New-CIPolicyRule                                   1.0        ConfigCI
+Cmdlet          New-DtcDiagnosticTransaction                       1.0.0.0    MsDtc
+Cmdlet          New-Event                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-EventLog                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-FileCatalog                                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-HgsTraceTarget                                 1.0.0.0    HgsDiagnostics
+Cmdlet          New-Item                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-ItemProperty                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-JobTrigger                                     1.1.0.0    PSScheduledJob
+Cmdlet          New-LocalGroup                                     1.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-LocalUser                                      1.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-Module                                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-ModuleManifest                                 3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-NetIPsecAuthProposal                           2.0.0.0    NetSecurity
+Cmdlet          New-NetIPsecMainModeCryptoProposal                 2.0.0.0    NetSecurity
+Cmdlet          New-NetIPsecQuickModeCryptoProposal                2.0.0.0    NetSecurity
+Cmdlet          New-Object                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-PmemDisk                                       1.0.0.0    PersistentMemory
+Cmdlet          New-ProvisioningRepro                              3.0        Provisioning
+Cmdlet          New-PSDrive                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSRoleCapabilityFile                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSSession                                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSSessionConfigurationFile                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSSessionOption                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSTransportOption                              3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSWorkflowExecutionOption                      2.0.0.0    PSWorkflow
+Cmdlet          New-ScheduledJobOption                             1.1.0.0    PSScheduledJob
+Cmdlet          New-SelfSignedCertificate                          1.0.0.0    PKI
+Cmdlet          New-Service                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-TimeSpan                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-TlsSessionTicketKey                            2.0.0.0    TLS
+Cmdlet          New-Variable                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-VFD                                            2.0.0.0    Hyper-V
+Cmdlet          New-VHD                                            2.0.0.0    Hyper-V
+Cmdlet          New-VM                                             2.0.0.0    Hyper-V
+Cmdlet          New-VMGroup                                        2.0.0.0    Hyper-V
+Cmdlet          New-VMReplicationAuthorizationEntry                2.0.0.0    Hyper-V
+Cmdlet          New-VMResourcePool                                 2.0.0.0    Hyper-V
+Cmdlet          New-VMSan                                          2.0.0.0    Hyper-V
+Cmdlet          New-VMSwitch                                       2.0.0.0    Hyper-V
+Cmdlet          New-WebServiceProxy                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-WindowsCustomImage                             3.0        Dism
+Cmdlet          New-WindowsImage                                   3.0        Dism
+Cmdlet          New-WinEvent                                       3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-WinUserLanguageList                            2.0.0.0    International
+Cmdlet          New-WSManInstance                                  3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          New-WSManSessionOption                             3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Optimize-AppxProvisionedPackages                   3.0        Dism
+Cmdlet          Optimize-VHD                                       2.0.0.0    Hyper-V
+Cmdlet          Optimize-VHDSet                                    2.0.0.0    Hyper-V
+Cmdlet          Optimize-WindowsImage                              3.0        Dism
+Cmdlet          Out-Default                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Out-File                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Out-GridView                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Out-Host                                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Out-Null                                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Out-Printer                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Out-String                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Pop-Location                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Protect-CmsMessage                                 3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Publish-AppvClientPackage                          1.0.0.0    AppvClient
+Cmdlet          Publish-DscConfiguration                           1.1        PSDesiredStateCon...
+Cmdlet          Push-Location                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Read-Host                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Receive-DtcDiagnosticTransaction                   1.0.0.0    MsDtc
+Cmdlet          Receive-Job                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Receive-PSSession                                  3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Register-ArgumentCompleter                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Register-CimIndicationEvent                        1.0.0.0    CimCmdlets
+Cmdlet          Register-EngineEvent                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Register-ObjectEvent                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Register-PackageSource                             1.0.0.1    PackageManagement
+Cmdlet          Register-PSSessionConfiguration                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Register-ScheduledJob                              1.1.0.0    PSScheduledJob
+Cmdlet          Register-UevTemplate                               2.1.639.0  UEV
+Cmdlet          Register-WmiEvent                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-AppvClientConnectionGroup                   1.0.0.0    AppvClient
+Cmdlet          Remove-AppvClientPackage                           1.0.0.0    AppvClient
+Cmdlet          Remove-AppvPublishingServer                        1.0.0.0    AppvClient
+Cmdlet          Remove-AppxPackage                                 2.0.1.0    Appx
+Cmdlet          Remove-AppxProvisionedPackage                      3.0        Dism
+Cmdlet          Remove-AppxVolume                                  2.0.1.0    Appx
+Cmdlet          Remove-BitsTransfer                                2.0.0.0    BitsTransfer
+Cmdlet          Remove-CertificateEnrollmentPolicyServer           1.0.0.0    PKI
+Cmdlet          Remove-CertificateNotificationTask                 1.0.0.0    PKI
+Cmdlet          Remove-CimInstance                                 1.0.0.0    CimCmdlets
+Cmdlet          Remove-CimSession                                  1.0.0.0    CimCmdlets
+Cmdlet          Remove-CIPolicyRule                                1.0        ConfigCI
+Cmdlet          Remove-Computer                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Event                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-EventLog                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Item                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-ItemProperty                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Job                                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-JobTrigger                                  1.1.0.0    PSScheduledJob
+Cmdlet          Remove-LocalGroup                                  1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-LocalGroupMember                            1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-LocalUser                                   1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Module                                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-PmemDisk                                    1.0.0.0    PersistentMemory
+Cmdlet          Remove-PSBreakpoint                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-PSDrive                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-PSReadLineKeyHandler                        2.0.0      PSReadline
+Cmdlet          Remove-PSSession                                   3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-PSSnapin                                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-TypeData                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Variable                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-VHDSnapshot                                 2.0.0.0    Hyper-V
+Cmdlet          Remove-VM                                          2.0.0.0    Hyper-V
+Cmdlet          Remove-VMAssignableDevice                          2.0.0.0    Hyper-V
+Cmdlet          Remove-VMDvdDrive                                  2.0.0.0    Hyper-V
+Cmdlet          Remove-VMFibreChannelHba                           2.0.0.0    Hyper-V
+Cmdlet          Remove-VMGpuPartitionAdapter                       2.0.0.0    Hyper-V
+Cmdlet          Remove-VMGroup                                     2.0.0.0    Hyper-V
+Cmdlet          Remove-VMGroupMember                               2.0.0.0    Hyper-V
+Cmdlet          Remove-VMHardDiskDrive                             2.0.0.0    Hyper-V
+Cmdlet          Remove-VMHostAssignableDevice                      2.0.0.0    Hyper-V
+Cmdlet          Remove-VMKeyStorageDrive                           2.0.0.0    Hyper-V
+Cmdlet          Remove-VMMigrationNetwork                          2.0.0.0    Hyper-V
+Cmdlet          Remove-VMNetworkAdapter                            2.0.0.0    Hyper-V
+Cmdlet          Remove-VMNetworkAdapterAcl                         2.0.0.0    Hyper-V
+Cmdlet          Remove-VMNetworkAdapterExtendedAcl                 2.0.0.0    Hyper-V
+Cmdlet          Remove-VMNetworkAdapterRoutingDomainMapping        2.0.0.0    Hyper-V
+Cmdlet          Remove-VMNetworkAdapterTeamMapping                 2.0.0.0    Hyper-V
+Cmdlet          Remove-VMPmemController                            2.0.0.0    Hyper-V
+Cmdlet          Remove-VMRemoteFx3dVideoAdapter                    2.0.0.0    Hyper-V
+Cmdlet          Remove-VMReplication                               2.0.0.0    Hyper-V
+Cmdlet          Remove-VMReplicationAuthorizationEntry             2.0.0.0    Hyper-V
+Cmdlet          Remove-VMResourcePool                              2.0.0.0    Hyper-V
+Cmdlet          Remove-VMSan                                       2.0.0.0    Hyper-V
+Cmdlet          Remove-VMSavedState                                2.0.0.0    Hyper-V
+Cmdlet          Remove-VMScsiController                            2.0.0.0    Hyper-V
+Cmdlet          Remove-VMSnapshot                                  2.0.0.0    Hyper-V
+Cmdlet          Remove-VMStoragePath                               2.0.0.0    Hyper-V
+Cmdlet          Remove-VMSwitch                                    2.0.0.0    Hyper-V
+Cmdlet          Remove-VMSwitchExtensionPortFeature                2.0.0.0    Hyper-V
+Cmdlet          Remove-VMSwitchExtensionSwitchFeature              2.0.0.0    Hyper-V
+Cmdlet          Remove-VMSwitchTeamMember                          2.0.0.0    Hyper-V
+Cmdlet          Remove-WindowsCapability                           3.0        Dism
+Cmdlet          Remove-WindowsDriver                               3.0        Dism
+Cmdlet          Remove-WindowsImage                                3.0        Dism
+Cmdlet          Remove-WindowsPackage                              3.0        Dism
+Cmdlet          Remove-WmiObject                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-WSManInstance                               3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Rename-Computer                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Rename-Item                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Rename-ItemProperty                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Rename-LocalGroup                                  1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Rename-LocalUser                                   1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Rename-VM                                          2.0.0.0    Hyper-V
+Cmdlet          Rename-VMGroup                                     2.0.0.0    Hyper-V
+Cmdlet          Rename-VMNetworkAdapter                            2.0.0.0    Hyper-V
+Cmdlet          Rename-VMResourcePool                              2.0.0.0    Hyper-V
+Cmdlet          Rename-VMSan                                       2.0.0.0    Hyper-V
+Cmdlet          Rename-VMSnapshot                                  2.0.0.0    Hyper-V
+Cmdlet          Rename-VMSwitch                                    2.0.0.0    Hyper-V
+Cmdlet          Repair-AppvClientConnectionGroup                   1.0.0.0    AppvClient
+Cmdlet          Repair-AppvClientPackage                           1.0.0.0    AppvClient
+Cmdlet          Repair-UevTemplateIndex                            2.1.639.0  UEV
+Cmdlet          Repair-VM                                          2.0.0.0    Hyper-V
+Cmdlet          Repair-WindowsImage                                3.0        Dism
+Cmdlet          Reset-ComputerMachinePassword                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Reset-VMReplicationStatistics                      2.0.0.0    Hyper-V
+Cmdlet          Reset-VMResourceMetering                           2.0.0.0    Hyper-V
+Cmdlet          Resize-VHD                                         2.0.0.0    Hyper-V
+Cmdlet          Resolve-DnsName                                    1.0.0.0    DnsClient
+Cmdlet          Resolve-Path                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Restart-Computer                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Restart-Service                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Restart-VM                                         2.0.0.0    Hyper-V
+Cmdlet          Restore-Computer                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Restore-UevBackup                                  2.1.639.0  UEV
+Cmdlet          Restore-UevUserSetting                             2.1.639.0  UEV
+Cmdlet          Restore-VMSnapshot                                 2.0.0.0    Hyper-V
+Cmdlet          Resume-BitsTransfer                                2.0.0.0    BitsTransfer
+Cmdlet          Resume-Job                                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Resume-ProvisioningSession                         3.0        Provisioning
+Cmdlet          Resume-Service                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Resume-VM                                          2.0.0.0    Hyper-V
+Cmdlet          Resume-VMReplication                               2.0.0.0    Hyper-V
+Cmdlet          Revoke-VMConnectAccess                             2.0.0.0    Hyper-V
+Cmdlet          Save-Help                                          3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Save-Package                                       1.0.0.1    PackageManagement
+Cmdlet          Save-VM                                            2.0.0.0    Hyper-V
+Cmdlet          Save-WindowsImage                                  3.0        Dism
+Cmdlet          Select-Object                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Select-String                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Select-Xml                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Send-AppvClientReport                              1.0.0.0    AppvClient
+Cmdlet          Send-DtcDiagnosticTransaction                      1.0.0.0    MsDtc
+Cmdlet          Send-MailMessage                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Acl                                            3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Alias                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-AppBackgroundTaskResourcePolicy                1.0.0.0    AppBackgroundTask
+Cmdlet          Set-AppLockerPolicy                                2.0.0.0    AppLocker
+Cmdlet          Set-AppvClientConfiguration                        1.0.0.0    AppvClient
+Cmdlet          Set-AppvClientMode                                 1.0.0.0    AppvClient
+Cmdlet          Set-AppvClientPackage                              1.0.0.0    AppvClient
+Cmdlet          Set-AppvPublishingServer                           1.0.0.0    AppvClient
+Cmdlet          Set-AppxDefaultVolume                              2.0.1.0    Appx
+Cmdlet          Set-AppXProvisionedDataFile                        3.0        Dism
+Cmdlet          Set-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-BitsTransfer                                   2.0.0.0    BitsTransfer
+Cmdlet          Set-CertificateAutoEnrollmentPolicy                1.0.0.0    PKI
+Cmdlet          Set-CimInstance                                    1.0.0.0    CimCmdlets
+Cmdlet          Set-CIPolicyIdInfo                                 1.0        ConfigCI
+Cmdlet          Set-CIPolicySetting                                1.0        ConfigCI
+Cmdlet          Set-CIPolicyVersion                                1.0        ConfigCI
+Cmdlet          Set-Clipboard                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Content                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Culture                                        2.0.0.0    International
+Cmdlet          Set-Date                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-DeliveryOptimizationStatus                     1.0.2.0    DeliveryOptimization
+Cmdlet          Set-DODownloadMode                                 1.0.2.0    DeliveryOptimization
+Cmdlet          Set-DOPercentageMaxBackgroundBandwidth             1.0.2.0    DeliveryOptimization
+Cmdlet          Set-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOptimization
+Cmdlet          Set-DscLocalConfigurationManager                   1.1        PSDesiredStateCon...
+Cmdlet          Set-ExecutionPolicy                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-HVCIOptions                                    1.0        ConfigCI
+Cmdlet          Set-Item                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-ItemProperty                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-JobTrigger                                     1.1.0.0    PSScheduledJob
+Cmdlet          Set-KdsConfiguration                               1.0.0.0    Kds
+Cmdlet          Set-LocalGroup                                     1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-LocalUser                                      1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Location                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-NonRemovableAppsPolicy                         3.0        Dism
+Cmdlet          Set-PackageSource                                  1.0.0.1    PackageManagement
+Cmdlet          Set-ProcessMitigation                              1.0.11     ProcessMitigations
+Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-PSDebug                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-PSReadLineKeyHandler                           2.0.0      PSReadline
+Cmdlet          Set-PSReadLineOption                               2.0.0      PSReadline
+Cmdlet          Set-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-RuleOption                                     1.0        ConfigCI
+Cmdlet          Set-ScheduledJob                                   1.1.0.0    PSScheduledJob
+Cmdlet          Set-ScheduledJobOption                             1.1.0.0    PSScheduledJob
+Cmdlet          Set-SecureBootUEFI                                 2.0.0.0    SecureBoot
+Cmdlet          Set-Service                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-StrictMode                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-TimeZone                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-TpmOwnerAuth                                   2.0.0.0    TrustedPlatformMo...
+Cmdlet          Set-TraceSource                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-UevConfiguration                               2.1.639.0  UEV
+Cmdlet          Set-UevTemplateProfile                             2.1.639.0  UEV
+Cmdlet          Set-Variable                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-VHD                                            2.0.0.0    Hyper-V
+Cmdlet          Set-VM                                             2.0.0.0    Hyper-V
+Cmdlet          Set-VMBios                                         2.0.0.0    Hyper-V
+Cmdlet          Set-VMComPort                                      2.0.0.0    Hyper-V
+Cmdlet          Set-VMDvdDrive                                     2.0.0.0    Hyper-V
+Cmdlet          Set-VMFibreChannelHba                              2.0.0.0    Hyper-V
+Cmdlet          Set-VMFirmware                                     2.0.0.0    Hyper-V
+Cmdlet          Set-VMFloppyDiskDrive                              2.0.0.0    Hyper-V
+Cmdlet          Set-VMGpuPartitionAdapter                          2.0.0.0    Hyper-V
+Cmdlet          Set-VMHardDiskDrive                                2.0.0.0    Hyper-V
+Cmdlet          Set-VMHost                                         2.0.0.0    Hyper-V
+Cmdlet          Set-VMHostCluster                                  2.0.0.0    Hyper-V
+Cmdlet          Set-VMKeyProtector                                 2.0.0.0    Hyper-V
+Cmdlet          Set-VMKeyStorageDrive                              2.0.0.0    Hyper-V
+Cmdlet          Set-VMMemory                                       2.0.0.0    Hyper-V
+Cmdlet          Set-VMMigrationNetwork                             2.0.0.0    Hyper-V
+Cmdlet          Set-VMNetworkAdapter                               2.0.0.0    Hyper-V
+Cmdlet          Set-VMNetworkAdapterFailoverConfiguration          2.0.0.0    Hyper-V
+Cmdlet          Set-VMNetworkAdapterIsolation                      2.0.0.0    Hyper-V
+Cmdlet          Set-VMNetworkAdapterRdma                           2.0.0.0    Hyper-V
+Cmdlet          Set-VMNetworkAdapterRoutingDomainMapping           2.0.0.0    Hyper-V
+Cmdlet          Set-VMNetworkAdapterTeamMapping                    2.0.0.0    Hyper-V
+Cmdlet          Set-VMNetworkAdapterVlan                           2.0.0.0    Hyper-V
+Cmdlet          Set-VMPartitionableGpu                             2.0.0.0    Hyper-V
+Cmdlet          Set-VMProcessor                                    2.0.0.0    Hyper-V
+Cmdlet          Set-VMRemoteFx3dVideoAdapter                       2.0.0.0    Hyper-V
+Cmdlet          Set-VMReplication                                  2.0.0.0    Hyper-V
+Cmdlet          Set-VMReplicationAuthorizationEntry                2.0.0.0    Hyper-V
+Cmdlet          Set-VMReplicationServer                            2.0.0.0    Hyper-V
+Cmdlet          Set-VMResourcePool                                 2.0.0.0    Hyper-V
+Cmdlet          Set-VMSan                                          2.0.0.0    Hyper-V
+Cmdlet          Set-VMSecurity                                     2.0.0.0    Hyper-V
+Cmdlet          Set-VMSecurityPolicy                               2.0.0.0    Hyper-V
+Cmdlet          Set-VMStorageSettings                              2.0.0.0    Hyper-V
+Cmdlet          Set-VMSwitch                                       2.0.0.0    Hyper-V
+Cmdlet          Set-VMSwitchExtensionPortFeature                   2.0.0.0    Hyper-V
+Cmdlet          Set-VMSwitchExtensionSwitchFeature                 2.0.0.0    Hyper-V
+Cmdlet          Set-VMSwitchTeam                                   2.0.0.0    Hyper-V
+Cmdlet          Set-VMVideo                                        2.0.0.0    Hyper-V
+Cmdlet          Set-WheaMemoryPolicy                               2.0.0.0    Whea
+Cmdlet          Set-WinAcceptLanguageFromLanguageListOptOut        2.0.0.0    International
+Cmdlet          Set-WinCultureFromLanguageListOptOut               2.0.0.0    International
+Cmdlet          Set-WinDefaultInputMethodOverride                  2.0.0.0    International
+Cmdlet          Set-WindowsEdition                                 3.0        Dism
+Cmdlet          Set-WindowsProductKey                              3.0        Dism
+Cmdlet          Set-WindowsSearchSetting                           1.0.0.0    WindowsSearch
+Cmdlet          Set-WinHomeLocation                                2.0.0.0    International
+Cmdlet          Set-WinLanguageBarOption                           2.0.0.0    International
+Cmdlet          Set-WinSystemLocale                                2.0.0.0    International
+Cmdlet          Set-WinUILanguageOverride                          2.0.0.0    International
+Cmdlet          Set-WinUserLanguageList                            2.0.0.0    International
+Cmdlet          Set-WmiInstance                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-WSManInstance                                  3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Set-WSManQuickConfig                               3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Show-Command                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Show-ControlPanelItem                              3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Show-EventLog                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Show-WindowsDeveloperLicenseRegistration           1.0.0.0    WindowsDeveloperL...
+Cmdlet          Sort-Object                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Split-Path                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Split-WindowsImage                                 3.0        Dism
+Cmdlet          Start-BitsTransfer                                 2.0.0.0    BitsTransfer
+Cmdlet          Start-DscConfiguration                             1.1        PSDesiredStateCon...
+Cmdlet          Start-DtcDiagnosticResourceManager                 1.0.0.0    MsDtc
+Cmdlet          Start-Job                                          3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Start-OSUninstall                                  3.0        Dism
+Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Start-Service                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Start-Sleep                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Start-Transaction                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Start-Transcript                                   3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Start-VM                                           2.0.0.0    Hyper-V
+Cmdlet          Start-VMFailover                                   2.0.0.0    Hyper-V
+Cmdlet          Start-VMInitialReplication                         2.0.0.0    Hyper-V
+Cmdlet          Start-VMTrace                                      2.0.0.0    Hyper-V
+Cmdlet          Stop-AppvClientConnectionGroup                     1.0.0.0    AppvClient
+Cmdlet          Stop-AppvClientPackage                             1.0.0.0    AppvClient
+Cmdlet          Stop-Computer                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Stop-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
+Cmdlet          Stop-Job                                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Stop-Service                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Stop-Transcript                                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Stop-VM                                            2.0.0.0    Hyper-V
+Cmdlet          Stop-VMFailover                                    2.0.0.0    Hyper-V
+Cmdlet          Stop-VMInitialReplication                          2.0.0.0    Hyper-V
+Cmdlet          Stop-VMReplication                                 2.0.0.0    Hyper-V
+Cmdlet          Stop-VMTrace                                       2.0.0.0    Hyper-V
+Cmdlet          Suspend-BitsTransfer                               2.0.0.0    BitsTransfer
+Cmdlet          Suspend-Job                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Suspend-Service                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Suspend-VM                                         2.0.0.0    Hyper-V
+Cmdlet          Suspend-VMReplication                              2.0.0.0    Hyper-V
+Cmdlet          Switch-Certificate                                 1.0.0.0    PKI
+Cmdlet          Sync-AppvPublishingServer                          1.0.0.0    AppvClient
+Cmdlet          Tee-Object                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Test-AppLockerPolicy                               2.0.0.0    AppLocker
+Cmdlet          Test-Certificate                                   1.0.0.0    PKI
+Cmdlet          Test-ComputerSecureChannel                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Test-Connection                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Test-DscConfiguration                              1.1        PSDesiredStateCon...
+Cmdlet          Test-FileCatalog                                   3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Test-HgsTraceTarget                                1.0.0.0    HgsDiagnostics
+Cmdlet          Test-KdsRootKey                                    1.0.0.0    Kds
+Cmdlet          Test-ModuleManifest                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Test-Path                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Test-PSSessionConfigurationFile                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Test-UevTemplate                                   2.1.639.0  UEV
+Cmdlet          Test-VHD                                           2.0.0.0    Hyper-V
+Cmdlet          Test-VMNetworkAdapter                              2.0.0.0    Hyper-V
+Cmdlet          Test-VMReplicationConnection                       2.0.0.0    Hyper-V
+Cmdlet          Test-WSMan                                         3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Trace-Command                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Unblock-File                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Unblock-Tpm                                        2.0.0.0    TrustedPlatformMo...
+Cmdlet          Undo-DtcDiagnosticTransaction                      1.0.0.0    MsDtc
+Cmdlet          Undo-Transaction                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Uninstall-Package                                  1.0.0.1    PackageManagement
+Cmdlet          Uninstall-ProvisioningPackage                      3.0        Provisioning
+Cmdlet          Uninstall-TrustedProvisioningCertificate           3.0        Provisioning
+Cmdlet          Unprotect-CmsMessage                               3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Unpublish-AppvClientPackage                        1.0.0.0    AppvClient
+Cmdlet          Unregister-Event                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Unregister-PackageSource                           1.0.0.1    PackageManagement
+Cmdlet          Unregister-PSSessionConfiguration                  3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Unregister-ScheduledJob                            1.1.0.0    PSScheduledJob
+Cmdlet          Unregister-UevTemplate                             2.1.639.0  UEV
+Cmdlet          Unregister-WindowsDeveloperLicense                 1.0.0.0    WindowsDeveloperL...
+Cmdlet          Update-FormatData                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Update-Help                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Update-List                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Update-TypeData                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Update-UevTemplate                                 2.1.639.0  UEV
+Cmdlet          Update-VMVersion                                   2.0.0.0    Hyper-V
+Cmdlet          Update-WIMBootEntry                                3.0        Dism
+Cmdlet          Use-Transaction                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Use-WindowsUnattend                                3.0        Dism
+Cmdlet          Wait-Debugger                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Wait-Event                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Wait-Job                                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Wait-VM                                            2.0.0.0    Hyper-V
+Cmdlet          Where-Object                                       3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Debug                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Error                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-EventLog                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Host                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Information                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Output                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Progress                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Verbose                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Warning                                      3.1.0.0    Microsoft.PowerSh...
+```
+下達指令 Get-Command -Type Cmdlet | Sort-Object -Property Noun (會按照字母做排序)
+```
+PS C:\windows\system32> Get-Command -Type Cmdlet | Sort-Object -Property Noun                      
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Get-Acl                                            3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Acl                                            3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Import-Alias                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Alias                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-Alias                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-Alias                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Alias                                          3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Enable-AppBackgroundTaskDiagnosticLog              1.0.0.0    AppBackgroundTask
 Cmdlet          Disable-AppBackgroundTaskDiagnosticLog             1.0.0.0    AppBackgroundTask
 Cmdlet          Set-AppBackgroundTaskResourcePolicy                1.0.0.0    AppBackgroundTask
@@ -2820,9 +3814,9 @@ Cmdlet          Get-AppxVolume                                     2.0.1.0    Ap
 Cmdlet          Dismount-AppxVolume                                2.0.1.0    Appx
 Cmdlet          Remove-AppxVolume                                  2.0.1.0    Appx
 Cmdlet          Add-AppxVolume                                     2.0.1.0    Appx
-Cmdlet          Register-ArgumentCompleter                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Set-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Get-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          Register-ArgumentCompleter                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerSh...
 Cmdlet          Export-BinaryMiLog                                 1.0.0.0    CimCmdlets
 Cmdlet          Import-BinaryMiLog                                 1.0.0.0    CimCmdlets
 Cmdlet          Add-BitsFile                                       2.0.0.0    BitsTransfer
@@ -2846,7 +3840,7 @@ Cmdlet          Remove-CertificateEnrollmentPolicyServer           1.0.0.0    PK
 Cmdlet          New-CertificateNotificationTask                    1.0.0.0    PKI
 Cmdlet          Get-CertificateNotificationTask                    1.0.0.0    PKI
 Cmdlet          Remove-CertificateNotificationTask                 1.0.0.0    PKI
-Cmdlet          Get-ChildItem                                      3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Get-ChildItem                                      3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Get-CimAssociatedInstance                          1.0.0.0    CimCmdlets
 Cmdlet          Get-CimClass                                       1.0.0.0    CimCmdlets
 Cmdlet          Register-CimIndicationEvent                        1.0.0.0    CimCmdlets
@@ -2871,57 +3865,57 @@ Cmdlet          Remove-CIPolicyRule                                1.0        Co
 Cmdlet          New-CIPolicyRule                                   1.0        ConfigCI
 Cmdlet          Set-CIPolicySetting                                1.0        ConfigCI
 Cmdlet          Set-CIPolicyVersion                                1.0        ConfigCI
-Cmdlet          Set-Clipboard                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Clipboard                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Export-Clixml                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Import-Clixml                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Unprotect-CmsMessage                               3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Protect-CmsMessage                                 3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Get-CmsMessage                                     3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Trace-Command                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Measure-Command                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Show-Command                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Command                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Invoke-Command                                     3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Set-Clipboard                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Clipboard                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-Clixml                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Import-Clixml                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Unprotect-CmsMessage                               3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Protect-CmsMessage                                 3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-CmsMessage                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Trace-Command                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Measure-Command                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Show-Command                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Command                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-Command                                     3.0.0.0    Microsoft.PowerSh...
 Cmdlet          Invoke-CommandInDesktopPackage                     2.0.1.0    Appx
-Cmdlet          Stop-Computer                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Restart-Computer                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Add-Computer                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Restore-Computer                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Rename-Computer                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-Computer                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Checkpoint-Computer                                3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ComputerInfo                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Reset-ComputerMachinePassword                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Disable-ComputerRestore                            3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Enable-ComputerRestore                             3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ComputerRestorePoint                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Test-ComputerSecureChannel                         3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Test-Connection                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Export-Console                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Clear-Content                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Add-Content                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-Content                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Content                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Show-ControlPanelItem                              3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ControlPanelItem                               3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Export-Counter                                     3.0.0.0    Microsoft.PowerShell.Diagnos...
-Cmdlet          Get-Counter                                        3.0.0.0    Microsoft.PowerShell.Diagnos...
-Cmdlet          Import-Counter                                     3.0.0.0    Microsoft.PowerShell.Diagnos...
-Cmdlet          Get-Credential                                     3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          ConvertFrom-Csv                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Export-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertTo-Csv                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Import-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Stop-Computer                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Restart-Computer                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Add-Computer                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Restore-Computer                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Rename-Computer                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Computer                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Checkpoint-Computer                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ComputerInfo                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Reset-ComputerMachinePassword                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-ComputerRestore                            3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-ComputerRestore                             3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ComputerRestorePoint                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Test-ComputerSecureChannel                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Test-Connection                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-Console                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-Content                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Add-Content                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Content                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Content                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Show-ControlPanelItem                              3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ControlPanelItem                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-Counter                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Counter                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Import-Counter                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Credential                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertFrom-Csv                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-Csv                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertTo-Csv                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Import-Csv                                         3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Set-Culture                                        2.0.0.0    International
-Cmdlet          Get-Culture                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Format-Custom                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Get-Culture                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Format-Custom                                      3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Get-DAPolicyChange                                 2.0.0.0    NetSecurity
-Cmdlet          Set-Date                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Date                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Debug                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Wait-Debugger                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-Default                                        3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Set-Date                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Date                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Debug                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Wait-Debugger                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Out-Default                                        3.0.0.0    Microsoft.PowerSh...
 Cmdlet          Delete-DeliveryOptimizationCache                   1.0.2.0    DeliveryOptimization
 Cmdlet          Get-DeliveryOptimizationLog                        1.0.2.0    DeliveryOptimization
 Cmdlet          Get-DeliveryOptimizationPerfSnap                   1.0.2.0    DeliveryOptimization
@@ -2936,11 +3930,11 @@ Cmdlet          Set-DOPercentageMaxBackgroundBandwidth             1.0.2.0    De
 Cmdlet          Get-DOPercentageMaxBackgroundBandwidth             1.0.2.0    DeliveryOptimization
 Cmdlet          Get-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOptimization
 Cmdlet          Set-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOptimization
-Cmdlet          Start-DscConfiguration                             1.1        PSDesiredStateConfiguration
-Cmdlet          Publish-DscConfiguration                           1.1        PSDesiredStateConfiguration
-Cmdlet          Test-DscConfiguration                              1.1        PSDesiredStateConfiguration
-Cmdlet          Set-DscLocalConfigurationManager                   1.1        PSDesiredStateConfiguration
-Cmdlet          Invoke-DscResource                                 1.1        PSDesiredStateConfiguration
+Cmdlet          Start-DscConfiguration                             1.1        PSDesiredStateCon...
+Cmdlet          Publish-DscConfiguration                           1.1        PSDesiredStateCon...
+Cmdlet          Test-DscConfiguration                              1.1        PSDesiredStateCon...
+Cmdlet          Set-DscLocalConfigurationManager                   1.1        PSDesiredStateCon...
+Cmdlet          Invoke-DscResource                                 1.1        PSDesiredStateCon...
 Cmdlet          Join-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
 Cmdlet          Start-DtcDiagnosticResourceManager                 1.0.0.0    MsDtc
 Cmdlet          Stop-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
@@ -2949,79 +3943,79 @@ Cmdlet          New-DtcDiagnosticTransaction                       1.0.0.0    Ms
 Cmdlet          Send-DtcDiagnosticTransaction                      1.0.0.0    MsDtc
 Cmdlet          Undo-DtcDiagnosticTransaction                      1.0.0.0    MsDtc
 Cmdlet          Receive-DtcDiagnosticTransaction                   1.0.0.0    MsDtc
-Cmdlet          Register-EngineEvent                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Error                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Unregister-Event                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Event                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-Event                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Wait-Event                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-Event                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Clear-EventLog                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-EventLog                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-EventLog                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Limit-EventLog                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-EventLog                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Show-EventLog                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Write-EventLog                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-EventSubscriber                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-ExecutionPolicy                                3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Set-ExecutionPolicy                                3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Invoke-Expression                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Unblock-File                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-File                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-FileCatalog                                    3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Test-FileCatalog                                   3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Get-FormatData                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Export-FormatData                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Update-FormatData                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-GridView                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Help                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Save-Help                                          3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Update-Help                                        3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Register-EngineEvent                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Error                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Unregister-Event                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Event                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-Event                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Wait-Event                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Event                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-EventLog                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-EventLog                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-EventLog                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Limit-EventLog                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-EventLog                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Show-EventLog                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-EventLog                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-EventSubscriber                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ExecutionPolicy                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-ExecutionPolicy                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-Expression                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Unblock-File                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Out-File                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-FileCatalog                                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Test-FileCatalog                                   3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-FormatData                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Export-FormatData                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Update-FormatData                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Out-GridView                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Help                                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Save-Help                                          3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Update-Help                                        3.0.0.0    Microsoft.PowerSh...
 Cmdlet          Get-HgsAttestationBaselinePolicy                   1.0.0.0    HgsClient
 Cmdlet          Get-HgsTrace                                       1.0.0.0    HgsDiagnostics
 Cmdlet          Get-HgsTraceFileData                               1.0.0.0    HgsDiagnostics
 Cmdlet          New-HgsTraceTarget                                 1.0.0.0    HgsDiagnostics
 Cmdlet          Test-HgsTraceTarget                                1.0.0.0    HgsDiagnostics
-Cmdlet          Clear-History                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Invoke-History                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Add-History                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-History                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Read-Host                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Host                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-Host                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-Host                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-HotFix                                         3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          ConvertTo-Html                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Clear-History                                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-History                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Add-History                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-History                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Read-Host                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Host                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Out-Host                                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Host                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-HotFix                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertTo-Html                                     3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Set-HVCIOptions                                    1.0        ConfigCI
-Cmdlet          Write-Information                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-Item                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Move-Item                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Invoke-Item                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Item                                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-Item                                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Clear-Item                                         3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-Item                                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Copy-Item                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Rename-Item                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ItemProperty                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Move-ItemProperty                                  3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Clear-ItemProperty                                 3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-ItemProperty                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-ItemProperty                                3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-ItemProperty                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Copy-ItemProperty                                  3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Rename-ItemProperty                                3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ItemPropertyValue                              3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Job                                            3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Receive-Job                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Resume-Job                                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Suspend-Job                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Start-Job                                          3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Remove-Job                                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Debug-Job                                          3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Wait-Job                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Stop-Job                                           3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Write-Information                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Item                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Move-Item                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-Item                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Item                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Item                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-Item                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-Item                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Copy-Item                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Rename-Item                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ItemProperty                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Move-ItemProperty                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-ItemProperty                                 3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-ItemProperty                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-ItemProperty                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-ItemProperty                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Copy-ItemProperty                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Rename-ItemProperty                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-ItemPropertyValue                              3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Job                                            3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Receive-Job                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Resume-Job                                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Suspend-Job                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Start-Job                                          3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Job                                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Debug-Job                                          3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Wait-Job                                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Stop-Job                                           3.0.0.0    Microsoft.PowerSh...
 Cmdlet          Set-JobTrigger                                     1.1.0.0    PSScheduledJob
 Cmdlet          Disable-JobTrigger                                 1.1.0.0    PSScheduledJob
 Cmdlet          Get-JobTrigger                                     1.1.0.0    PSScheduledJob
@@ -3029,64 +4023,64 @@ Cmdlet          Enable-JobTrigger                                  1.1.0.0    PS
 Cmdlet          Remove-JobTrigger                                  1.1.0.0    PSScheduledJob
 Cmdlet          New-JobTrigger                                     1.1.0.0    PSScheduledJob
 Cmdlet          Add-JobTrigger                                     1.1.0.0    PSScheduledJob
-Cmdlet          ConvertTo-Json                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertFrom-Json                                   3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          ConvertTo-Json                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertFrom-Json                                   3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Clear-KdsCache                                     1.0.0.0    Kds
 Cmdlet          Get-KdsConfiguration                               1.0.0.0    Kds
 Cmdlet          Set-KdsConfiguration                               1.0.0.0    Kds
 Cmdlet          Add-KdsRootKey                                     1.0.0.0    Kds
 Cmdlet          Test-KdsRootKey                                    1.0.0.0    Kds
 Cmdlet          Get-KdsRootKey                                     1.0.0.0    Kds
-Cmdlet          Update-List                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Format-List                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-LocalGroup                                     1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Rename-LocalGroup                                  1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Remove-LocalGroup                                  1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          New-LocalGroup                                     1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Set-LocalGroup                                     1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Add-LocalGroupMember                               1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Get-LocalGroupMember                               1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Remove-LocalGroupMember                            1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Import-LocalizedData                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Disable-LocalUser                                  1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Enable-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Rename-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          New-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Set-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Remove-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Get-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Push-Location                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Location                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Pop-Location                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-Location                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Send-MailMessage                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Member                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Add-Member                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Module                                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Remove-Module                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-Module                                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Import-Module                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-ModuleManifest                                 3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Test-ModuleManifest                                3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Export-ModuleMember                                3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Update-List                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Format-List                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-LocalGroup                                     1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Rename-LocalGroup                                  1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-LocalGroup                                  1.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-LocalGroup                                     1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-LocalGroup                                     1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Add-LocalGroupMember                               1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-LocalGroupMember                               1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-LocalGroupMember                            1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Import-LocalizedData                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-LocalUser                                  1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-LocalUser                                   1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Rename-LocalUser                                   1.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-LocalUser                                      1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-LocalUser                                      1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-LocalUser                                   1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-LocalUser                                      1.0.0.0    Microsoft.PowerSh...
+Cmdlet          Push-Location                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Location                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Pop-Location                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Location                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Send-MailMessage                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Member                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Add-Member                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Module                                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Module                                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-Module                                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Import-Module                                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-ModuleManifest                                 3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Test-ModuleManifest                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Export-ModuleMember                                3.0.0.0    Microsoft.PowerSh...
 Cmdlet          New-NetIPsecAuthProposal                           2.0.0.0    NetSecurity
 Cmdlet          New-NetIPsecMainModeCryptoProposal                 2.0.0.0    NetSecurity
 Cmdlet          New-NetIPsecQuickModeCryptoProposal                2.0.0.0    NetSecurity
 Cmdlet          Set-NonRemovableAppsPolicy                         3.0        Dism
 Cmdlet          Get-NonRemovableAppsPolicy                         3.0        Dism
-Cmdlet          Out-Null                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Group-Object                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Select-Object                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Where-Object                                       3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Measure-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Tee-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Compare-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ForEach-Object                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Sort-Object                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Register-ObjectEvent                               3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Out-Null                                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Group-Object                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Select-Object                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Where-Object                                       3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-Object                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Measure-Object                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Tee-Object                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Compare-Object                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ForEach-Object                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Sort-Object                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Register-ObjectEvent                               3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Start-OSUninstall                                  3.0        Dism
-Cmdlet          Write-Output                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Write-Output                                       3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Install-Package                                    1.0.0.1    PackageManagement
 Cmdlet          Get-Package                                        1.0.0.1    PackageManagement
 Cmdlet          Save-Package                                       1.0.0.1    PackageManagement
@@ -3100,12 +4094,12 @@ Cmdlet          Get-PackageSource                                  1.0.0.1    Pa
 Cmdlet          Set-PackageSource                                  1.0.0.1    PackageManagement
 Cmdlet          Unregister-PackageSource                           1.0.0.1    PackageManagement
 Cmdlet          Register-PackageSource                             1.0.0.1    PackageManagement
-Cmdlet          Resolve-Path                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Test-Path                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Split-Path                                         3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Convert-Path                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Join-Path                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-PfxCertificate                                 3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          Resolve-Path                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Test-Path                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Split-Path                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Convert-Path                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Join-Path                                          3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PfxCertificate                                 3.0.0.0    Microsoft.PowerSh...
 Cmdlet          Import-PfxCertificate                              1.0.0.0    PKI
 Cmdlet          Export-PfxCertificate                              1.0.0.0    PKI
 Cmdlet          Get-PfxData                                        1.0.0.0    PKI
@@ -3115,78 +4109,78 @@ Cmdlet          Remove-PmemDisk                                    1.0.0.0    Pe
 Cmdlet          Get-PmemPhysicalDevice                             1.0.0.0    PersistentMemory
 Cmdlet          Initialize-PmemPhysicalDevice                      1.0.0.0    PersistentMemory
 Cmdlet          Get-PmemUnusedRegion                               1.0.0.0    PersistentMemory
-Cmdlet          Out-Printer                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Out-Printer                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Get-ProcessMitigation                              1.0.11     ProcessMitigations
 Cmdlet          Set-ProcessMitigation                              1.0.11     ProcessMitigations
 Cmdlet          ConvertTo-ProcessMitigationPolicy                  1.0.11     ProcessMitigations
-Cmdlet          Write-Progress                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Write-Progress                                     3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Export-ProvisioningPackage                         3.0        Provisioning
 Cmdlet          Uninstall-ProvisioningPackage                      3.0        Provisioning
 Cmdlet          Get-ProvisioningPackage                            3.0        Provisioning
 Cmdlet          Install-ProvisioningPackage                        3.0        Provisioning
 Cmdlet          New-ProvisioningRepro                              3.0        Provisioning
 Cmdlet          Resume-ProvisioningSession                         3.0        Provisioning
-Cmdlet          Disable-PSBreakpoint                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Enable-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-PSCallStack                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-PSDebug                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSDrive                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-PSDrive                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-PSDrive                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Enter-PSHostProcess                                3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Exit-PSHostProcess                                 3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSHostProcessInfo                              3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSProvider                                     3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Disable-PSBreakpoint                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-PSBreakpoint                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSBreakpoint                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-PSBreakpoint                                3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSCallStack                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-PSDebug                                        3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSDrive                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-PSDrive                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSDrive                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Enter-PSHostProcess                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Exit-PSHostProcess                                 3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSHostProcessInfo                              3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSProvider                                     3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Set-PSReadLineKeyHandler                           2.0.0      PSReadline
 Cmdlet          Get-PSReadLineKeyHandler                           2.0.0      PSReadline
 Cmdlet          Remove-PSReadLineKeyHandler                        2.0.0      PSReadline
 Cmdlet          Set-PSReadLineOption                               2.0.0      PSReadline
 Cmdlet          Get-PSReadLineOption                               2.0.0      PSReadline
-Cmdlet          Enable-PSRemoting                                  3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Disable-PSRemoting                                 3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSRoleCapabilityFile                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Import-PSSession                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Enter-PSSession                                    3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Exit-PSSession                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Disconnect-PSSession                               3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSSession                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Remove-PSSession                                   3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSSession                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Receive-PSSession                                  3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Connect-PSSession                                  3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Export-PSSession                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-PSSessionCapability                            3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Unregister-PSSessionConfiguration                  3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Enable-PSSessionConfiguration                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Register-PSSessionConfiguration                    3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Set-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Disable-PSSessionConfiguration                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSSessionConfigurationFile                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Test-PSSessionConfigurationFile                    3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSSessionOption                                3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Remove-PSSnapin                                    3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSSnapin                                       3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Add-PSSnapin                                       3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSTransportOption                              3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Enable-PSRemoting                                  3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-PSRemoting                                 3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSRoleCapabilityFile                           3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Import-PSSession                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Enter-PSSession                                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Exit-PSSession                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Disconnect-PSSession                               3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSSession                                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-PSSession                                   3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSSession                                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Receive-PSSession                                  3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Connect-PSSession                                  3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Export-PSSession                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSSessionCapability                            3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Unregister-PSSessionConfiguration                  3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-PSSessionConfiguration                      3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Register-PSSessionConfiguration                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Set-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-PSSessionConfiguration                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSSessionConfigurationFile                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Test-PSSessionConfigurationFile                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSSessionOption                                3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-PSSnapin                                    3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Get-PSSnapin                                       3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Add-PSSnapin                                       3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-PSTransportOption                              3.0.0.0    Microsoft.PowerSh...
 Cmdlet          New-PSWorkflowExecutionOption                      2.0.0.0    PSWorkflow
-Cmdlet          Get-Random                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Clear-RecycleBin                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Invoke-RestMethod                                  3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Get-Random                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-RecycleBin                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-RestMethod                                  3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Set-RuleOption                                     1.0        ConfigCI
-Cmdlet          Debug-Runspace                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Runspace                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-RunspaceDebug                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Enable-RunspaceDebug                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Disable-RunspaceDebug                              3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Debug-Runspace                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Runspace                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-RunspaceDebug                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Enable-RunspaceDebug                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Disable-RunspaceDebug                              3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Register-ScheduledJob                              1.1.0.0    PSScheduledJob
 Cmdlet          Set-ScheduledJob                                   1.1.0.0    PSScheduledJob
 Cmdlet          Unregister-ScheduledJob                            1.1.0.0    PSScheduledJob
@@ -3201,33 +4195,33 @@ Cmdlet          Confirm-SecureBootUEFI                             2.0.0.0    Se
 Cmdlet          Get-SecureBootUEFI                                 2.0.0.0    SecureBoot
 Cmdlet          Set-SecureBootUEFI                                 2.0.0.0    SecureBoot
 Cmdlet          Format-SecureBootUEFI                              2.0.0.0    SecureBoot
-Cmdlet          ConvertTo-SecureString                             3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          ConvertFrom-SecureString                           3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          ConvertTo-SecureString                             3.0.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertFrom-SecureString                           3.0.0.0    Microsoft.PowerSh...
 Cmdlet          New-SelfSignedCertificate                          1.0.0.0    PKI
-Cmdlet          Get-Service                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Resume-Service                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Restart-Service                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-Service                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Service                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Stop-Service                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Suspend-Service                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-Service                                        3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Get-Service                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Resume-Service                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Restart-Service                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Service                                        3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Start-Service                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Stop-Service                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Suspend-Service                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-Service                                        3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Add-SignerRule                                     1.0        ConfigCI
-Cmdlet          Start-Sleep                                        3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Start-Sleep                                        3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Import-StartLayout                                 1.0.0.0    StartLayout
 Cmdlet          Export-StartLayout                                 1.0.0.0    StartLayout
 Cmdlet          Export-StartLayoutEdgeAssets                       1.0.0.0    StartLayout
-Cmdlet          Set-StrictMode                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Convert-String                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertFrom-String                                 3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-String                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Select-String                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertFrom-StringData                             3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Set-StrictMode                                     3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Convert-String                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertFrom-String                                 3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Out-String                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Select-String                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertFrom-StringData                             3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Get-SystemDriver                                   1.0        ConfigCI
-Cmdlet          Format-Table                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-TimeSpan                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-TimeZone                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-TimeZone                                       3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Format-Table                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-TimeSpan                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-TimeZone                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-TimeZone                                       3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Get-TlsCipherSuite                                 2.0.0.0    TLS
 Cmdlet          Enable-TlsCipherSuite                              2.0.0.0    TLS
 Cmdlet          Disable-TlsCipherSuite                             2.0.0.0    TLS
@@ -3238,36 +4232,36 @@ Cmdlet          Enable-TlsSessionTicketKey                         2.0.0.0    TL
 Cmdlet          Export-TlsSessionTicketKey                         2.0.0.0    TLS
 Cmdlet          Disable-TlsSessionTicketKey                        2.0.0.0    TLS
 Cmdlet          New-TlsSessionTicketKey                            2.0.0.0    TLS
-Cmdlet          Initialize-Tpm                                     2.0.0.0    TrustedPlatformModule
-Cmdlet          Clear-Tpm                                          2.0.0.0    TrustedPlatformModule
-Cmdlet          Unblock-Tpm                                        2.0.0.0    TrustedPlatformModule
-Cmdlet          Get-Tpm                                            2.0.0.0    TrustedPlatformModule
-Cmdlet          Enable-TpmAutoProvisioning                         2.0.0.0    TrustedPlatformModule
-Cmdlet          Disable-TpmAutoProvisioning                        2.0.0.0    TrustedPlatformModule
-Cmdlet          Get-TpmEndorsementKeyInfo                          2.0.0.0    TrustedPlatformModule
-Cmdlet          Import-TpmOwnerAuth                                2.0.0.0    TrustedPlatformModule
-Cmdlet          ConvertTo-TpmOwnerAuth                             2.0.0.0    TrustedPlatformModule
-Cmdlet          Set-TpmOwnerAuth                                   2.0.0.0    TrustedPlatformModule
-Cmdlet          Get-TpmSupportedFeature                            2.0.0.0    TrustedPlatformModule
+Cmdlet          Initialize-Tpm                                     2.0.0.0    TrustedPlatformMo...
+Cmdlet          Clear-Tpm                                          2.0.0.0    TrustedPlatformMo...
+Cmdlet          Unblock-Tpm                                        2.0.0.0    TrustedPlatformMo...
+Cmdlet          Get-Tpm                                            2.0.0.0    TrustedPlatformMo...
+Cmdlet          Enable-TpmAutoProvisioning                         2.0.0.0    TrustedPlatformMo...
+Cmdlet          Disable-TpmAutoProvisioning                        2.0.0.0    TrustedPlatformMo...
+Cmdlet          Get-TpmEndorsementKeyInfo                          2.0.0.0    TrustedPlatformMo...
+Cmdlet          Import-TpmOwnerAuth                                2.0.0.0    TrustedPlatformMo...
+Cmdlet          ConvertTo-TpmOwnerAuth                             2.0.0.0    TrustedPlatformMo...
+Cmdlet          Set-TpmOwnerAuth                                   2.0.0.0    TrustedPlatformMo...
+Cmdlet          Get-TpmSupportedFeature                            2.0.0.0    TrustedPlatformMo...
 Cmdlet          Export-Trace                                       3.0        Provisioning
-Cmdlet          Get-TraceSource                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-TraceSource                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Undo-Transaction                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Use-Transaction                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Transaction                                  3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Complete-Transaction                               3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Transaction                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Transcript                                   3.0.0.0    Microsoft.PowerShell.Host
-Cmdlet          Stop-Transcript                                    3.0.0.0    Microsoft.PowerShell.Host
+Cmdlet          Get-TraceSource                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-TraceSource                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Undo-Transaction                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Use-Transaction                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Start-Transaction                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Complete-Transaction                               3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Transaction                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Start-Transcript                                   3.0.0.0    Microsoft.PowerSh...
+Cmdlet          Stop-Transcript                                    3.0.0.0    Microsoft.PowerSh...
 Cmdlet          Get-TroubleshootingPack                            1.0.0.0    TroubleshootingPack
 Cmdlet          Invoke-TroubleshootingPack                         1.0.0.0    TroubleshootingPack
 Cmdlet          Uninstall-TrustedProvisioningCertificate           3.0        Provisioning
 Cmdlet          Get-TrustedProvisioningCertificate                 3.0        Provisioning
 Cmdlet          Install-TrustedProvisioningCertificate             3.0        Provisioning
-Cmdlet          Add-Type                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-TypeData                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-TypeData                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Update-TypeData                                    3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Add-Type                                           3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-TypeData                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-TypeData                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Update-TypeData                                    3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Disable-Uev                                        2.1.639.0  UEV
 Cmdlet          Enable-Uev                                         2.1.639.0  UEV
 Cmdlet          Clear-UevAppxPackage                               2.1.639.0  UEV
@@ -3293,14 +4287,14 @@ Cmdlet          Repair-UevTemplateIndex                            2.1.639.0  UE
 Cmdlet          Set-UevTemplateProfile                             2.1.639.0  UEV
 Cmdlet          Get-UevTemplateProgram                             2.1.639.0  UEV
 Cmdlet          Restore-UevUserSetting                             2.1.639.0  UEV
-Cmdlet          Get-UICulture                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Unique                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Clear-Variable                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-Variable                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-Variable                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Variable                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-Variable                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Verbose                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Get-UICulture                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Unique                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Clear-Variable                                     3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-Variable                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-Variable                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-Variable                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-Variable                                       3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Write-Verbose                                      3.1.0.0    Microsoft.PowerSh...
 Cmdlet          New-VFD                                            2.0.0.0    Hyper-V
 Cmdlet          Convert-VHD                                        2.0.0.0    Hyper-V
 Cmdlet          Get-VHD                                            2.0.0.0    Hyper-V
@@ -3539,12 +4533,12 @@ Cmdlet          Stop-VMTrace                                       2.0.0.0    Hy
 Cmdlet          Update-VMVersion                                   2.0.0.0    Hyper-V
 Cmdlet          Set-VMVideo                                        2.0.0.0    Hyper-V
 Cmdlet          Get-VMVideo                                        2.0.0.0    Hyper-V
-Cmdlet          Write-Warning                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Invoke-WebRequest                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-WebServiceProxy                                3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Write-Warning                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-WebRequest                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          New-WebServiceProxy                                3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Set-WheaMemoryPolicy                               2.0.0.0    Whea
 Cmdlet          Get-WheaMemoryPolicy                               2.0.0.0    Whea
-Cmdlet          Format-Wide                                        3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Format-Wide                                        3.1.0.0    Microsoft.PowerSh...
 Cmdlet          Get-WIMBootEntry                                   3.0        Dism
 Cmdlet          Update-WIMBootEntry                                3.0        Dism
 Cmdlet          Set-WinAcceptLanguageFromLanguageListOptOut        2.0.0.0    International
@@ -3560,18 +4554,18 @@ Cmdlet          Export-WindowsCapabilitySource                     3.0        Di
 Cmdlet          Clear-WindowsCorruptMountPoint                     3.0        Dism
 Cmdlet          Expand-WindowsCustomDataImage                      3.0        Dism
 Cmdlet          New-WindowsCustomImage                             3.0        Dism
-Cmdlet          Unregister-WindowsDeveloperLicense                 1.0.0.0    WindowsDeveloperLicense
-Cmdlet          Get-WindowsDeveloperLicense                        1.0.0.0    WindowsDeveloperLicense
-Cmdlet          Show-WindowsDeveloperLicenseRegistration           1.0.0.0    WindowsDeveloperLicense
+Cmdlet          Unregister-WindowsDeveloperLicense                 1.0.0.0    WindowsDeveloperL...
+Cmdlet          Get-WindowsDeveloperLicense                        1.0.0.0    WindowsDeveloperL...
+Cmdlet          Show-WindowsDeveloperLicenseRegistration           1.0.0.0    WindowsDeveloperL...
 Cmdlet          Remove-WindowsDriver                               3.0        Dism
 Cmdlet          Add-WindowsDriver                                  3.0        Dism
 Cmdlet          Get-WindowsDriver                                  3.0        Dism
 Cmdlet          Export-WindowsDriver                               3.0        Dism
 Cmdlet          Set-WindowsEdition                                 3.0        Dism
 Cmdlet          Get-WindowsEdition                                 3.0        Dism
-Cmdlet          Enable-WindowsErrorReporting                       1.0        WindowsErrorReporting
-Cmdlet          Get-WindowsErrorReporting                          1.0        WindowsErrorReporting
-Cmdlet          Disable-WindowsErrorReporting                      1.0        WindowsErrorReporting
+Cmdlet          Enable-WindowsErrorReporting                       1.0        WindowsErrorRepor...
+Cmdlet          Get-WindowsErrorReporting                          1.0        WindowsErrorRepor...
+Cmdlet          Disable-WindowsErrorReporting                      1.0        WindowsErrorRepor...
 Cmdlet          Add-WindowsImage                                   3.0        Dism
 Cmdlet          Get-WindowsImage                                   3.0        Dism
 Cmdlet          Save-WindowsImage                                  3.0        Dism
@@ -3595,8 +4589,8 @@ Cmdlet          Set-WindowsProductKey                              3.0        Di
 Cmdlet          Get-WindowsSearchSetting                           1.0.0.0    WindowsSearch
 Cmdlet          Set-WindowsSearchSetting                           1.0.0.0    WindowsSearch
 Cmdlet          Use-WindowsUnattend                                3.0        Dism
-Cmdlet          Get-WinEvent                                       3.0.0.0    Microsoft.PowerShell.Diagnos...
-Cmdlet          New-WinEvent                                       3.0.0.0    Microsoft.PowerShell.Diagnos...
+Cmdlet          Get-WinEvent                                       3.0.0.0    Microsoft.PowerSh...
+Cmdlet          New-WinEvent                                       3.0.0.0    Microsoft.PowerSh...
 Cmdlet          Get-WinHomeLocation                                2.0.0.0    International
 Cmdlet          Set-WinHomeLocation                                2.0.0.0    International
 Cmdlet          Set-WinLanguageBarOption                           2.0.0.0    International
@@ -3608,211 +4602,128 @@ Cmdlet          Set-WinUILanguageOverride                          2.0.0.0    In
 Cmdlet          Set-WinUserLanguageList                            2.0.0.0    International
 Cmdlet          New-WinUserLanguageList                            2.0.0.0    International
 Cmdlet          Get-WinUserLanguageList                            2.0.0.0    International
-Cmdlet          Register-WmiEvent                                  3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-WmiInstance                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Invoke-WmiMethod                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-WmiObject                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-WmiObject                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Disconnect-WSMan                                   3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Connect-WSMan                                      3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Test-WSMan                                         3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Invoke-WSManAction                                 3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Get-WSManCredSSP                                   3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Disable-WSManCredSSP                               3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Enable-WSManCredSSP                                3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          New-WSManInstance                                  3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Set-WSManInstance                                  3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Remove-WSManInstance                               3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Get-WSManInstance                                  3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Set-WSManQuickConfig                               3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          New-WSManSessionOption                             3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Select-Xml                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertTo-Xml                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Register-WmiEvent                                  3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Set-WmiInstance                                    3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Invoke-WmiMethod                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Remove-WmiObject                                   3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Get-WmiObject                                      3.1.0.0    Microsoft.PowerSh...
+Cmdlet          Disconnect-WSMan                                   3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Connect-WSMan                                      3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Test-WSMan                                         3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Invoke-WSManAction                                 3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Get-WSManCredSSP                                   3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Disable-WSManCredSSP                               3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Enable-WSManCredSSP                                3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          New-WSManInstance                                  3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Set-WSManInstance                                  3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Remove-WSManInstance                               3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Get-WSManInstance                                  3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Set-WSManQuickConfig                               3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          New-WSManSessionOption                             3.0.0.0    Microsoft.WSMan.M...
+Cmdlet          Select-Xml                                         3.1.0.0    Microsoft.PowerSh...
+Cmdlet          ConvertTo-Xml                                      3.1.0.0    Microsoft.PowerSh...
 ```
-Get-Command -Type Cmdlet | Sort-Object -Property Noun | Format-Table -GroupBy Noun
+下達指令 Get-Command -Type Cmdlet | Format-Table -GroupBy Noun
 ```
-Noun: Acl
+Cmdlet          Invoke-WebRequest                                  3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: WmiMethod
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-Acl                                            3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Set-Acl                                            3.0.0.0    Microsoft.PowerShell.Security
+Cmdlet          Invoke-WmiMethod                                   3.1.0.0    Microsoft.PowerSh...
 
 
-   Noun: Alias
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Import-Alias                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Export-Alias                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: AppBackgroundTaskDiagnosticLog
+   Noun: WSManAction
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Enable-AppBackgroundTaskDiagnosticLog              1.0.0.0    AppBackgroundTask
-Cmdlet          Disable-AppBackgroundTaskDiagnosticLog             1.0.0.0    AppBackgroundTask
+Cmdlet          Invoke-WSManAction                                 3.0.0.0    Microsoft.WSMan.M...
 
 
-   Noun: AppBackgroundTaskResourcePolicy
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-AppBackgroundTaskResourcePolicy                1.0.0.0    AppBackgroundTask
-
-
-   Noun: AppLockerFileInformation
+   Noun: DtcDiagnosticResourceManager
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-AppLockerFileInformation                       2.0.0.0    AppLocker
+Cmdlet          Join-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
 
 
-   Noun: AppLockerPolicy
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-AppLockerPolicy                                2.0.0.0    AppLocker
-Cmdlet          Test-AppLockerPolicy                               2.0.0.0    AppLocker
-Cmdlet          Get-AppLockerPolicy                                2.0.0.0    AppLocker
-Cmdlet          New-AppLockerPolicy                                2.0.0.0    AppLocker
-
-
-   Noun: Appv
+   Noun: Path
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Enable-Appv                                        1.0.0.0    AppvClient
-Cmdlet          Disable-Appv                                       1.0.0.0    AppvClient
+Cmdlet          Join-Path                                          3.1.0.0    Microsoft.PowerSh...
 
 
-   Noun: AppvClientApplication
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-AppvClientApplication                          1.0.0.0    AppvClient
-
-
-   Noun: AppvClientConfiguration
+   Noun: EventLog
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Set-AppvClientConfiguration                        1.0.0.0    AppvClient
-Cmdlet          Get-AppvClientConfiguration                        1.0.0.0    AppvClient
+Cmdlet          Limit-EventLog                                     3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Command
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Measure-Command                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Object
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Measure-Object                                     3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Measure-VM                                         2.0.0.0    Hyper-V
+
+
+   Noun: VMReplication
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Measure-VMReplication                              2.0.0.0    Hyper-V
+
+
+   Noun: VMResourcePool
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Measure-VMResourcePool                             2.0.0.0    Hyper-V
+
+
+   Noun: CIPolicy
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Merge-CIPolicy                                     1.0        ConfigCI
+
+
+   Noun: VHD
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Merge-VHD                                          2.0.0.0    Hyper-V
 
 
    Noun: AppvClientConnectionGroup
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Add-AppvClientConnectionGroup                      1.0.0.0    AppvClient
 Cmdlet          Mount-AppvClientConnectionGroup                    1.0.0.0    AppvClient
-Cmdlet          Repair-AppvClientConnectionGroup                   1.0.0.0    AppvClient
-Cmdlet          Remove-AppvClientConnectionGroup                   1.0.0.0    AppvClient
-Cmdlet          Get-AppvClientConnectionGroup                      1.0.0.0    AppvClient
-Cmdlet          Stop-AppvClientConnectionGroup                     1.0.0.0    AppvClient
-Cmdlet          Disable-AppvClientConnectionGroup                  1.0.0.0    AppvClient
-Cmdlet          Enable-AppvClientConnectionGroup                   1.0.0.0    AppvClient
-
-
-   Noun: AppvClientMode
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-AppvClientMode                                 1.0.0.0    AppvClient
-Cmdlet          Get-AppvClientMode                                 1.0.0.0    AppvClient
 
 
    Noun: AppvClientPackage
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Stop-AppvClientPackage                             1.0.0.0    AppvClient
-Cmdlet          Unpublish-AppvClientPackage                        1.0.0.0    AppvClient
-Cmdlet          Repair-AppvClientPackage                           1.0.0.0    AppvClient
-Cmdlet          Get-AppvClientPackage                              1.0.0.0    AppvClient
-Cmdlet          Publish-AppvClientPackage                          1.0.0.0    AppvClient
 Cmdlet          Mount-AppvClientPackage                            1.0.0.0    AppvClient
-Cmdlet          Add-AppvClientPackage                              1.0.0.0    AppvClient
-Cmdlet          Set-AppvClientPackage                              1.0.0.0    AppvClient
-Cmdlet          Remove-AppvClientPackage                           1.0.0.0    AppvClient
-
-
-   Noun: AppvClientReport
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Send-AppvClientReport                              1.0.0.0    AppvClient
-
-
-   Noun: AppvPublishingServer
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-AppvPublishingServer                        1.0.0.0    AppvClient
-Cmdlet          Add-AppvPublishingServer                           1.0.0.0    AppvClient
-Cmdlet          Sync-AppvPublishingServer                          1.0.0.0    AppvClient
-Cmdlet          Set-AppvPublishingServer                           1.0.0.0    AppvClient
-Cmdlet          Get-AppvPublishingServer                           1.0.0.0    AppvClient
-
-
-   Noun: AppvStatus
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-AppvStatus                                     1.0.0.0    AppvClient
-
-
-   Noun: AppxDefaultVolume
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-AppxDefaultVolume                              2.0.1.0    Appx
-Cmdlet          Get-AppxDefaultVolume                              2.0.1.0    Appx
-
-
-   Noun: AppxPackage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Move-AppxPackage                                   2.0.1.0    Appx
-Cmdlet          Add-AppxPackage                                    2.0.1.0    Appx
-Cmdlet          Remove-AppxPackage                                 2.0.1.0    Appx
-Cmdlet          Get-AppxPackage                                    2.0.1.0    Appx
-
-
-   Noun: AppxPackageManifest
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-AppxPackageManifest                            2.0.1.0    Appx
-
-
-   Noun: AppXProvisionedDataFile
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-AppXProvisionedDataFile                        3.0        Dism
-
-
-   Noun: AppxProvisionedPackage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-AppxProvisionedPackage                      3.0        Dism
-Cmdlet          Add-AppxProvisionedPackage                         3.0        Dism
-Cmdlet          Get-AppxProvisionedPackage                         3.0        Dism
-
-
-   Noun: AppxProvisionedPackages
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Optimize-AppxProvisionedPackages                   3.0        Dism
 
 
    Noun: AppxVolume
@@ -3820,81 +4731,76 @@ Cmdlet          Optimize-AppxProvisionedPackages                   3.0        Di
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          Mount-AppxVolume                                   2.0.1.0    Appx
-Cmdlet          Get-AppxVolume                                     2.0.1.0    Appx
-Cmdlet          Dismount-AppxVolume                                2.0.1.0    Appx
-Cmdlet          Remove-AppxVolume                                  2.0.1.0    Appx
-Cmdlet          Add-AppxVolume                                     2.0.1.0    Appx
 
 
-   Noun: ArgumentCompleter
+   Noun: VHD
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Register-ArgumentCompleter                         3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Mount-VHD                                          2.0.0.0    Hyper-V
 
 
-   Noun: AuthenticodeSignature
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Get-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerShell.Security
-
-
-   Noun: BinaryMiLog
+   Noun: VMHostAssignableDevice
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Export-BinaryMiLog                                 1.0.0.0    CimCmdlets
-Cmdlet          Import-BinaryMiLog                                 1.0.0.0    CimCmdlets
+Cmdlet          Mount-VMHostAssignableDevice                       2.0.0.0    Hyper-V
 
 
-   Noun: BitsFile
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-BitsFile                                       2.0.0.0    BitsTransfer
-
-
-   Noun: BitsTransfer
+   Noun: WindowsImage
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-BitsTransfer                                   2.0.0.0    BitsTransfer
-Cmdlet          Suspend-BitsTransfer                               2.0.0.0    BitsTransfer
-Cmdlet          Start-BitsTransfer                                 2.0.0.0    BitsTransfer
-Cmdlet          Set-BitsTransfer                                   2.0.0.0    BitsTransfer
-Cmdlet          Resume-BitsTransfer                                2.0.0.0    BitsTransfer
-Cmdlet          Complete-BitsTransfer                              2.0.0.0    BitsTransfer
-Cmdlet          Remove-BitsTransfer                                2.0.0.0    BitsTransfer
+Cmdlet          Mount-WindowsImage                                 3.0        Dism
 
 
-   Noun: Certificate
+   Noun: AppxPackage
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Import-Certificate                                 1.0.0.0    PKI
-Cmdlet          Get-Certificate                                    1.0.0.0    PKI
-Cmdlet          Test-Certificate                                   1.0.0.0    PKI
-Cmdlet          Export-Certificate                                 1.0.0.0    PKI
-Cmdlet          Switch-Certificate                                 1.0.0.0    PKI
+Cmdlet          Move-AppxPackage                                   2.0.1.0    Appx
 
 
-   Noun: CertificateAutoEnrollmentPolicy
+   Noun: Item
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Set-CertificateAutoEnrollmentPolicy                1.0.0.0    PKI
-Cmdlet          Get-CertificateAutoEnrollmentPolicy                1.0.0.0    PKI
+Cmdlet          Move-Item                                          3.1.0.0    Microsoft.PowerSh...
 
 
-   Noun: CertificateEnrollmentPolicyServer
+   Noun: ItemProperty
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Add-CertificateEnrollmentPolicyServer              1.0.0.0    PKI
-Cmdlet          Get-CertificateEnrollmentPolicyServer              1.0.0.0    PKI
-Cmdlet          Remove-CertificateEnrollmentPolicyServer           1.0.0.0    PKI
+Cmdlet          Move-ItemProperty                                  3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Move-VM                                            2.0.0.0    Hyper-V
+
+
+   Noun: VMStorage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Move-VMStorage                                     2.0.0.0    Hyper-V
+
+
+   Noun: Alias
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-Alias                                          3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: AppLockerPolicy
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-AppLockerPolicy                                2.0.0.0    AppLocker
 
 
    Noun: CertificateNotificationTask
@@ -3902,36 +4808,6 @@ Cmdlet          Remove-CertificateEnrollmentPolicyServer           1.0.0.0    PK
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          New-CertificateNotificationTask                    1.0.0.0    PKI
-Cmdlet          Get-CertificateNotificationTask                    1.0.0.0    PKI
-Cmdlet          Remove-CertificateNotificationTask                 1.0.0.0    PKI
-
-
-   Noun: ChildItem
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-ChildItem                                      3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: CimAssociatedInstance
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-CimAssociatedInstance                          1.0.0.0    CimCmdlets
-
-
-   Noun: CimClass
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-CimClass                                       1.0.0.0    CimCmdlets
-
-
-   Noun: CimIndicationEvent
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Register-CimIndicationEvent                        1.0.0.0    CimCmdlets
 
 
    Noun: CimInstance
@@ -3939,16 +4815,6 @@ Cmdlet          Register-CimIndicationEvent                        1.0.0.0    Ci
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          New-CimInstance                                    1.0.0.0    CimCmdlets
-Cmdlet          Set-CimInstance                                    1.0.0.0    CimCmdlets
-Cmdlet          Get-CimInstance                                    1.0.0.0    CimCmdlets
-Cmdlet          Remove-CimInstance                                 1.0.0.0    CimCmdlets
-
-
-   Noun: CimMethod
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Invoke-CimMethod                                   1.0.0.0    CimCmdlets
 
 
    Noun: CimSession
@@ -3956,8 +4822,6 @@ Cmdlet          Invoke-CimMethod                                   1.0.0.0    Ci
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          New-CimSession                                     1.0.0.0    CimCmdlets
-Cmdlet          Remove-CimSession                                  1.0.0.0    CimCmdlets
-Cmdlet          Get-CimSession                                     1.0.0.0    CimCmdlets
 
 
    Noun: CimSessionOption
@@ -3971,488 +4835,42 @@ Cmdlet          New-CimSessionOption                               1.0.0.0    Ci
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          ConvertFrom-CIPolicy                               1.0        ConfigCI
-Cmdlet          Merge-CIPolicy                                     1.0        ConfigCI
-Cmdlet          Get-CIPolicy                                       1.0        ConfigCI
 Cmdlet          New-CIPolicy                                       1.0        ConfigCI
-
-
-   Noun: CIPolicyIdInfo
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-CIPolicyIdInfo                                 1.0        ConfigCI
-Cmdlet          Get-CIPolicyIdInfo                                 1.0        ConfigCI
-
-
-   Noun: CIPolicyInfo
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-CIPolicyInfo                                   1.0        ConfigCI
 
 
    Noun: CIPolicyRule
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Edit-CIPolicyRule                                  1.0        ConfigCI
-Cmdlet          Remove-CIPolicyRule                                1.0        ConfigCI
 Cmdlet          New-CIPolicyRule                                   1.0        ConfigCI
-
-
-   Noun: CIPolicySetting
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-CIPolicySetting                                1.0        ConfigCI
-
-
-   Noun: CIPolicyVersion
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-CIPolicyVersion                                1.0        ConfigCI
-
-
-   Noun: Clipboard
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-Clipboard                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Clipboard                                      3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: Clixml
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Export-Clixml                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Import-Clixml                                      3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: CmsMessage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Unprotect-CmsMessage                               3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Protect-CmsMessage                                 3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Get-CmsMessage                                     3.0.0.0    Microsoft.PowerShell.Security
-
-
-   Noun: Command
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Trace-Command                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Measure-Command                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Show-Command                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Command                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Invoke-Command                                     3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: CommandInDesktopPackage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Invoke-CommandInDesktopPackage                     2.0.1.0    Appx
-
-
-   Noun: Computer
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Stop-Computer                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Restart-Computer                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Add-Computer                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Restore-Computer                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Rename-Computer                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-Computer                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Checkpoint-Computer                                3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: ComputerInfo
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-ComputerInfo                                   3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: ComputerMachinePassword
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Reset-ComputerMachinePassword                      3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: ComputerRestore
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Disable-ComputerRestore                            3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Enable-ComputerRestore                             3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: ComputerRestorePoint
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-ComputerRestorePoint                           3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: ComputerSecureChannel
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Test-ComputerSecureChannel                         3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: Connection
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Test-Connection                                    3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: Console
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Export-Console                                     3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: Content
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Clear-Content                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Add-Content                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-Content                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Content                                        3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: ControlPanelItem
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Show-ControlPanelItem                              3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-ControlPanelItem                               3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: Counter
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Export-Counter                                     3.0.0.0    Microsoft.PowerShell.Diagnos...
-Cmdlet          Get-Counter                                        3.0.0.0    Microsoft.PowerShell.Diagnos...
-Cmdlet          Import-Counter                                     3.0.0.0    Microsoft.PowerShell.Diagnos...
-
-
-   Noun: Credential
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-Credential                                     3.0.0.0    Microsoft.PowerShell.Security
-
-
-   Noun: Csv
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          ConvertFrom-Csv                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Export-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertTo-Csv                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Import-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Culture
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-Culture                                        2.0.0.0    International
-Cmdlet          Get-Culture                                        3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Custom
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Format-Custom                                      3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: DAPolicyChange
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-DAPolicyChange                                 2.0.0.0    NetSecurity
-
-
-   Noun: Date
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-Date                                           3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Date                                           3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Debug
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Write-Debug                                        3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Debugger
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Wait-Debugger                                      3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Default
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Out-Default                                        3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: DeliveryOptimizationCache
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Delete-DeliveryOptimizationCache                   1.0.2.0    DeliveryOptimization
-
-
-   Noun: DeliveryOptimizationLog
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-DeliveryOptimizationLog                        1.0.2.0    DeliveryOptimization
-
-
-   Noun: DeliveryOptimizationPerfSnap
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-DeliveryOptimizationPerfSnap                   1.0.2.0    DeliveryOptimization
-
-
-   Noun: DeliveryOptimizationPerfSnapThisMonth
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-DeliveryOptimizationPerfSnapThisMonth          1.0.2.0    DeliveryOptimization
-
-
-   Noun: DeliveryOptimizationStatus
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-DeliveryOptimizationStatus                     1.0.2.0    DeliveryOptimization
-Cmdlet          Set-DeliveryOptimizationStatus                     1.0.2.0    DeliveryOptimization
-
-
-   Noun: DnsName
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Resolve-DnsName                                    1.0.0.0    DnsClient
-
-
-   Noun: DOConfig
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-DOConfig                                       1.0.2.0    DeliveryOptimization
-
-
-   Noun: DODownloadMode
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-DODownloadMode                                 1.0.2.0    DeliveryOptimization
-Cmdlet          Set-DODownloadMode                                 1.0.2.0    DeliveryOptimization
-
-
-   Noun: DOPercentageMaxBackgroundBandwidth
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-DOPercentageMaxBackgroundBandwidth             1.0.2.0    DeliveryOptimization
-Cmdlet          Get-DOPercentageMaxBackgroundBandwidth             1.0.2.0    DeliveryOptimization
-
-
-   Noun: DOPercentageMaxForegroundBandwidth
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOptimization
-Cmdlet          Set-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOptimization
-
-
-   Noun: DscConfiguration
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Start-DscConfiguration                             1.1        PSDesiredStateConfiguration
-Cmdlet          Publish-DscConfiguration                           1.1        PSDesiredStateConfiguration
-Cmdlet          Test-DscConfiguration                              1.1        PSDesiredStateConfiguration
-
-
-   Noun: DscLocalConfigurationManager
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-DscLocalConfigurationManager                   1.1        PSDesiredStateConfiguration
-
-
-   Noun: DscResource
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Invoke-DscResource                                 1.1        PSDesiredStateConfiguration
-
-
-   Noun: DtcDiagnosticResourceManager
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Join-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
-Cmdlet          Start-DtcDiagnosticResourceManager                 1.0.0.0    MsDtc
-Cmdlet          Stop-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
 
 
    Noun: DtcDiagnosticTransaction
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Complete-DtcDiagnosticTransaction                  1.0.0.0    MsDtc
 Cmdlet          New-DtcDiagnosticTransaction                       1.0.0.0    MsDtc
-Cmdlet          Send-DtcDiagnosticTransaction                      1.0.0.0    MsDtc
-Cmdlet          Undo-DtcDiagnosticTransaction                      1.0.0.0    MsDtc
-Cmdlet          Receive-DtcDiagnosticTransaction                   1.0.0.0    MsDtc
-
-
-   Noun: EngineEvent
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Register-EngineEvent                               3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Error
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Write-Error                                        3.1.0.0    Microsoft.PowerShell.Utility
 
 
    Noun: Event
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Unregister-Event                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Event                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-Event                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Wait-Event                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-Event                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-Event                                          3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: EventLog
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Clear-EventLog                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-EventLog                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-EventLog                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Limit-EventLog                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-EventLog                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Show-EventLog                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Write-EventLog                                     3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: EventSubscriber
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-EventSubscriber                                3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: ExecutionPolicy
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-ExecutionPolicy                                3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Set-ExecutionPolicy                                3.0.0.0    Microsoft.PowerShell.Security
-
-
-   Noun: Expression
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Invoke-Expression                                  3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: File
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Unblock-File                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-File                                           3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-EventLog                                       3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: FileCatalog
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          New-FileCatalog                                    3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Test-FileCatalog                                   3.0.0.0    Microsoft.PowerShell.Security
-
-
-   Noun: FormatData
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-FormatData                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Export-FormatData                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Update-FormatData                                  3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: GridView
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Out-GridView                                       3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Help
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-Help                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Save-Help                                          3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Update-Help                                        3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: HgsAttestationBaselinePolicy
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-HgsAttestationBaselinePolicy                   1.0.0.0    HgsClient
-
-
-   Noun: HgsTrace
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-HgsTrace                                       1.0.0.0    HgsDiagnostics
-
-
-   Noun: HgsTraceFileData
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-HgsTraceFileData                               1.0.0.0    HgsDiagnostics
+Cmdlet          New-FileCatalog                                    3.0.0.0    Microsoft.PowerSh...
 
 
    Noun: HgsTraceTarget
@@ -4460,249 +4878,55 @@ Cmdlet          Get-HgsTraceFileData                               1.0.0.0    Hg
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          New-HgsTraceTarget                                 1.0.0.0    HgsDiagnostics
-Cmdlet          Test-HgsTraceTarget                                1.0.0.0    HgsDiagnostics
-
-
-   Noun: History
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Clear-History                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Invoke-History                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Add-History                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-History                                        3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: Host
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Read-Host                                          3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Write-Host                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-Host                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-Host                                           3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: HotFix
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-HotFix                                         3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: Html
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          ConvertTo-Html                                     3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: HVCIOptions
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-HVCIOptions                                    1.0        ConfigCI
-
-
-   Noun: Information
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Write-Information                                  3.1.0.0    Microsoft.PowerShell.Utility
 
 
    Noun: Item
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Remove-Item                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Move-Item                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Invoke-Item                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Item                                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-Item                                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Clear-Item                                         3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-Item                                           3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Copy-Item                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Rename-Item                                        3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          New-Item                                           3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: ItemProperty
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-ItemProperty                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Move-ItemProperty                                  3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Clear-ItemProperty                                 3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-ItemProperty                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-ItemProperty                                3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-ItemProperty                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Copy-ItemProperty                                  3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Rename-ItemProperty                                3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: ItemPropertyValue
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-ItemPropertyValue                              3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: Job
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-Job                                            3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Receive-Job                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Resume-Job                                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Suspend-Job                                        3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Start-Job                                          3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Remove-Job                                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Debug-Job                                          3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Wait-Job                                           3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Stop-Job                                           3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-ItemProperty                                   3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: JobTrigger
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Set-JobTrigger                                     1.1.0.0    PSScheduledJob
-Cmdlet          Disable-JobTrigger                                 1.1.0.0    PSScheduledJob
-Cmdlet          Get-JobTrigger                                     1.1.0.0    PSScheduledJob
-Cmdlet          Enable-JobTrigger                                  1.1.0.0    PSScheduledJob
-Cmdlet          Remove-JobTrigger                                  1.1.0.0    PSScheduledJob
 Cmdlet          New-JobTrigger                                     1.1.0.0    PSScheduledJob
-Cmdlet          Add-JobTrigger                                     1.1.0.0    PSScheduledJob
-
-
-   Noun: Json
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          ConvertTo-Json                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertFrom-Json                                   3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: KdsCache
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Clear-KdsCache                                     1.0.0.0    Kds
-
-
-   Noun: KdsConfiguration
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-KdsConfiguration                               1.0.0.0    Kds
-Cmdlet          Set-KdsConfiguration                               1.0.0.0    Kds
-
-
-   Noun: KdsRootKey
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-KdsRootKey                                     1.0.0.0    Kds
-Cmdlet          Test-KdsRootKey                                    1.0.0.0    Kds
-Cmdlet          Get-KdsRootKey                                     1.0.0.0    Kds
-
-
-   Noun: List
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Update-List                                        3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Format-List                                        3.1.0.0    Microsoft.PowerShell.Utility
 
 
    Noun: LocalGroup
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-LocalGroup                                     1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Rename-LocalGroup                                  1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Remove-LocalGroup                                  1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          New-LocalGroup                                     1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Set-LocalGroup                                     1.0.0.0    Microsoft.PowerShell.LocalAc...
-
-
-   Noun: LocalGroupMember
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-LocalGroupMember                               1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Get-LocalGroupMember                               1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Remove-LocalGroupMember                            1.0.0.0    Microsoft.PowerShell.LocalAc...
-
-
-   Noun: LocalizedData
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Import-LocalizedData                               3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-LocalGroup                                     1.0.0.0    Microsoft.PowerSh...
 
 
    Noun: LocalUser
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Disable-LocalUser                                  1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Enable-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Rename-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          New-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Set-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Remove-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAc...
-Cmdlet          Get-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAc...
-
-
-   Noun: Location
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Push-Location                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Location                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Pop-Location                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-Location                                       3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: MailMessage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Send-MailMessage                                   3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Member
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-Member                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Add-Member                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-LocalUser                                      1.0.0.0    Microsoft.PowerSh...
 
 
    Noun: Module
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-Module                                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Remove-Module                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-Module                                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Import-Module                                      3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-Module                                         3.0.0.0    Microsoft.PowerSh...
 
 
    Noun: ModuleManifest
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          New-ModuleManifest                                 3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Test-ModuleManifest                                3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: ModuleMember
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Export-ModuleMember                                3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-ModuleManifest                                 3.0.0.0    Microsoft.PowerSh...
 
 
    Noun: NetIPsecAuthProposal
@@ -4726,113 +4950,11 @@ CommandType     Name                                               Version    So
 Cmdlet          New-NetIPsecQuickModeCryptoProposal                2.0.0.0    NetSecurity
 
 
-   Noun: NonRemovableAppsPolicy
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-NonRemovableAppsPolicy                         3.0        Dism
-Cmdlet          Get-NonRemovableAppsPolicy                         3.0        Dism
-
-
-   Noun: Null
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Out-Null                                           3.0.0.0    Microsoft.PowerShell.Core
-
-
    Noun: Object
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Group-Object                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Select-Object                                      3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Where-Object                                       3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Measure-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Tee-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Compare-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ForEach-Object                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Sort-Object                                        3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: ObjectEvent
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Register-ObjectEvent                               3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: OSUninstall
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Start-OSUninstall                                  3.0        Dism
-
-
-   Noun: Output
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Write-Output                                       3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Package
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Install-Package                                    1.0.0.1    PackageManagement
-Cmdlet          Get-Package                                        1.0.0.1    PackageManagement
-Cmdlet          Save-Package                                       1.0.0.1    PackageManagement
-Cmdlet          Uninstall-Package                                  1.0.0.1    PackageManagement
-Cmdlet          Find-Package                                       1.0.0.1    PackageManagement
-
-
-   Noun: PackageProvider
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Install-PackageProvider                            1.0.0.1    PackageManagement
-Cmdlet          Get-PackageProvider                                1.0.0.1    PackageManagement
-Cmdlet          Find-PackageProvider                               1.0.0.1    PackageManagement
-Cmdlet          Import-PackageProvider                             1.0.0.1    PackageManagement
-
-
-   Noun: PackageSource
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-PackageSource                                  1.0.0.1    PackageManagement
-Cmdlet          Set-PackageSource                                  1.0.0.1    PackageManagement
-Cmdlet          Unregister-PackageSource                           1.0.0.1    PackageManagement
-Cmdlet          Register-PackageSource                             1.0.0.1    PackageManagement
-
-
-   Noun: Path
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Resolve-Path                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Test-Path                                          3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Split-Path                                         3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Convert-Path                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Join-Path                                          3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: PfxCertificate
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-PfxCertificate                                 3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          Import-PfxCertificate                              1.0.0.0    PKI
-Cmdlet          Export-PfxCertificate                              1.0.0.0    PKI
-
-
-   Noun: PfxData
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-PfxData                                        1.0.0.0    PKI
+Cmdlet          New-Object                                         3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: PmemDisk
@@ -4840,73 +4962,6 @@ Cmdlet          Get-PfxData                                        1.0.0.0    PK
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          New-PmemDisk                                       1.0.0.0    PersistentMemory
-Cmdlet          Get-PmemDisk                                       1.0.0.0    PersistentMemory
-Cmdlet          Remove-PmemDisk                                    1.0.0.0    PersistentMemory
-
-
-   Noun: PmemPhysicalDevice
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-PmemPhysicalDevice                             1.0.0.0    PersistentMemory
-Cmdlet          Initialize-PmemPhysicalDevice                      1.0.0.0    PersistentMemory
-
-
-   Noun: PmemUnusedRegion
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-PmemUnusedRegion                               1.0.0.0    PersistentMemory
-
-
-   Noun: Printer
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Out-Printer                                        3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Process
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-Process                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Debug-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: ProcessMitigation
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-ProcessMitigation                              1.0.11     ProcessMitigations
-Cmdlet          Set-ProcessMitigation                              1.0.11     ProcessMitigations
-
-
-   Noun: ProcessMitigationPolicy
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          ConvertTo-ProcessMitigationPolicy                  1.0.11     ProcessMitigations
-
-
-   Noun: Progress
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Write-Progress                                     3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: ProvisioningPackage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Export-ProvisioningPackage                         3.0        Provisioning
-Cmdlet          Uninstall-ProvisioningPackage                      3.0        Provisioning
-Cmdlet          Get-ProvisioningPackage                            3.0        Provisioning
-Cmdlet          Install-ProvisioningPackage                        3.0        Provisioning
 
 
    Noun: ProvisioningRepro
@@ -4916,165 +4971,46 @@ CommandType     Name                                               Version    So
 Cmdlet          New-ProvisioningRepro                              3.0        Provisioning
 
 
-   Noun: ProvisioningSession
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Resume-ProvisioningSession                         3.0        Provisioning
-
-
-   Noun: PSBreakpoint
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Disable-PSBreakpoint                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-PSBreakpoint                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Enable-PSBreakpoint                                3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: PSCallStack
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-PSCallStack                                    3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: PSDebug
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-PSDebug                                        3.0.0.0    Microsoft.PowerShell.Core
-
-
    Noun: PSDrive
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          New-PSDrive                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Remove-PSDrive                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-PSDrive                                        3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: PSHostProcess
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Enter-PSHostProcess                                3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Exit-PSHostProcess                                 3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: PSHostProcessInfo
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-PSHostProcessInfo                              3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: PSProvider
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-PSProvider                                     3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: PSReadLineKeyHandler
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-PSReadLineKeyHandler                           2.0.0      PSReadline
-Cmdlet          Get-PSReadLineKeyHandler                           2.0.0      PSReadline
-Cmdlet          Remove-PSReadLineKeyHandler                        2.0.0      PSReadline
-
-
-   Noun: PSReadLineOption
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-PSReadLineOption                               2.0.0      PSReadline
-Cmdlet          Get-PSReadLineOption                               2.0.0      PSReadline
-
-
-   Noun: PSRemoting
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Enable-PSRemoting                                  3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Disable-PSRemoting                                 3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-PSDrive                                        3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: PSRoleCapabilityFile
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          New-PSRoleCapabilityFile                           3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-PSRoleCapabilityFile                           3.0.0.0    Microsoft.PowerSh...
 
 
    Noun: PSSession
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Import-PSSession                                   3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Enter-PSSession                                    3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Exit-PSSession                                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Disconnect-PSSession                               3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          New-PSSession                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Remove-PSSession                                   3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSSession                                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Receive-PSSession                                  3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Connect-PSSession                                  3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Export-PSSession                                   3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: PSSessionCapability
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-PSSessionCapability                            3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: PSSessionConfiguration
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Unregister-PSSessionConfiguration                  3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Enable-PSSessionConfiguration                      3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Register-PSSessionConfiguration                    3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Set-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Disable-PSSessionConfiguration                     3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-PSSession                                      3.0.0.0    Microsoft.PowerSh...
 
 
    Noun: PSSessionConfigurationFile
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          New-PSSessionConfigurationFile                     3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Test-PSSessionConfigurationFile                    3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-PSSessionConfigurationFile                     3.0.0.0    Microsoft.PowerSh...
 
 
    Noun: PSSessionOption
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          New-PSSessionOption                                3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: PSSnapin
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-PSSnapin                                    3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Get-PSSnapin                                       3.0.0.0    Microsoft.PowerShell.Core
-Cmdlet          Add-PSSnapin                                       3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-PSSessionOption                                3.0.0.0    Microsoft.PowerSh...
 
 
    Noun: PSTransportOption
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          New-PSTransportOption                              3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          New-PSTransportOption                              3.0.0.0    Microsoft.PowerSh...
 
 
    Noun: PSWorkflowExecutionOption
@@ -5084,95 +5020,11 @@ CommandType     Name                                               Version    So
 Cmdlet          New-PSWorkflowExecutionOption                      2.0.0.0    PSWorkflow
 
 
-   Noun: Random
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-Random                                         3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: RecycleBin
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Clear-RecycleBin                                   3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: RestMethod
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Invoke-RestMethod                                  3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: RuleOption
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-RuleOption                                     1.0        ConfigCI
-
-
-   Noun: Runspace
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Debug-Runspace                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Runspace                                       3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: RunspaceDebug
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-RunspaceDebug                                  3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Enable-RunspaceDebug                               3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Disable-RunspaceDebug                              3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: ScheduledJob
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Register-ScheduledJob                              1.1.0.0    PSScheduledJob
-Cmdlet          Set-ScheduledJob                                   1.1.0.0    PSScheduledJob
-Cmdlet          Unregister-ScheduledJob                            1.1.0.0    PSScheduledJob
-Cmdlet          Enable-ScheduledJob                                1.1.0.0    PSScheduledJob
-Cmdlet          Disable-ScheduledJob                               1.1.0.0    PSScheduledJob
-Cmdlet          Get-ScheduledJob                                   1.1.0.0    PSScheduledJob
-
-
    Noun: ScheduledJobOption
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-ScheduledJobOption                             1.1.0.0    PSScheduledJob
 Cmdlet          New-ScheduledJobOption                             1.1.0.0    PSScheduledJob
-Cmdlet          Set-ScheduledJobOption                             1.1.0.0    PSScheduledJob
-
-
-   Noun: SecureBootPolicy
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-SecureBootPolicy                               2.0.0.0    SecureBoot
-
-
-   Noun: SecureBootUEFI
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Confirm-SecureBootUEFI                             2.0.0.0    SecureBoot
-Cmdlet          Get-SecureBootUEFI                                 2.0.0.0    SecureBoot
-Cmdlet          Set-SecureBootUEFI                                 2.0.0.0    SecureBoot
-Cmdlet          Format-SecureBootUEFI                              2.0.0.0    SecureBoot
-
-
-   Noun: SecureString
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          ConvertTo-SecureString                             3.0.0.0    Microsoft.PowerShell.Security
-Cmdlet          ConvertFrom-SecureString                           3.0.0.0    Microsoft.PowerShell.Security
 
 
    Noun: SelfSignedCertificate
@@ -5186,355 +5038,28 @@ Cmdlet          New-SelfSignedCertificate                          1.0.0.0    PK
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-Service                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Resume-Service                                     3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Restart-Service                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Set-Service                                        3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Service                                      3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Stop-Service                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Suspend-Service                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          New-Service                                        3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: SignerRule
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-SignerRule                                     1.0        ConfigCI
-
-
-   Noun: Sleep
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Start-Sleep                                        3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: StartLayout
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Import-StartLayout                                 1.0.0.0    StartLayout
-Cmdlet          Export-StartLayout                                 1.0.0.0    StartLayout
-
-
-   Noun: StartLayoutEdgeAssets
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Export-StartLayoutEdgeAssets                       1.0.0.0    StartLayout
-
-
-   Noun: StrictMode
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-StrictMode                                     3.0.0.0    Microsoft.PowerShell.Core
-
-
-   Noun: String
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Convert-String                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertFrom-String                                 3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Out-String                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Select-String                                      3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: StringData
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          ConvertFrom-StringData                             3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: SystemDriver
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-SystemDriver                                   1.0        ConfigCI
-
-
-   Noun: Table
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Format-Table                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-Service                                        3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: TimeSpan
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          New-TimeSpan                                       3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: TimeZone
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-TimeZone                                       3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-TimeZone                                       3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: TlsCipherSuite
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-TlsCipherSuite                                 2.0.0.0    TLS
-Cmdlet          Enable-TlsCipherSuite                              2.0.0.0    TLS
-Cmdlet          Disable-TlsCipherSuite                             2.0.0.0    TLS
-
-
-   Noun: TlsEccCurve
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-TlsEccCurve                                    2.0.0.0    TLS
-Cmdlet          Disable-TlsEccCurve                                2.0.0.0    TLS
-Cmdlet          Enable-TlsEccCurve                                 2.0.0.0    TLS
+Cmdlet          New-TimeSpan                                       3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: TlsSessionTicketKey
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Enable-TlsSessionTicketKey                         2.0.0.0    TLS
-Cmdlet          Export-TlsSessionTicketKey                         2.0.0.0    TLS
-Cmdlet          Disable-TlsSessionTicketKey                        2.0.0.0    TLS
 Cmdlet          New-TlsSessionTicketKey                            2.0.0.0    TLS
-
-
-   Noun: Tpm
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Initialize-Tpm                                     2.0.0.0    TrustedPlatformModule
-Cmdlet          Clear-Tpm                                          2.0.0.0    TrustedPlatformModule
-Cmdlet          Unblock-Tpm                                        2.0.0.0    TrustedPlatformModule
-Cmdlet          Get-Tpm                                            2.0.0.0    TrustedPlatformModule
-
-
-   Noun: TpmAutoProvisioning
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Enable-TpmAutoProvisioning                         2.0.0.0    TrustedPlatformModule
-Cmdlet          Disable-TpmAutoProvisioning                        2.0.0.0    TrustedPlatformModule
-
-
-   Noun: TpmEndorsementKeyInfo
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-TpmEndorsementKeyInfo                          2.0.0.0    TrustedPlatformModule
-
-
-   Noun: TpmOwnerAuth
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Import-TpmOwnerAuth                                2.0.0.0    TrustedPlatformModule
-Cmdlet          ConvertTo-TpmOwnerAuth                             2.0.0.0    TrustedPlatformModule
-Cmdlet          Set-TpmOwnerAuth                                   2.0.0.0    TrustedPlatformModule
-
-
-   Noun: TpmSupportedFeature
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-TpmSupportedFeature                            2.0.0.0    TrustedPlatformModule
-
-
-   Noun: Trace
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Export-Trace                                       3.0        Provisioning
-
-
-   Noun: TraceSource
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-TraceSource                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-TraceSource                                    3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Transaction
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Undo-Transaction                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Use-Transaction                                    3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Start-Transaction                                  3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Complete-Transaction                               3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-Transaction                                    3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: Transcript
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Start-Transcript                                   3.0.0.0    Microsoft.PowerShell.Host
-Cmdlet          Stop-Transcript                                    3.0.0.0    Microsoft.PowerShell.Host
-
-
-   Noun: TroubleshootingPack
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-TroubleshootingPack                            1.0.0.0    TroubleshootingPack
-Cmdlet          Invoke-TroubleshootingPack                         1.0.0.0    TroubleshootingPack
-
-
-   Noun: TrustedProvisioningCertificate
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Uninstall-TrustedProvisioningCertificate           3.0        Provisioning
-Cmdlet          Get-TrustedProvisioningCertificate                 3.0        Provisioning
-Cmdlet          Install-TrustedProvisioningCertificate             3.0        Provisioning
-
-
-   Noun: Type
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-Type                                           3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: TypeData
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-TypeData                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-TypeData                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Update-TypeData                                    3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Uev
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Disable-Uev                                        2.1.639.0  UEV
-Cmdlet          Enable-Uev                                         2.1.639.0  UEV
-
-
-   Noun: UevAppxPackage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Clear-UevAppxPackage                               2.1.639.0  UEV
-Cmdlet          Get-UevAppxPackage                                 2.1.639.0  UEV
-Cmdlet          Enable-UevAppxPackage                              2.1.639.0  UEV
-Cmdlet          Disable-UevAppxPackage                             2.1.639.0  UEV
-
-
-   Noun: UevBackup
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Restore-UevBackup                                  2.1.639.0  UEV
-
-
-   Noun: UevConfiguration
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-UevConfiguration                               2.1.639.0  UEV
-Cmdlet          Get-UevConfiguration                               2.1.639.0  UEV
-Cmdlet          Clear-UevConfiguration                             2.1.639.0  UEV
-Cmdlet          Import-UevConfiguration                            2.1.639.0  UEV
-Cmdlet          Export-UevConfiguration                            2.1.639.0  UEV
-
-
-   Noun: UevPackage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Export-UevPackage                                  2.1.639.0  UEV
-
-
-   Noun: UevStatus
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-UevStatus                                      2.1.639.0  UEV
-
-
-   Noun: UevTemplate
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Enable-UevTemplate                                 2.1.639.0  UEV
-Cmdlet          Test-UevTemplate                                   2.1.639.0  UEV
-Cmdlet          Disable-UevTemplate                                2.1.639.0  UEV
-Cmdlet          Get-UevTemplate                                    2.1.639.0  UEV
-Cmdlet          Update-UevTemplate                                 2.1.639.0  UEV
-Cmdlet          Register-UevTemplate                               2.1.639.0  UEV
-Cmdlet          Unregister-UevTemplate                             2.1.639.0  UEV
-
-
-   Noun: UevTemplateIndex
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Repair-UevTemplateIndex                            2.1.639.0  UEV
-
-
-   Noun: UevTemplateProfile
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-UevTemplateProfile                             2.1.639.0  UEV
-
-
-   Noun: UevTemplateProgram
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-UevTemplateProgram                             2.1.639.0  UEV
-
-
-   Noun: UevUserSetting
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Restore-UevUserSetting                             2.1.639.0  UEV
-
-
-   Noun: UICulture
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-UICulture                                      3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Unique
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-Unique                                         3.1.0.0    Microsoft.PowerShell.Utility
 
 
    Noun: Variable
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Clear-Variable                                     3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Set-Variable                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Remove-Variable                                    3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          Get-Variable                                       3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          New-Variable                                       3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: Verbose
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Write-Verbose                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-Variable                                       3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: VFD
@@ -5548,456 +5073,21 @@ Cmdlet          New-VFD                                            2.0.0.0    Hy
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Convert-VHD                                        2.0.0.0    Hyper-V
-Cmdlet          Get-VHD                                            2.0.0.0    Hyper-V
-Cmdlet          Optimize-VHD                                       2.0.0.0    Hyper-V
-Cmdlet          Set-VHD                                            2.0.0.0    Hyper-V
-Cmdlet          Merge-VHD                                          2.0.0.0    Hyper-V
-Cmdlet          Resize-VHD                                         2.0.0.0    Hyper-V
-Cmdlet          Mount-VHD                                          2.0.0.0    Hyper-V
-Cmdlet          Dismount-VHD                                       2.0.0.0    Hyper-V
-Cmdlet          Test-VHD                                           2.0.0.0    Hyper-V
 Cmdlet          New-VHD                                            2.0.0.0    Hyper-V
-
-
-   Noun: VHDSet
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VHDSet                                         2.0.0.0    Hyper-V
-Cmdlet          Optimize-VHDSet                                    2.0.0.0    Hyper-V
-
-
-   Noun: VHDSnapshot
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VHDSnapshot                                    2.0.0.0    Hyper-V
-Cmdlet          Remove-VHDSnapshot                                 2.0.0.0    Hyper-V
 
 
    Noun: VM
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Wait-VM                                            2.0.0.0    Hyper-V
-Cmdlet          Remove-VM                                          2.0.0.0    Hyper-V
-Cmdlet          Debug-VM                                           2.0.0.0    Hyper-V
-Cmdlet          Set-VM                                             2.0.0.0    Hyper-V
-Cmdlet          Move-VM                                            2.0.0.0    Hyper-V
-Cmdlet          Stop-VM                                            2.0.0.0    Hyper-V
-Cmdlet          Suspend-VM                                         2.0.0.0    Hyper-V
-Cmdlet          Resume-VM                                          2.0.0.0    Hyper-V
 Cmdlet          New-VM                                             2.0.0.0    Hyper-V
-Cmdlet          Save-VM                                            2.0.0.0    Hyper-V
-Cmdlet          Export-VM                                          2.0.0.0    Hyper-V
-Cmdlet          Measure-VM                                         2.0.0.0    Hyper-V
-Cmdlet          Restart-VM                                         2.0.0.0    Hyper-V
-Cmdlet          Import-VM                                          2.0.0.0    Hyper-V
-Cmdlet          Repair-VM                                          2.0.0.0    Hyper-V
-Cmdlet          Compare-VM                                         2.0.0.0    Hyper-V
-Cmdlet          Start-VM                                           2.0.0.0    Hyper-V
-Cmdlet          Rename-VM                                          2.0.0.0    Hyper-V
-Cmdlet          Get-VM                                             2.0.0.0    Hyper-V
-Cmdlet          Checkpoint-VM                                      2.0.0.0    Hyper-V
-
-
-   Noun: VMAssignableDevice
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-VMAssignableDevice                          2.0.0.0    Hyper-V
-Cmdlet          Add-VMAssignableDevice                             2.0.0.0    Hyper-V
-Cmdlet          Get-VMAssignableDevice                             2.0.0.0    Hyper-V
-
-
-   Noun: VMBios
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-VMBios                                         2.0.0.0    Hyper-V
-Cmdlet          Get-VMBios                                         2.0.0.0    Hyper-V
-
-
-   Noun: VMComPort
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMComPort                                      2.0.0.0    Hyper-V
-Cmdlet          Set-VMComPort                                      2.0.0.0    Hyper-V
-
-
-   Noun: VMConnectAccess
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMConnectAccess                                2.0.0.0    Hyper-V
-Cmdlet          Revoke-VMConnectAccess                             2.0.0.0    Hyper-V
-Cmdlet          Grant-VMConnectAccess                              2.0.0.0    Hyper-V
-
-
-   Noun: VMConsoleSupport
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Disable-VMConsoleSupport                           2.0.0.0    Hyper-V
-Cmdlet          Enable-VMConsoleSupport                            2.0.0.0    Hyper-V
-
-
-   Noun: VMDvdDrive
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-VMDvdDrive                                  2.0.0.0    Hyper-V
-Cmdlet          Set-VMDvdDrive                                     2.0.0.0    Hyper-V
-Cmdlet          Add-VMDvdDrive                                     2.0.0.0    Hyper-V
-Cmdlet          Get-VMDvdDrive                                     2.0.0.0    Hyper-V
-
-
-   Noun: VMEventing
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Disable-VMEventing                                 2.0.0.0    Hyper-V
-Cmdlet          Enable-VMEventing                                  2.0.0.0    Hyper-V
-
-
-   Noun: VMFailover
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Stop-VMFailover                                    2.0.0.0    Hyper-V
-Cmdlet          Complete-VMFailover                                2.0.0.0    Hyper-V
-Cmdlet          Start-VMFailover                                   2.0.0.0    Hyper-V
-
-
-   Noun: VMFibreChannelHba
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-VMFibreChannelHba                              2.0.0.0    Hyper-V
-Cmdlet          Get-VMFibreChannelHba                              2.0.0.0    Hyper-V
-Cmdlet          Remove-VMFibreChannelHba                           2.0.0.0    Hyper-V
-Cmdlet          Add-VMFibreChannelHba                              2.0.0.0    Hyper-V
-
-
-   Noun: VMFile
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Copy-VMFile                                        2.0.0.0    Hyper-V
-
-
-   Noun: VMFirmware
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMFirmware                                     2.0.0.0    Hyper-V
-Cmdlet          Set-VMFirmware                                     2.0.0.0    Hyper-V
-
-
-   Noun: VMFloppyDiskDrive
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMFloppyDiskDrive                              2.0.0.0    Hyper-V
-Cmdlet          Set-VMFloppyDiskDrive                              2.0.0.0    Hyper-V
-
-
-   Noun: VMGpuPartitionAdapter
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-VMGpuPartitionAdapter                          2.0.0.0    Hyper-V
-Cmdlet          Remove-VMGpuPartitionAdapter                       2.0.0.0    Hyper-V
-Cmdlet          Get-VMGpuPartitionAdapter                          2.0.0.0    Hyper-V
-Cmdlet          Set-VMGpuPartitionAdapter                          2.0.0.0    Hyper-V
 
 
    Noun: VMGroup
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Rename-VMGroup                                     2.0.0.0    Hyper-V
-Cmdlet          Get-VMGroup                                        2.0.0.0    Hyper-V
-Cmdlet          Remove-VMGroup                                     2.0.0.0    Hyper-V
 Cmdlet          New-VMGroup                                        2.0.0.0    Hyper-V
-
-
-   Noun: VMGroupMember
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-VMGroupMember                                  2.0.0.0    Hyper-V
-Cmdlet          Remove-VMGroupMember                               2.0.0.0    Hyper-V
-
-
-   Noun: VMHardDiskDrive
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMHardDiskDrive                                2.0.0.0    Hyper-V
-Cmdlet          Add-VMHardDiskDrive                                2.0.0.0    Hyper-V
-Cmdlet          Remove-VMHardDiskDrive                             2.0.0.0    Hyper-V
-Cmdlet          Set-VMHardDiskDrive                                2.0.0.0    Hyper-V
-
-
-   Noun: VMHost
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMHost                                         2.0.0.0    Hyper-V
-Cmdlet          Set-VMHost                                         2.0.0.0    Hyper-V
-
-
-   Noun: VMHostAssignableDevice
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-VMHostAssignableDevice                         2.0.0.0    Hyper-V
-Cmdlet          Remove-VMHostAssignableDevice                      2.0.0.0    Hyper-V
-Cmdlet          Mount-VMHostAssignableDevice                       2.0.0.0    Hyper-V
-Cmdlet          Dismount-VMHostAssignableDevice                    2.0.0.0    Hyper-V
-Cmdlet          Get-VMHostAssignableDevice                         2.0.0.0    Hyper-V
-
-
-   Noun: VMHostCluster
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-VMHostCluster                                  2.0.0.0    Hyper-V
-Cmdlet          Get-VMHostCluster                                  2.0.0.0    Hyper-V
-
-
-   Noun: VMHostNumaNode
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMHostNumaNode                                 2.0.0.0    Hyper-V
-
-
-   Noun: VMHostNumaNodeStatus
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMHostNumaNodeStatus                           2.0.0.0    Hyper-V
-
-
-   Noun: VMHostSupportedVersion
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMHostSupportedVersion                         2.0.0.0    Hyper-V
-
-
-   Noun: VMIdeController
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMIdeController                                2.0.0.0    Hyper-V
-
-
-   Noun: VMInitialReplication
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Import-VMInitialReplication                        2.0.0.0    Hyper-V
-Cmdlet          Stop-VMInitialReplication                          2.0.0.0    Hyper-V
-Cmdlet          Start-VMInitialReplication                         2.0.0.0    Hyper-V
-
-
-   Noun: VMIntegrationService
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Disable-VMIntegrationService                       2.0.0.0    Hyper-V
-Cmdlet          Enable-VMIntegrationService                        2.0.0.0    Hyper-V
-Cmdlet          Get-VMIntegrationService                           2.0.0.0    Hyper-V
-
-
-   Noun: VMKeyProtector
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-VMKeyProtector                                 2.0.0.0    Hyper-V
-Cmdlet          Get-VMKeyProtector                                 2.0.0.0    Hyper-V
-
-
-   Noun: VMKeyStorageDrive
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-VMKeyStorageDrive                           2.0.0.0    Hyper-V
-Cmdlet          Add-VMKeyStorageDrive                              2.0.0.0    Hyper-V
-Cmdlet          Get-VMKeyStorageDrive                              2.0.0.0    Hyper-V
-Cmdlet          Set-VMKeyStorageDrive                              2.0.0.0    Hyper-V
-
-
-   Noun: VMMemory
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMMemory                                       2.0.0.0    Hyper-V
-Cmdlet          Set-VMMemory                                       2.0.0.0    Hyper-V
-
-
-   Noun: VMMigration
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Disable-VMMigration                                2.0.0.0    Hyper-V
-Cmdlet          Enable-VMMigration                                 2.0.0.0    Hyper-V
-
-
-   Noun: VMMigrationNetwork
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMMigrationNetwork                             2.0.0.0    Hyper-V
-Cmdlet          Remove-VMMigrationNetwork                          2.0.0.0    Hyper-V
-Cmdlet          Add-VMMigrationNetwork                             2.0.0.0    Hyper-V
-Cmdlet          Set-VMMigrationNetwork                             2.0.0.0    Hyper-V
-
-
-   Noun: VMNetworkAdapter
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-VMNetworkAdapter                               2.0.0.0    Hyper-V
-Cmdlet          Get-VMNetworkAdapter                               2.0.0.0    Hyper-V
-Cmdlet          Remove-VMNetworkAdapter                            2.0.0.0    Hyper-V
-Cmdlet          Set-VMNetworkAdapter                               2.0.0.0    Hyper-V
-Cmdlet          Test-VMNetworkAdapter                              2.0.0.0    Hyper-V
-Cmdlet          Disconnect-VMNetworkAdapter                        2.0.0.0    Hyper-V
-Cmdlet          Connect-VMNetworkAdapter                           2.0.0.0    Hyper-V
-Cmdlet          Rename-VMNetworkAdapter                            2.0.0.0    Hyper-V
-
-
-   Noun: VMNetworkAdapterAcl
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-VMNetworkAdapterAcl                            2.0.0.0    Hyper-V
-Cmdlet          Remove-VMNetworkAdapterAcl                         2.0.0.0    Hyper-V
-Cmdlet          Get-VMNetworkAdapterAcl                            2.0.0.0    Hyper-V
-
-
-   Noun: VMNetworkAdapterExtendedAcl
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-VMNetworkAdapterExtendedAcl                    2.0.0.0    Hyper-V
-Cmdlet          Remove-VMNetworkAdapterExtendedAcl                 2.0.0.0    Hyper-V
-Cmdlet          Get-VMNetworkAdapterExtendedAcl                    2.0.0.0    Hyper-V
-
-
-   Noun: VMNetworkAdapterFailoverConfiguration
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-VMNetworkAdapterFailoverConfiguration          2.0.0.0    Hyper-V
-Cmdlet          Get-VMNetworkAdapterFailoverConfiguration          2.0.0.0    Hyper-V
-
-
-   Noun: VMNetworkAdapterIsolation
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-VMNetworkAdapterIsolation                      2.0.0.0    Hyper-V
-Cmdlet          Get-VMNetworkAdapterIsolation                      2.0.0.0    Hyper-V
-
-
-   Noun: VMNetworkAdapterRdma
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMNetworkAdapterRdma                           2.0.0.0    Hyper-V
-Cmdlet          Set-VMNetworkAdapterRdma                           2.0.0.0    Hyper-V
-
-
-   Noun: VMNetworkAdapterRoutingDomainMapping
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-VMNetworkAdapterRoutingDomainMapping           2.0.0.0    Hyper-V
-Cmdlet          Remove-VMNetworkAdapterRoutingDomainMapping        2.0.0.0    Hyper-V
-Cmdlet          Get-VMNetworkAdapterRoutingDomainMapping           2.0.0.0    Hyper-V
-Cmdlet          Add-VMNetworkAdapterRoutingDomainMapping           2.0.0.0    Hyper-V
-
-
-   Noun: VMNetworkAdapterTeamMapping
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMNetworkAdapterTeamMapping                    2.0.0.0    Hyper-V
-Cmdlet          Remove-VMNetworkAdapterTeamMapping                 2.0.0.0    Hyper-V
-Cmdlet          Set-VMNetworkAdapterTeamMapping                    2.0.0.0    Hyper-V
-
-
-   Noun: VMNetworkAdapterVlan
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMNetworkAdapterVlan                           2.0.0.0    Hyper-V
-Cmdlet          Set-VMNetworkAdapterVlan                           2.0.0.0    Hyper-V
-
-
-   Noun: VMPartitionableGpu
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMPartitionableGpu                             2.0.0.0    Hyper-V
-Cmdlet          Set-VMPartitionableGpu                             2.0.0.0    Hyper-V
-
-
-   Noun: VMPmemController
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-VMPmemController                               2.0.0.0    Hyper-V
-Cmdlet          Get-VMPmemController                               2.0.0.0    Hyper-V
-Cmdlet          Remove-VMPmemController                            2.0.0.0    Hyper-V
-
-
-   Noun: VMProcessor
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-VMProcessor                                    2.0.0.0    Hyper-V
-Cmdlet          Get-VMProcessor                                    2.0.0.0    Hyper-V
-
-
-   Noun: VMRemoteFx3dVideoAdapter
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-VMRemoteFx3dVideoAdapter                       2.0.0.0    Hyper-V
-Cmdlet          Set-VMRemoteFx3dVideoAdapter                       2.0.0.0    Hyper-V
-Cmdlet          Get-VMRemoteFx3dVideoAdapter                       2.0.0.0    Hyper-V
-Cmdlet          Remove-VMRemoteFx3dVideoAdapter                    2.0.0.0    Hyper-V
-
-
-   Noun: VMRemoteFXPhysicalVideoAdapter
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Disable-VMRemoteFXPhysicalVideoAdapter             2.0.0.0    Hyper-V
-Cmdlet          Enable-VMRemoteFXPhysicalVideoAdapter              2.0.0.0    Hyper-V
-Cmdlet          Get-VMRemoteFXPhysicalVideoAdapter                 2.0.0.0    Hyper-V
-
-
-   Noun: VMReplication
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Measure-VMReplication                              2.0.0.0    Hyper-V
-Cmdlet          Remove-VMReplication                               2.0.0.0    Hyper-V
-Cmdlet          Suspend-VMReplication                              2.0.0.0    Hyper-V
-Cmdlet          Set-VMReplication                                  2.0.0.0    Hyper-V
-Cmdlet          Resume-VMReplication                               2.0.0.0    Hyper-V
-Cmdlet          Get-VMReplication                                  2.0.0.0    Hyper-V
-Cmdlet          Enable-VMReplication                               2.0.0.0    Hyper-V
-Cmdlet          Stop-VMReplication                                 2.0.0.0    Hyper-V
 
 
    Noun: VMReplicationAuthorizationEntry
@@ -6005,24 +5095,881 @@ Cmdlet          Stop-VMReplication                                 2.0.0.0    Hy
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          New-VMReplicationAuthorizationEntry                2.0.0.0    Hyper-V
-Cmdlet          Set-VMReplicationAuthorizationEntry                2.0.0.0    Hyper-V
-Cmdlet          Get-VMReplicationAuthorizationEntry                2.0.0.0    Hyper-V
+
+
+   Noun: VMResourcePool
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-VMResourcePool                                 2.0.0.0    Hyper-V
+
+
+   Noun: VMSan
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-VMSan                                          2.0.0.0    Hyper-V
+
+
+   Noun: VMSwitch
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-VMSwitch                                       2.0.0.0    Hyper-V
+
+
+   Noun: WebServiceProxy
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-WebServiceProxy                                3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: WindowsCustomImage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-WindowsCustomImage                             3.0        Dism
+
+
+   Noun: WindowsImage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-WindowsImage                                   3.0        Dism
+
+
+   Noun: WinEvent
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-WinEvent                                       3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: WinUserLanguageList
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-WinUserLanguageList                            2.0.0.0    International
+
+
+   Noun: WSManInstance
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-WSManInstance                                  3.0.0.0    Microsoft.WSMan.M...
+
+
+   Noun: WSManSessionOption
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          New-WSManSessionOption                             3.0.0.0    Microsoft.WSMan.M...
+
+
+   Noun: AppxProvisionedPackages
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Optimize-AppxProvisionedPackages                   3.0        Dism
+
+
+   Noun: VHD
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Optimize-VHD                                       2.0.0.0    Hyper-V
+
+
+   Noun: VHDSet
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Optimize-VHDSet                                    2.0.0.0    Hyper-V
+
+
+   Noun: WindowsImage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Optimize-WindowsImage                              3.0        Dism
+
+
+   Noun: Default
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Out-Default                                        3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: File
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Out-File                                           3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: GridView
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Out-GridView                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Host
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Out-Host                                           3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: Null
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Out-Null                                           3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: Printer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Out-Printer                                        3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: String
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Out-String                                         3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Location
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Pop-Location                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: CmsMessage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Protect-CmsMessage                                 3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: AppvClientPackage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Publish-AppvClientPackage                          1.0.0.0    AppvClient
+
+
+   Noun: DscConfiguration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Publish-DscConfiguration                           1.1        PSDesiredStateCon...
+
+
+   Noun: Location
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Push-Location                                      3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Host
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Read-Host                                          3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: DtcDiagnosticTransaction
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Receive-DtcDiagnosticTransaction                   1.0.0.0    MsDtc
+
+
+   Noun: Job
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Receive-Job                                        3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: PSSession
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Receive-PSSession                                  3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: ArgumentCompleter
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Register-ArgumentCompleter                         3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: CimIndicationEvent
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Register-CimIndicationEvent                        1.0.0.0    CimCmdlets
+
+
+   Noun: EngineEvent
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Register-EngineEvent                               3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: ObjectEvent
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Register-ObjectEvent                               3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: PackageSource
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Register-PackageSource                             1.0.0.1    PackageManagement
+
+
+   Noun: PSSessionConfiguration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Register-PSSessionConfiguration                    3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: ScheduledJob
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Register-ScheduledJob                              1.1.0.0    PSScheduledJob
+
+
+   Noun: UevTemplate
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Register-UevTemplate                               2.1.639.0  UEV
+
+
+   Noun: WmiEvent
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Register-WmiEvent                                  3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: AppvClientConnectionGroup
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-AppvClientConnectionGroup                   1.0.0.0    AppvClient
+
+
+   Noun: AppvClientPackage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-AppvClientPackage                           1.0.0.0    AppvClient
+
+
+   Noun: AppvPublishingServer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-AppvPublishingServer                        1.0.0.0    AppvClient
+
+
+   Noun: AppxPackage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-AppxPackage                                 2.0.1.0    Appx
+
+
+   Noun: AppxProvisionedPackage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-AppxProvisionedPackage                      3.0        Dism
+
+
+   Noun: AppxVolume
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-AppxVolume                                  2.0.1.0    Appx
+
+
+   Noun: BitsTransfer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-BitsTransfer                                2.0.0.0    BitsTransfer
+
+
+   Noun: CertificateEnrollmentPolicyServer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-CertificateEnrollmentPolicyServer           1.0.0.0    PKI
+
+
+   Noun: CertificateNotificationTask
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-CertificateNotificationTask                 1.0.0.0    PKI
+
+
+   Noun: CimInstance
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-CimInstance                                 1.0.0.0    CimCmdlets
+
+
+   Noun: CimSession
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-CimSession                                  1.0.0.0    CimCmdlets
+
+
+   Noun: CIPolicyRule
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-CIPolicyRule                                1.0        ConfigCI
+
+
+   Noun: Computer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-Computer                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Event
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-Event                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: EventLog
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-EventLog                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Item
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-Item                                        3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: ItemProperty
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-ItemProperty                                3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Job
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-Job                                         3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: JobTrigger
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-JobTrigger                                  1.1.0.0    PSScheduledJob
+
+
+   Noun: LocalGroup
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-LocalGroup                                  1.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: LocalGroupMember
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-LocalGroupMember                            1.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: LocalUser
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-LocalUser                                   1.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: Module
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-Module                                      3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: PmemDisk
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-PmemDisk                                    1.0.0.0    PersistentMemory
+
+
+   Noun: PSBreakpoint
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-PSBreakpoint                                3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: PSDrive
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-PSDrive                                     3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: PSReadLineKeyHandler
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-PSReadLineKeyHandler                        2.0.0      PSReadline
+
+
+   Noun: PSSession
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-PSSession                                   3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: PSSnapin
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-PSSnapin                                    3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: TypeData
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-TypeData                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Variable
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-Variable                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: VHDSnapshot
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VHDSnapshot                                 2.0.0.0    Hyper-V
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VM                                          2.0.0.0    Hyper-V
+
+
+   Noun: VMAssignableDevice
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMAssignableDevice                          2.0.0.0    Hyper-V
+
+
+   Noun: VMDvdDrive
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMDvdDrive                                  2.0.0.0    Hyper-V
+
+
+   Noun: VMFibreChannelHba
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMFibreChannelHba                           2.0.0.0    Hyper-V
+
+
+   Noun: VMGpuPartitionAdapter
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMGpuPartitionAdapter                       2.0.0.0    Hyper-V
+
+
+   Noun: VMGroup
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMGroup                                     2.0.0.0    Hyper-V
+
+
+   Noun: VMGroupMember
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMGroupMember                               2.0.0.0    Hyper-V
+
+
+   Noun: VMHardDiskDrive
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMHardDiskDrive                             2.0.0.0    Hyper-V
+
+
+   Noun: VMHostAssignableDevice
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMHostAssignableDevice                      2.0.0.0    Hyper-V
+
+
+   Noun: VMKeyStorageDrive
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMKeyStorageDrive                           2.0.0.0    Hyper-V
+
+
+   Noun: VMMigrationNetwork
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMMigrationNetwork                          2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapter
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMNetworkAdapter                            2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapterAcl
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMNetworkAdapterAcl                         2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapterExtendedAcl
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMNetworkAdapterExtendedAcl                 2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapterRoutingDomainMapping
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMNetworkAdapterRoutingDomainMapping        2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapterTeamMapping
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMNetworkAdapterTeamMapping                 2.0.0.0    Hyper-V
+
+
+   Noun: VMPmemController
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMPmemController                            2.0.0.0    Hyper-V
+
+
+   Noun: VMRemoteFx3dVideoAdapter
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMRemoteFx3dVideoAdapter                    2.0.0.0    Hyper-V
+
+
+   Noun: VMReplication
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMReplication                               2.0.0.0    Hyper-V
+
+
+   Noun: VMReplicationAuthorizationEntry
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
 Cmdlet          Remove-VMReplicationAuthorizationEntry             2.0.0.0    Hyper-V
 
 
-   Noun: VMReplicationConnection
+   Noun: VMResourcePool
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Test-VMReplicationConnection                       2.0.0.0    Hyper-V
+Cmdlet          Remove-VMResourcePool                              2.0.0.0    Hyper-V
 
 
-   Noun: VMReplicationServer
+   Noun: VMSan
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Set-VMReplicationServer                            2.0.0.0    Hyper-V
-Cmdlet          Get-VMReplicationServer                            2.0.0.0    Hyper-V
+Cmdlet          Remove-VMSan                                       2.0.0.0    Hyper-V
+
+
+   Noun: VMSavedState
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMSavedState                                2.0.0.0    Hyper-V
+
+
+   Noun: VMScsiController
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMScsiController                            2.0.0.0    Hyper-V
+
+
+   Noun: VMSnapshot
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMSnapshot                                  2.0.0.0    Hyper-V
+
+
+   Noun: VMStoragePath
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMStoragePath                               2.0.0.0    Hyper-V
+
+
+   Noun: VMSwitch
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMSwitch                                    2.0.0.0    Hyper-V
+
+
+   Noun: VMSwitchExtensionPortFeature
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMSwitchExtensionPortFeature                2.0.0.0    Hyper-V
+
+
+   Noun: VMSwitchExtensionSwitchFeature
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMSwitchExtensionSwitchFeature              2.0.0.0    Hyper-V
+
+
+   Noun: VMSwitchTeamMember
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-VMSwitchTeamMember                          2.0.0.0    Hyper-V
+
+
+   Noun: WindowsCapability
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-WindowsCapability                           3.0        Dism
+
+
+   Noun: WindowsDriver
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-WindowsDriver                               3.0        Dism
+
+
+   Noun: WindowsImage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-WindowsImage                                3.0        Dism
+
+
+   Noun: WindowsPackage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-WindowsPackage                              3.0        Dism
+
+
+   Noun: WmiObject
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-WmiObject                                   3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: WSManInstance
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Remove-WSManInstance                               3.0.0.0    Microsoft.WSMan.M...
+
+
+   Noun: Computer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-Computer                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Item
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-Item                                        3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: ItemProperty
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-ItemProperty                                3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: LocalGroup
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-LocalGroup                                  1.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: LocalUser
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-LocalUser                                   1.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-VM                                          2.0.0.0    Hyper-V
+
+
+   Noun: VMGroup
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-VMGroup                                     2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapter
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-VMNetworkAdapter                            2.0.0.0    Hyper-V
+
+
+   Noun: VMResourcePool
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-VMResourcePool                              2.0.0.0    Hyper-V
+
+
+   Noun: VMSan
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-VMSan                                       2.0.0.0    Hyper-V
+
+
+   Noun: VMSnapshot
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-VMSnapshot                                  2.0.0.0    Hyper-V
+
+
+   Noun: VMSwitch
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Rename-VMSwitch                                    2.0.0.0    Hyper-V
+
+
+   Noun: AppvClientConnectionGroup
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Repair-AppvClientConnectionGroup                   1.0.0.0    AppvClient
+
+
+   Noun: AppvClientPackage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Repair-AppvClientPackage                           1.0.0.0    AppvClient
+
+
+   Noun: UevTemplateIndex
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Repair-UevTemplateIndex                            2.1.639.0  UEV
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Repair-VM                                          2.0.0.0    Hyper-V
+
+
+   Noun: WindowsImage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Repair-WindowsImage                                3.0        Dism
+
+
+   Noun: ComputerMachinePassword
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Reset-ComputerMachinePassword                      3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: VMReplicationStatistics
@@ -6037,19 +5984,789 @@ Cmdlet          Reset-VMReplicationStatistics                      2.0.0.0    Hy
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          Reset-VMResourceMetering                           2.0.0.0    Hyper-V
-Cmdlet          Disable-VMResourceMetering                         2.0.0.0    Hyper-V
-Cmdlet          Enable-VMResourceMetering                          2.0.0.0    Hyper-V
+
+
+   Noun: VHD
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Resize-VHD                                         2.0.0.0    Hyper-V
+
+
+   Noun: DnsName
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Resolve-DnsName                                    1.0.0.0    DnsClient
+
+
+   Noun: Path
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Resolve-Path                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Computer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Restart-Computer                                   3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Service
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Restart-Service                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Restart-VM                                         2.0.0.0    Hyper-V
+
+
+   Noun: Computer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Restore-Computer                                   3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: UevBackup
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Restore-UevBackup                                  2.1.639.0  UEV
+
+
+   Noun: UevUserSetting
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Restore-UevUserSetting                             2.1.639.0  UEV
+
+
+   Noun: VMSnapshot
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Restore-VMSnapshot                                 2.0.0.0    Hyper-V
+
+
+   Noun: BitsTransfer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Resume-BitsTransfer                                2.0.0.0    BitsTransfer
+
+
+   Noun: Job
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Resume-Job                                         3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: ProvisioningSession
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Resume-ProvisioningSession                         3.0        Provisioning
+
+
+   Noun: Service
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Resume-Service                                     3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Resume-VM                                          2.0.0.0    Hyper-V
+
+
+   Noun: VMReplication
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Resume-VMReplication                               2.0.0.0    Hyper-V
+
+
+   Noun: VMConnectAccess
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Revoke-VMConnectAccess                             2.0.0.0    Hyper-V
+
+
+   Noun: Help
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Save-Help                                          3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: Package
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Save-Package                                       1.0.0.1    PackageManagement
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Save-VM                                            2.0.0.0    Hyper-V
+
+
+   Noun: WindowsImage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Save-WindowsImage                                  3.0        Dism
+
+
+   Noun: Object
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Select-Object                                      3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: String
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Select-String                                      3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Xml
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Select-Xml                                         3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: AppvClientReport
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Send-AppvClientReport                              1.0.0.0    AppvClient
+
+
+   Noun: DtcDiagnosticTransaction
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Send-DtcDiagnosticTransaction                      1.0.0.0    MsDtc
+
+
+   Noun: MailMessage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Send-MailMessage                                   3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Acl
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-Acl                                            3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: Alias
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-Alias                                          3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: AppBackgroundTaskResourcePolicy
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-AppBackgroundTaskResourcePolicy                1.0.0.0    AppBackgroundTask
+
+
+   Noun: AppLockerPolicy
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-AppLockerPolicy                                2.0.0.0    AppLocker
+
+
+   Noun: AppvClientConfiguration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-AppvClientConfiguration                        1.0.0.0    AppvClient
+
+
+   Noun: AppvClientMode
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-AppvClientMode                                 1.0.0.0    AppvClient
+
+
+   Noun: AppvClientPackage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-AppvClientPackage                              1.0.0.0    AppvClient
+
+
+   Noun: AppvPublishingServer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-AppvPublishingServer                           1.0.0.0    AppvClient
+
+
+   Noun: AppxDefaultVolume
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-AppxDefaultVolume                              2.0.1.0    Appx
+
+
+   Noun: AppXProvisionedDataFile
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-AppXProvisionedDataFile                        3.0        Dism
+
+
+   Noun: AuthenticodeSignature
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-AuthenticodeSignature                          3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: BitsTransfer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-BitsTransfer                                   2.0.0.0    BitsTransfer
+
+
+   Noun: CertificateAutoEnrollmentPolicy
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-CertificateAutoEnrollmentPolicy                1.0.0.0    PKI
+
+
+   Noun: CimInstance
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-CimInstance                                    1.0.0.0    CimCmdlets
+
+
+   Noun: CIPolicyIdInfo
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-CIPolicyIdInfo                                 1.0        ConfigCI
+
+
+   Noun: CIPolicySetting
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-CIPolicySetting                                1.0        ConfigCI
+
+
+   Noun: CIPolicyVersion
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-CIPolicyVersion                                1.0        ConfigCI
+
+
+   Noun: Clipboard
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-Clipboard                                      3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Content
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-Content                                        3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Culture
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-Culture                                        2.0.0.0    International
+
+
+   Noun: Date
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-Date                                           3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: DeliveryOptimizationStatus
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-DeliveryOptimizationStatus                     1.0.2.0    DeliveryOptimization
+
+
+   Noun: DODownloadMode
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-DODownloadMode                                 1.0.2.0    DeliveryOptimization
+
+
+   Noun: DOPercentageMaxBackgroundBandwidth
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-DOPercentageMaxBackgroundBandwidth             1.0.2.0    DeliveryOptimization
+
+
+   Noun: DOPercentageMaxForegroundBandwidth
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-DOPercentageMaxForegroundBandwidth             1.0.2.0    DeliveryOptimization
+
+
+   Noun: DscLocalConfigurationManager
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-DscLocalConfigurationManager                   1.1        PSDesiredStateCon...
+
+
+   Noun: ExecutionPolicy
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-ExecutionPolicy                                3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: HVCIOptions
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-HVCIOptions                                    1.0        ConfigCI
+
+
+   Noun: Item
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-Item                                           3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: ItemProperty
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-ItemProperty                                   3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: JobTrigger
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-JobTrigger                                     1.1.0.0    PSScheduledJob
+
+
+   Noun: KdsConfiguration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-KdsConfiguration                               1.0.0.0    Kds
+
+
+   Noun: LocalGroup
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-LocalGroup                                     1.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: LocalUser
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-LocalUser                                      1.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: Location
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-Location                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: NonRemovableAppsPolicy
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-NonRemovableAppsPolicy                         3.0        Dism
+
+
+   Noun: PackageSource
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-PackageSource                                  1.0.0.1    PackageManagement
+
+
+   Noun: ProcessMitigation
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-ProcessMitigation                              1.0.11     ProcessMitigations
+
+
+   Noun: PSBreakpoint
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-PSBreakpoint                                   3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: PSDebug
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-PSDebug                                        3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: PSReadLineKeyHandler
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-PSReadLineKeyHandler                           2.0.0      PSReadline
+
+
+   Noun: PSReadLineOption
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-PSReadLineOption                               2.0.0      PSReadline
+
+
+   Noun: PSSessionConfiguration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-PSSessionConfiguration                         3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: RuleOption
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-RuleOption                                     1.0        ConfigCI
+
+
+   Noun: ScheduledJob
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-ScheduledJob                                   1.1.0.0    PSScheduledJob
+
+
+   Noun: ScheduledJobOption
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-ScheduledJobOption                             1.1.0.0    PSScheduledJob
+
+
+   Noun: SecureBootUEFI
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-SecureBootUEFI                                 2.0.0.0    SecureBoot
+
+
+   Noun: Service
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-Service                                        3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: StrictMode
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-StrictMode                                     3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: TimeZone
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-TimeZone                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: TpmOwnerAuth
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-TpmOwnerAuth                                   2.0.0.0    TrustedPlatformMo...
+
+
+   Noun: TraceSource
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-TraceSource                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: UevConfiguration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-UevConfiguration                               2.1.639.0  UEV
+
+
+   Noun: UevTemplateProfile
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-UevTemplateProfile                             2.1.639.0  UEV
+
+
+   Noun: Variable
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-Variable                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: VHD
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VHD                                            2.0.0.0    Hyper-V
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VM                                             2.0.0.0    Hyper-V
+
+
+   Noun: VMBios
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMBios                                         2.0.0.0    Hyper-V
+
+
+   Noun: VMComPort
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMComPort                                      2.0.0.0    Hyper-V
+
+
+   Noun: VMDvdDrive
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMDvdDrive                                     2.0.0.0    Hyper-V
+
+
+   Noun: VMFibreChannelHba
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMFibreChannelHba                              2.0.0.0    Hyper-V
+
+
+   Noun: VMFirmware
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMFirmware                                     2.0.0.0    Hyper-V
+
+
+   Noun: VMFloppyDiskDrive
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMFloppyDiskDrive                              2.0.0.0    Hyper-V
+
+
+   Noun: VMGpuPartitionAdapter
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMGpuPartitionAdapter                          2.0.0.0    Hyper-V
+
+
+   Noun: VMHardDiskDrive
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMHardDiskDrive                                2.0.0.0    Hyper-V
+
+
+   Noun: VMHost
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMHost                                         2.0.0.0    Hyper-V
+
+
+   Noun: VMHostCluster
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMHostCluster                                  2.0.0.0    Hyper-V
+
+
+   Noun: VMKeyProtector
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMKeyProtector                                 2.0.0.0    Hyper-V
+
+
+   Noun: VMKeyStorageDrive
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMKeyStorageDrive                              2.0.0.0    Hyper-V
+
+
+   Noun: VMMemory
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMMemory                                       2.0.0.0    Hyper-V
+
+
+   Noun: VMMigrationNetwork
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMMigrationNetwork                             2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapter
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMNetworkAdapter                               2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapterFailoverConfiguration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMNetworkAdapterFailoverConfiguration          2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapterIsolation
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMNetworkAdapterIsolation                      2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapterRdma
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMNetworkAdapterRdma                           2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapterRoutingDomainMapping
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMNetworkAdapterRoutingDomainMapping           2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapterTeamMapping
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMNetworkAdapterTeamMapping                    2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapterVlan
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMNetworkAdapterVlan                           2.0.0.0    Hyper-V
+
+
+   Noun: VMPartitionableGpu
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMPartitionableGpu                             2.0.0.0    Hyper-V
+
+
+   Noun: VMProcessor
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMProcessor                                    2.0.0.0    Hyper-V
+
+
+   Noun: VMRemoteFx3dVideoAdapter
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMRemoteFx3dVideoAdapter                       2.0.0.0    Hyper-V
+
+
+   Noun: VMReplication
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMReplication                                  2.0.0.0    Hyper-V
+
+
+   Noun: VMReplicationAuthorizationEntry
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMReplicationAuthorizationEntry                2.0.0.0    Hyper-V
+
+
+   Noun: VMReplicationServer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-VMReplicationServer                            2.0.0.0    Hyper-V
 
 
    Noun: VMResourcePool
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Remove-VMResourcePool                              2.0.0.0    Hyper-V
-Cmdlet          New-VMResourcePool                                 2.0.0.0    Hyper-V
-Cmdlet          Get-VMResourcePool                                 2.0.0.0    Hyper-V
-Cmdlet          Measure-VMResourcePool                             2.0.0.0    Hyper-V
-Cmdlet          Rename-VMResourcePool                              2.0.0.0    Hyper-V
 Cmdlet          Set-VMResourcePool                                 2.0.0.0    Hyper-V
 
 
@@ -6058,35 +6775,12 @@ Cmdlet          Set-VMResourcePool                                 2.0.0.0    Hy
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          Set-VMSan                                          2.0.0.0    Hyper-V
-Cmdlet          Disconnect-VMSan                                   2.0.0.0    Hyper-V
-Cmdlet          Rename-VMSan                                       2.0.0.0    Hyper-V
-Cmdlet          Get-VMSan                                          2.0.0.0    Hyper-V
-Cmdlet          New-VMSan                                          2.0.0.0    Hyper-V
-Cmdlet          Remove-VMSan                                       2.0.0.0    Hyper-V
-Cmdlet          Connect-VMSan                                      2.0.0.0    Hyper-V
-
-
-   Noun: VMSavedState
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-VMSavedState                                2.0.0.0    Hyper-V
-
-
-   Noun: VMScsiController
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMScsiController                               2.0.0.0    Hyper-V
-Cmdlet          Add-VMScsiController                               2.0.0.0    Hyper-V
-Cmdlet          Remove-VMScsiController                            2.0.0.0    Hyper-V
 
 
    Noun: VMSecurity
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-VMSecurity                                     2.0.0.0    Hyper-V
 Cmdlet          Set-VMSecurity                                     2.0.0.0    Hyper-V
 
 
@@ -6097,94 +6791,32 @@ CommandType     Name                                               Version    So
 Cmdlet          Set-VMSecurityPolicy                               2.0.0.0    Hyper-V
 
 
-   Noun: VMSnapshot
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMSnapshot                                     2.0.0.0    Hyper-V
-Cmdlet          Restore-VMSnapshot                                 2.0.0.0    Hyper-V
-Cmdlet          Remove-VMSnapshot                                  2.0.0.0    Hyper-V
-Cmdlet          Rename-VMSnapshot                                  2.0.0.0    Hyper-V
-Cmdlet          Export-VMSnapshot                                  2.0.0.0    Hyper-V
-
-
-   Noun: VMStorage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Move-VMStorage                                     2.0.0.0    Hyper-V
-
-
-   Noun: VMStoragePath
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-VMStoragePath                               2.0.0.0    Hyper-V
-Cmdlet          Add-VMStoragePath                                  2.0.0.0    Hyper-V
-Cmdlet          Get-VMStoragePath                                  2.0.0.0    Hyper-V
-
-
    Noun: VMStorageSettings
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          Set-VMStorageSettings                              2.0.0.0    Hyper-V
-Cmdlet          Get-VMStorageSettings                              2.0.0.0    Hyper-V
 
 
    Noun: VMSwitch
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Rename-VMSwitch                                    2.0.0.0    Hyper-V
-Cmdlet          Add-VMSwitch                                       2.0.0.0    Hyper-V
-Cmdlet          New-VMSwitch                                       2.0.0.0    Hyper-V
-Cmdlet          Get-VMSwitch                                       2.0.0.0    Hyper-V
 Cmdlet          Set-VMSwitch                                       2.0.0.0    Hyper-V
-Cmdlet          Remove-VMSwitch                                    2.0.0.0    Hyper-V
-
-
-   Noun: VMSwitchExtension
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMSwitchExtension                              2.0.0.0    Hyper-V
-Cmdlet          Enable-VMSwitchExtension                           2.0.0.0    Hyper-V
-Cmdlet          Disable-VMSwitchExtension                          2.0.0.0    Hyper-V
-
-
-   Noun: VMSwitchExtensionPortData
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMSwitchExtensionPortData                      2.0.0.0    Hyper-V
 
 
    Noun: VMSwitchExtensionPortFeature
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-VMSwitchExtensionPortFeature                   2.0.0.0    Hyper-V
-Cmdlet          Add-VMSwitchExtensionPortFeature                   2.0.0.0    Hyper-V
 Cmdlet          Set-VMSwitchExtensionPortFeature                   2.0.0.0    Hyper-V
-Cmdlet          Remove-VMSwitchExtensionPortFeature                2.0.0.0    Hyper-V
-
-
-   Noun: VMSwitchExtensionSwitchData
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMSwitchExtensionSwitchData                    2.0.0.0    Hyper-V
 
 
    Noun: VMSwitchExtensionSwitchFeature
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Remove-VMSwitchExtensionSwitchFeature              2.0.0.0    Hyper-V
-Cmdlet          Add-VMSwitchExtensionSwitchFeature                 2.0.0.0    Hyper-V
 Cmdlet          Set-VMSwitchExtensionSwitchFeature                 2.0.0.0    Hyper-V
-Cmdlet          Get-VMSwitchExtensionSwitchFeature                 2.0.0.0    Hyper-V
 
 
    Noun: VMSwitchTeam
@@ -6192,59 +6824,6 @@ Cmdlet          Get-VMSwitchExtensionSwitchFeature                 2.0.0.0    Hy
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          Set-VMSwitchTeam                                   2.0.0.0    Hyper-V
-Cmdlet          Get-VMSwitchTeam                                   2.0.0.0    Hyper-V
-
-
-   Noun: VMSwitchTeamMember
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-VMSwitchTeamMember                          2.0.0.0    Hyper-V
-Cmdlet          Add-VMSwitchTeamMember                             2.0.0.0    Hyper-V
-
-
-   Noun: VMSystemSwitchExtension
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMSystemSwitchExtension                        2.0.0.0    Hyper-V
-
-
-   Noun: VMSystemSwitchExtensionPortFeature
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMSystemSwitchExtensionPortFeature             2.0.0.0    Hyper-V
-
-
-   Noun: VMSystemSwitchExtensionSwitchFeature
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-VMSystemSwitchExtensionSwitchFeature           2.0.0.0    Hyper-V
-
-
-   Noun: VMTPM
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Enable-VMTPM                                       2.0.0.0    Hyper-V
-Cmdlet          Disable-VMTPM                                      2.0.0.0    Hyper-V
-
-
-   Noun: VMTrace
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Start-VMTrace                                      2.0.0.0    Hyper-V
-Cmdlet          Stop-VMTrace                                       2.0.0.0    Hyper-V
-
-
-   Noun: VMVersion
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Update-VMVersion                                   2.0.0.0    Hyper-V
 
 
    Noun: VMVideo
@@ -6252,28 +6831,6 @@ Cmdlet          Update-VMVersion                                   2.0.0.0    Hy
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          Set-VMVideo                                        2.0.0.0    Hyper-V
-Cmdlet          Get-VMVideo                                        2.0.0.0    Hyper-V
-
-
-   Noun: Warning
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Write-Warning                                      3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: WebRequest
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Invoke-WebRequest                                  3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: WebServiceProxy
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          New-WebServiceProxy                                3.1.0.0    Microsoft.PowerShell.Management
 
 
    Noun: WheaMemoryPolicy
@@ -6281,22 +6838,6 @@ Cmdlet          New-WebServiceProxy                                3.1.0.0    Mi
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          Set-WheaMemoryPolicy                               2.0.0.0    Whea
-Cmdlet          Get-WheaMemoryPolicy                               2.0.0.0    Whea
-
-
-   Noun: Wide
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Format-Wide                                        3.1.0.0    Microsoft.PowerShell.Utility
-
-
-   Noun: WIMBootEntry
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-WIMBootEntry                                   3.0        Dism
-Cmdlet          Update-WIMBootEntry                                3.0        Dism
 
 
    Noun: WinAcceptLanguageFromLanguageListOptOut
@@ -6304,7 +6845,6 @@ Cmdlet          Update-WIMBootEntry                                3.0        Di
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          Set-WinAcceptLanguageFromLanguageListOptOut        2.0.0.0    International
-Cmdlet          Get-WinAcceptLanguageFromLanguageListOptOut        2.0.0.0    International
 
 
    Noun: WinCultureFromLanguageListOptOut
@@ -6312,77 +6852,13 @@ Cmdlet          Get-WinAcceptLanguageFromLanguageListOptOut        2.0.0.0    In
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          Set-WinCultureFromLanguageListOptOut               2.0.0.0    International
-Cmdlet          Get-WinCultureFromLanguageListOptOut               2.0.0.0    International
 
 
    Noun: WinDefaultInputMethodOverride
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-WinDefaultInputMethodOverride                  2.0.0.0    International
 Cmdlet          Set-WinDefaultInputMethodOverride                  2.0.0.0    International
-
-
-   Noun: WindowsCapability
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-WindowsCapability                              3.0        Dism
-Cmdlet          Get-WindowsCapability                              3.0        Dism
-Cmdlet          Remove-WindowsCapability                           3.0        Dism
-
-
-   Noun: WindowsCapabilitySource
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Export-WindowsCapabilitySource                     3.0        Dism
-
-
-   Noun: WindowsCorruptMountPoint
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Clear-WindowsCorruptMountPoint                     3.0        Dism
-
-
-   Noun: WindowsCustomDataImage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Expand-WindowsCustomDataImage                      3.0        Dism
-
-
-   Noun: WindowsCustomImage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          New-WindowsCustomImage                             3.0        Dism
-
-
-   Noun: WindowsDeveloperLicense
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Unregister-WindowsDeveloperLicense                 1.0.0.0    WindowsDeveloperLicense
-Cmdlet          Get-WindowsDeveloperLicense                        1.0.0.0    WindowsDeveloperLicense
-
-
-   Noun: WindowsDeveloperLicenseRegistration
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Show-WindowsDeveloperLicenseRegistration           1.0.0.0    WindowsDeveloperLicense
-
-
-   Noun: WindowsDriver
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-WindowsDriver                               3.0        Dism
-Cmdlet          Add-WindowsDriver                                  3.0        Dism
-Cmdlet          Get-WindowsDriver                                  3.0        Dism
-Cmdlet          Export-WindowsDriver                               3.0        Dism
 
 
    Noun: WindowsEdition
@@ -6390,59 +6866,6 @@ Cmdlet          Export-WindowsDriver                               3.0        Di
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
 Cmdlet          Set-WindowsEdition                                 3.0        Dism
-Cmdlet          Get-WindowsEdition                                 3.0        Dism
-
-
-   Noun: WindowsErrorReporting
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Enable-WindowsErrorReporting                       1.0        WindowsErrorReporting
-Cmdlet          Get-WindowsErrorReporting                          1.0        WindowsErrorReporting
-Cmdlet          Disable-WindowsErrorReporting                      1.0        WindowsErrorReporting
-
-
-   Noun: WindowsImage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-WindowsImage                                   3.0        Dism
-Cmdlet          Get-WindowsImage                                   3.0        Dism
-Cmdlet          Save-WindowsImage                                  3.0        Dism
-Cmdlet          Remove-WindowsImage                                3.0        Dism
-Cmdlet          Optimize-WindowsImage                              3.0        Dism
-Cmdlet          Split-WindowsImage                                 3.0        Dism
-Cmdlet          Export-WindowsImage                                3.0        Dism
-Cmdlet          Repair-WindowsImage                                3.0        Dism
-Cmdlet          New-WindowsImage                                   3.0        Dism
-Cmdlet          Dismount-WindowsImage                              3.0        Dism
-Cmdlet          Mount-WindowsImage                                 3.0        Dism
-Cmdlet          Expand-WindowsImage                                3.0        Dism
-
-
-   Noun: WindowsImageContent
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-WindowsImageContent                            3.0        Dism
-
-
-   Noun: WindowsOptionalFeature
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Disable-WindowsOptionalFeature                     3.0        Dism
-Cmdlet          Get-WindowsOptionalFeature                         3.0        Dism
-Cmdlet          Enable-WindowsOptionalFeature                      3.0        Dism
-
-
-   Noun: WindowsPackage
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Add-WindowsPackage                                 3.0        Dism
-Cmdlet          Remove-WindowsPackage                              3.0        Dism
-Cmdlet          Get-WindowsPackage                                 3.0        Dism
 
 
    Noun: WindowsProductKey
@@ -6456,8 +6879,637 @@ Cmdlet          Set-WindowsProductKey                              3.0        Di
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-WindowsSearchSetting                           1.0.0.0    WindowsSearch
 Cmdlet          Set-WindowsSearchSetting                           1.0.0.0    WindowsSearch
+
+
+   Noun: WinHomeLocation
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-WinHomeLocation                                2.0.0.0    International
+
+
+   Noun: WinLanguageBarOption
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-WinLanguageBarOption                           2.0.0.0    International
+
+
+   Noun: WinSystemLocale
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-WinSystemLocale                                2.0.0.0    International
+
+
+   Noun: WinUILanguageOverride
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-WinUILanguageOverride                          2.0.0.0    International
+
+
+   Noun: WinUserLanguageList
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-WinUserLanguageList                            2.0.0.0    International
+
+
+   Noun: WmiInstance
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-WmiInstance                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: WSManInstance
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-WSManInstance                                  3.0.0.0    Microsoft.WSMan.M...
+
+
+   Noun: WSManQuickConfig
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Set-WSManQuickConfig                               3.0.0.0    Microsoft.WSMan.M...
+
+
+   Noun: Command
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Show-Command                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: ControlPanelItem
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Show-ControlPanelItem                              3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: EventLog
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Show-EventLog                                      3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: WindowsDeveloperLicenseRegistration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Show-WindowsDeveloperLicenseRegistration           1.0.0.0    WindowsDeveloperL...
+
+
+   Noun: Object
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Sort-Object                                        3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Path
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Split-Path                                         3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: WindowsImage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Split-WindowsImage                                 3.0        Dism
+
+
+   Noun: BitsTransfer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-BitsTransfer                                 2.0.0.0    BitsTransfer
+
+
+   Noun: DscConfiguration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-DscConfiguration                             1.1        PSDesiredStateCon...
+
+
+   Noun: DtcDiagnosticResourceManager
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-DtcDiagnosticResourceManager                 1.0.0.0    MsDtc
+
+
+   Noun: Job
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-Job                                          3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: OSUninstall
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-OSUninstall                                  3.0        Dism
+
+
+   Noun: Process
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-Process                                      3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Service
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-Service                                      3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Sleep
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-Sleep                                        3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Transaction
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-Transaction                                  3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Transcript
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-Transcript                                   3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-VM                                           2.0.0.0    Hyper-V
+
+
+   Noun: VMFailover
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-VMFailover                                   2.0.0.0    Hyper-V
+
+
+   Noun: VMInitialReplication
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-VMInitialReplication                         2.0.0.0    Hyper-V
+
+
+   Noun: VMTrace
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Start-VMTrace                                      2.0.0.0    Hyper-V
+
+
+   Noun: AppvClientConnectionGroup
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-AppvClientConnectionGroup                     1.0.0.0    AppvClient
+
+
+   Noun: AppvClientPackage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-AppvClientPackage                             1.0.0.0    AppvClient
+
+
+   Noun: Computer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-Computer                                      3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: DtcDiagnosticResourceManager
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
+
+
+   Noun: Job
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-Job                                           3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: Process
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-Process                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Service
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-Service                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Transcript
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-Transcript                                    3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-VM                                            2.0.0.0    Hyper-V
+
+
+   Noun: VMFailover
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-VMFailover                                    2.0.0.0    Hyper-V
+
+
+   Noun: VMInitialReplication
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-VMInitialReplication                          2.0.0.0    Hyper-V
+
+
+   Noun: VMReplication
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-VMReplication                                 2.0.0.0    Hyper-V
+
+
+   Noun: VMTrace
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Stop-VMTrace                                       2.0.0.0    Hyper-V
+
+
+   Noun: BitsTransfer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Suspend-BitsTransfer                               2.0.0.0    BitsTransfer
+
+
+   Noun: Job
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Suspend-Job                                        3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: Service
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Suspend-Service                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: VM
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Suspend-VM                                         2.0.0.0    Hyper-V
+
+
+   Noun: VMReplication
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Suspend-VMReplication                              2.0.0.0    Hyper-V
+
+
+   Noun: Certificate
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Switch-Certificate                                 1.0.0.0    PKI
+
+
+   Noun: AppvPublishingServer
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Sync-AppvPublishingServer                          1.0.0.0    AppvClient
+
+
+   Noun: Object
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Tee-Object                                         3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: AppLockerPolicy
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-AppLockerPolicy                               2.0.0.0    AppLocker
+
+
+   Noun: Certificate
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-Certificate                                   1.0.0.0    PKI
+
+
+   Noun: ComputerSecureChannel
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-ComputerSecureChannel                         3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Connection
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-Connection                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: DscConfiguration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-DscConfiguration                              1.1        PSDesiredStateCon...
+
+
+   Noun: FileCatalog
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-FileCatalog                                   3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: HgsTraceTarget
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-HgsTraceTarget                                1.0.0.0    HgsDiagnostics
+
+
+   Noun: KdsRootKey
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-KdsRootKey                                    1.0.0.0    Kds
+
+
+   Noun: ModuleManifest
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-ModuleManifest                                3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: Path
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-Path                                          3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: PSSessionConfigurationFile
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-PSSessionConfigurationFile                    3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: UevTemplate
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-UevTemplate                                   2.1.639.0  UEV
+
+
+   Noun: VHD
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-VHD                                           2.0.0.0    Hyper-V
+
+
+   Noun: VMNetworkAdapter
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-VMNetworkAdapter                              2.0.0.0    Hyper-V
+
+
+   Noun: VMReplicationConnection
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-VMReplicationConnection                       2.0.0.0    Hyper-V
+
+
+   Noun: WSMan
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Test-WSMan                                         3.0.0.0    Microsoft.WSMan.M...
+
+
+   Noun: Command
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Trace-Command                                      3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: File
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Unblock-File                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Tpm
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Unblock-Tpm                                        2.0.0.0    TrustedPlatformMo...
+
+
+   Noun: DtcDiagnosticTransaction
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Undo-DtcDiagnosticTransaction                      1.0.0.0    MsDtc
+
+
+   Noun: Transaction
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Undo-Transaction                                   3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Package
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Uninstall-Package                                  1.0.0.1    PackageManagement
+
+
+   Noun: ProvisioningPackage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Uninstall-ProvisioningPackage                      3.0        Provisioning
+
+
+   Noun: TrustedProvisioningCertificate
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Uninstall-TrustedProvisioningCertificate           3.0        Provisioning
+
+
+   Noun: CmsMessage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Unprotect-CmsMessage                               3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: AppvClientPackage
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Unpublish-AppvClientPackage                        1.0.0.0    AppvClient
+
+
+   Noun: Event
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Unregister-Event                                   3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: PackageSource
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Unregister-PackageSource                           1.0.0.1    PackageManagement
+
+
+   Noun: PSSessionConfiguration
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Unregister-PSSessionConfiguration                  3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: ScheduledJob
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Unregister-ScheduledJob                            1.1.0.0    PSScheduledJob
+
+
+   Noun: UevTemplate
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Unregister-UevTemplate                             2.1.639.0  UEV
+
+
+   Noun: WindowsDeveloperLicense
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Unregister-WindowsDeveloperLicense                 1.0.0.0    WindowsDeveloperL...
+
+
+   Noun: FormatData
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Update-FormatData                                  3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Help
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Update-Help                                        3.0.0.0    Microsoft.PowerSh...
+
+
+   Noun: List
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Update-List                                        3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: TypeData
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Update-TypeData                                    3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: UevTemplate
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Update-UevTemplate                                 2.1.639.0  UEV
+
+
+   Noun: VMVersion
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Update-VMVersion                                   2.0.0.0    Hyper-V
+
+
+   Noun: WIMBootEntry
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Update-WIMBootEntry                                3.0        Dism
+
+
+   Noun: Transaction
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Use-Transaction                                    3.1.0.0    Microsoft.PowerSh...
 
 
    Noun: WindowsUnattend
@@ -6467,140 +7519,107 @@ CommandType     Name                                               Version    So
 Cmdlet          Use-WindowsUnattend                                3.0        Dism
 
 
-   Noun: WinEvent
+   Noun: Debugger
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-WinEvent                                       3.0.0.0    Microsoft.PowerShell.Diagnos...
-Cmdlet          New-WinEvent                                       3.0.0.0    Microsoft.PowerShell.Diagnos...
+Cmdlet          Wait-Debugger                                      3.1.0.0    Microsoft.PowerSh...
 
 
-   Noun: WinHomeLocation
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-WinHomeLocation                                2.0.0.0    International
-Cmdlet          Set-WinHomeLocation                                2.0.0.0    International
-
-
-   Noun: WinLanguageBarOption
+   Noun: Event
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Set-WinLanguageBarOption                           2.0.0.0    International
-Cmdlet          Get-WinLanguageBarOption                           2.0.0.0    International
+Cmdlet          Wait-Event                                         3.1.0.0    Microsoft.PowerSh...
 
 
-   Noun: WinSystemLocale
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-WinSystemLocale                                2.0.0.0    International
-Cmdlet          Get-WinSystemLocale                                2.0.0.0    International
-
-
-   Noun: WinUILanguageOverride
+   Noun: Job
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Get-WinUILanguageOverride                          2.0.0.0    International
-Cmdlet          Set-WinUILanguageOverride                          2.0.0.0    International
+Cmdlet          Wait-Job                                           3.0.0.0    Microsoft.PowerSh...
 
 
-   Noun: WinUserLanguageList
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-WinUserLanguageList                            2.0.0.0    International
-Cmdlet          New-WinUserLanguageList                            2.0.0.0    International
-Cmdlet          Get-WinUserLanguageList                            2.0.0.0    International
-
-
-   Noun: WmiEvent
+   Noun: Process
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Register-WmiEvent                                  3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Wait-Process                                       3.1.0.0    Microsoft.PowerSh...
 
 
-   Noun: WmiInstance
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Set-WmiInstance                                    3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: WmiMethod
+   Noun: VM
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Invoke-WmiMethod                                   3.1.0.0    Microsoft.PowerShell.Management
+Cmdlet          Wait-VM                                            2.0.0.0    Hyper-V
 
 
-   Noun: WmiObject
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Remove-WmiObject                                   3.1.0.0    Microsoft.PowerShell.Management
-Cmdlet          Get-WmiObject                                      3.1.0.0    Microsoft.PowerShell.Management
-
-
-   Noun: WSMan
+   Noun: Object
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Disconnect-WSMan                                   3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Connect-WSMan                                      3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Test-WSMan                                         3.0.0.0    Microsoft.WSMan.Management
+Cmdlet          Where-Object                                       3.0.0.0    Microsoft.PowerSh...
 
 
-   Noun: WSManAction
+   Noun: Debug
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Invoke-WSManAction                                 3.0.0.0    Microsoft.WSMan.Management
+Cmdlet          Write-Debug                                        3.1.0.0    Microsoft.PowerSh...
 
 
-   Noun: WSManCredSSP
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          Get-WSManCredSSP                                   3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Disable-WSManCredSSP                               3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Enable-WSManCredSSP                                3.0.0.0    Microsoft.WSMan.Management
-
-
-   Noun: WSManInstance
+   Noun: Error
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          New-WSManInstance                                  3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Set-WSManInstance                                  3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Remove-WSManInstance                               3.0.0.0    Microsoft.WSMan.Management
-Cmdlet          Get-WSManInstance                                  3.0.0.0    Microsoft.WSMan.Management
+Cmdlet          Write-Error                                        3.1.0.0    Microsoft.PowerSh...
 
 
-   Noun: WSManQuickConfig
+   Noun: EventLog
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Set-WSManQuickConfig                               3.0.0.0    Microsoft.WSMan.Management
+Cmdlet          Write-EventLog                                     3.1.0.0    Microsoft.PowerSh...
 
 
-   Noun: WSManSessionOption
-
-CommandType     Name                                               Version    Source
------------     ----                                               -------    ------
-Cmdlet          New-WSManSessionOption                             3.0.0.0    Microsoft.WSMan.Management
-
-
-   Noun: Xml
+   Noun: Host
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------
-Cmdlet          Select-Xml                                         3.1.0.0    Microsoft.PowerShell.Utility
-Cmdlet          ConvertTo-Xml                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Write-Host                                         3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Information
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Write-Information                                  3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Output
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Write-Output                                       3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Progress
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Write-Progress                                     3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Verbose
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Write-Verbose                                      3.1.0.0    Microsoft.PowerSh...
+
+
+   Noun: Warning
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Write-Warning                                      3.1.0.0    Microsoft.PowerSh...
 ```
-
-
-
